@@ -1,12 +1,33 @@
-# yo
 
-This project is generated with [yo angular generator](https://github.com/yeoman/generator-angular)
-version 0.15.1.
+## Installation
 
-## Build & development
+Global dependencies
 
-Run `grunt` for building and `grunt serve` for preview.
+```
+    npm install -g gulp bower
+```
 
-## Testing
+Clone project
 
-Running `grunt test` will run the unit tests with karma.
+```
+    git clone https://github.com/epenkman/oss-cafe.git
+    cd oss-cafe
+    npm install
+```
+
+## Build and Run
+
+Local developer preview:
+```
+    gulp serve
+```
+
+Unit tests with karma.js
+```
+    gulp test
+```
+
+Generate deployable artefact
+```
+    gulp build
+```
