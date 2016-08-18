@@ -31,13 +31,15 @@
     "phantomjs-prebuilt": "^2.1.12",
     "rimraf": "^2.4.0",
     "run-sequence": "^1.1.1",
-    "wiredep": "^2.2.2"
+    "wiredep": "^2.2.2",
+    "protractor": "3.0.0"
   },
   "engines": {
     "node": ">=0.10.0"
   },
   "scripts": {
     "postinstall": "pushd app && bower install && popd",
-    "test": "karma start test/karma.conf.js"
+    "test": "karma start test/karma.conf.js",
+    "postinstall": "node ./node_modules/protractor/bin/webdriver-manager update"
   }
 }
