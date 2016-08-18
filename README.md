@@ -17,7 +17,7 @@ Clone project
 
 ## Build and Run
 
-Local developer preview:
+Local developer preview
 ```
     gulp serve
 ```
@@ -31,3 +31,18 @@ Generate deployable artefact
 ```
     gulp build
 ```
+
+Preview deployable artefact in the browser
+```
+    gulp serve:prod
+```
+
+
+## Developing
+
+This project uses .editorconfig for code conventions, you may have to install a plugin for your editor to support .editorconfig files
+
+
+## Project structure and architecture
+
+This project uses a traditional angularjs project structure taken from the [angular.js yeoman generator] (https://github.com/yeoman/generator-angular)
