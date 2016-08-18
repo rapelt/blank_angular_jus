@@ -2,6 +2,7 @@
 
 set -e
 
+
 export STACK_NAME=$BUILD_STAGE
 export AWS_CLI_DIRECTORY=awscli-bundle
 
