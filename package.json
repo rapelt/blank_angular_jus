@@ -37,6 +37,7 @@
     "node": ">=0.10.0"
   },
   "scripts": {
+    "postinstall": "pushd app && bower install && popd",
     "test": "karma start test/karma.conf.js"
   }
 }
