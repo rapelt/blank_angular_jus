@@ -1,0 +1,65 @@
+#!/bin/bash
+
+set -e
+
+export STACK_NAME=$BUILD_STAGE
+export AWS_CLI_DIRECTORY=awscli-bundle
+
+
+if [ ! -d "$AWS_CLI_DIRECTORY" ]; then
+  echo "Installing aws cli"
+
+  curl "https://s3.amazonaws.com/aws-cli/awscli-bundle.zip" -o "awscli-bundle.zip"
+  unzip awscli-bundle.zip
+
+  ##Remove zipped file
+  rm awscli-bundle.zip
+  ##Install awscli
+  ./awscli-bundle/install -b ~/bin/aws
+  echo "aws cli successfully installed"
+fi
+
+
+aws cloudformation create-stack \
+    --stack-name $STACK_NAME \
+    --template-body file://cfn-templates/cafe.template \
+    --parameters ParameterKey=RegionName,ParameterValue=test
+
+aws cloudformation wait stack-create-complete \
+    --stack-name $STACK_NAME
+
+BUCKET_OUPUT=$(aws cloudformation describe-stacks --stack-name $STACK_NAME)
+
+StackStatus=$(echo $BUCKET_OUPUT | python -c 'import sys, json; print json.load(sys.stdin)["Stacks"][0]["StackStatus"]')
+WebsiteURL=$(echo $BUCKET_OUPUT | python -c 'import sys, json; print json.load(sys.stdin)["Stacks"][0]["Outputs"][0]["OutputValue"]')
+S3BucketId=$(echo $BUCKET_OUPUT | python -c 'import sys, json; print json.load(sys.stdin)["Stacks"][0]["Outputs"][1]["OutputValue"]')
+
+
+if [ $StackStatus="CREATE_COMPLETE" ]; then
+  echo "Completed"
+else
+  echo "Stack setup failed"
+  exit 1
+fi
+
+##Copy files to release folder
+mkdir -p release
+cp *.html release/
+
+
+##Upload release folder to s3 bucket
+aws s3 cp release/ "s3://$S3BucketId" --recursive --acl public-read
+
+##Test if website is working
+response=$(curl --write-out %{http_code} --silent --output /dev/null $WebsiteURL)
+
+if [ $response=200 ]; then
+  echo "Website setup successful"
+  exit 0
+else
+  echo "Website setup failed"
+  exit 1
+fi
+
+
+

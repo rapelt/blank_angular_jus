@@ -1,0 +1,49 @@
+{
+  "AWSTemplateFormatVersion": "2010-09-09",
+  "Resources": {
+    "WebsiteBucket": {
+      "Type": "AWS::S3::Bucket",
+      "Properties": {
+        "BucketName": {
+          "Fn::Join": [
+            "",
+            [
+              {
+                "Ref": "RegionName"
+              },
+              "-mdjn.bucket"
+            ]
+          ]
+        },
+        "AccessControl": "PublicRead",
+        "WebsiteConfiguration": {
+        "IndexDocument": "index.html",
+          "ErrorDocument": "404.html"
+        }
+      }
+    }
+  },
+  "Parameters": {
+    "RegionName": {
+      "Type": "String",
+      "Description": "Region name (dev, uat, etc.)"
+    }
+  },
+  "Outputs": {
+    "WebsiteURL": {
+      "Value": {
+        "Fn::GetAtt": [
+          "WebsiteBucket",
+          "WebsiteURL"
+        ]
+      },
+      "Description": "URL for website hosted on S3"
+    },
+  "S3BucketId": {
+      "Value": { 
+        "Ref" : "WebsiteBucket" 
+        },
+       "Description": "URL for website hosted on S3"
+    }
+  }
+}

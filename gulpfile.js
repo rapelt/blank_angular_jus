@@ -31,6 +31,7 @@ var paths = {
   karma: 'test/karma.conf.js',
   views: {
     main: yeoman.app + '/index.html',
+    error: yeoman.app + '/404.html',
     files: [yeoman.app + '/views/**/*.html']
   }
 };
@@ -132,8 +133,10 @@ gulp.task('test', ['start:server:test'], function () {
   return gulp.src(testToFiles)
     .pipe($.karma({
       configFile: paths.karma,
-      action: 'watch'
-    }));
+    }))
+    .once('end', function () {
+      process.exit();
+    });
 });
 
 // inject bower components
@@ -154,11 +157,11 @@ gulp.task('clean:dist', function (cb) {
   rimraf('./dist', cb);
 });
 
-gulp.task('client:build', ['html', 'styles'], function () {
+gulp.task('client:build',  function () {
   var jsFilter = $.filter('**/*.js');
   var cssFilter = $.filter('**/*.css');
 
-  return gulp.src(paths.views.main)
+  return gulp.src([paths.views.main, paths.views.error])
     .pipe($.useref({searchPath: [yeoman.app, '.tmp']}))
     .pipe(jsFilter)
     .pipe($.ngAnnotate())

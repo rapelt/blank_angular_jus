@@ -1,0 +1,19 @@
+#!/bin/bash
+
+STACK_NAME=$BUILD_STAGE
+
+BUCKET_OUPUT=$(aws cloudformation describe-stacks --stack-name $STACK_NAME)
+
+S3BucketId=$(echo $BUCKET_OUPUT | python -c 'import sys, json; print json.load(sys.stdin)["Stacks"][0]["Outputs"][1]["OutputValue"]')
+
+
+##Remove s3 bucket content
+aws s3 rm s3://S3BucketId --recursive
+
+##Delete cloud formation stack
+aws cloudformation delete-stack \
+    --stack-name $STACK_NAME
+
+##Wait for deletion operation to finish
+aws cloudformation wait stack-delete-complete \
+    --stack-name $STACK_NAME
