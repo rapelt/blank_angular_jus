@@ -5,10 +5,12 @@ set -e
 
 STACK_NAME=$BUILD_STAGE
 AWS_CLI_DIRECTORY=awscli-bundle
+TEMPLATE_LOCATION=cfn-templates/cafe.template
 
 if [ -z "$STACK_NAME" ]; then 
-  echo "change stack name to bamboo recognised variable"
   STACK_NAME=$bamboo_BUILD_STAGE
+  TEMPLATE_LOCATION=cafe.template
+  echo "change stack name to bamboo recognised variable"
 fi
 
 if [ ! -d "$AWS_CLI_DIRECTORY" ]; then
@@ -27,7 +29,7 @@ fi
 
 aws cloudformation create-stack \
     --stack-name $STACK_NAME \
-    --template-body file://cfn-templates/cafe.template \
+    --template-body file://$TEMPLATE_LOCATION \
     --parameters ParameterKey=RegionName,ParameterValue=test
 
 aws cloudformation wait stack-create-complete \
