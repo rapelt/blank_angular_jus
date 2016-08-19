@@ -1,6 +1,5 @@
 'use strict';
-
-jasmine.DEFAULT_TIMEOUT_INTERVAL = 10000;
+jasmine.DEFAULT_TIMEOUT_INTERVAL = 20000;
 
 describe('angularjs homepage', function() {
 
