@@ -7,7 +7,7 @@ STACK_NAME=$BUILD_STAGE
 AWS_CLI_DIRECTORY=awscli-bundle
 
 if [ -z "$STACK_NAME" ]; then 
-  echo "change stage name to bamboo recognised variable"
+  echo "change stack name to bamboo recognised variable"
   STACK_NAME=$bamboo_BUILD_STAGE
 fi
 
