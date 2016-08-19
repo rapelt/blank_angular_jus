@@ -1,46 +1,23 @@
 'use strict';
 
+jasmine.DEFAULT_TIMEOUT_INTERVAL = 10000;
+
 describe('angularjs homepage', function() {
-  it('should greet the named user', function() {
-    browser.get('http://www.angularjs.org');
 
-    element(by.model('yourName')).sendKeys('Julie');
-
-    var greeting = element(by.binding('yourName'));
-
-    expect(greeting.getText()).toEqual('Hello Julie!');
+  it('should check our CAFE PAGE',function() {
+    browser.get('http://localhost:9001');
+    expect(true).toBe(true);
   });
-
-  describe('todo list', function() {
-    var todoList;
-
-    beforeEach(function() {
-      browser.get('http://www.angularjs.org');
-
-      todoList = element.all(by.repeater('todo in todoList.todos'));
-    });
-
-    it('should list todos', function() {
-      expect(todoList.count()).toEqual(2);
-      expect(todoList.get(1).getText()).toEqual('build an angular app');
-    });
-
-    it('should add a todo', function() {
-      var addTodo = element(by.model('todoList.todoText'));
-      var addButton = element(by.css('[value="add"]'));
-
-      addTodo.sendKeys('write a protractor test');
-      addButton.click();
-
-      expect(todoList.count()).toEqual(3);
-      expect(todoList.get(2).getText()).toEqual('write a protractor test');
-    });
-
-    describe('angularjs homepage test', function(){
-      it('should check our CAFE PAGE',function() {
-        browser.get('http://localhost:9000');
-        browser.sleep(10000);
-      });
-    });
+  it('should check our CAFE PAGE2',function() {
+    browser.get('http://localhost:9001');
+    expect(true).toBe(true);
+  });
+  it('should check our CAFE PAGE',function() {
+    browser.get('http://localhost:9001');
+    expect(true).toBe(true);
+  });
+  it('should check our CAFE PAGE2',function() {
+    browser.get('http://localhost:9001');
+    expect(true).toBe(true);
   });
 });

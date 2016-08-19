@@ -9,14 +9,16 @@ exports.config = {
 
 
   capabilities: {
-    'browserName': 'chrome',
+    'browserName': 'phantomjs',
+    'phantomjs.binary.path': require('phantomjs').path,
+    // 'phantomjs.ghostdriver.cli.args': ['--loglevel=DEBUG'],
     'chromeOptions': {'args': ['--disable-extensions']}
   },
 
 
   // A base URL for your application under test. Calls to protractor.get()
   // with relative paths will be prepended with this.
-  baseUrl: 'http://localhost:9000',
+  baseUrl: 'http://localhost:9001',
 
   jasmineNodeOpts: {
     onComplete: null,

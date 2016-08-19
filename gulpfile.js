@@ -8,6 +8,8 @@ var lazypipe = require('lazypipe');
 var rimraf = require('rimraf');
 var wiredep = require('wiredep').stream;
 var runSequence = require('run-sequence');
+var gulp = require('gulp');
+var angularProtractor = require('gulp-angular-protractor');
 
 var yeoman = {
   app: 'app',
@@ -139,6 +141,25 @@ gulp.task('test', ['start:server:test'], function () {
     });
 });
 
+gulp.task('teste2e',['start:server:test'], function(cb){
+  gulp.src(['./E2E/spec/*.js'])
+      .pipe(angularProtractor({
+          'configFile': './E2E/conf.js',
+          'autoStartStopServer': true,
+          'debug': false
+      }))
+      .on('error', function(e) {
+        console.log('error', e)
+        process.exit(1);
+      })
+      .on('end', function(e){
+        $.connect.serverClose();
+        process.exit(0);
+      });
+})
+
+
+
 // inject bower components
 gulp.task('bower', function () {
   return gulp.src(paths.views.main)
@@ -200,7 +221,7 @@ gulp.task('copy:fonts', function () {
 });
 
 gulp.task('build', ['clean:dist'], function () {
-  runSequence(['images', 'copy:extras', 'copy:fonts', 'client:build']);
+  runSequence(['styles','images', 'copy:extras', 'copy:fonts', 'client:build']);
 });
 
 gulp.task('default', ['build']);

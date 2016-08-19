@@ -2,7 +2,9 @@
   "name": "yo",
   "private": true,
   "devDependencies": {
+    "bower": "^1.7.9",
     "gulp": "^3.9.0",
+    "gulp-angular-protractor": "^0.1.4",
     "gulp-autoprefixer": "2.3.1",
     "gulp-cache": "^0.2.10",
     "gulp-connect": "^2.2.0",
@@ -28,17 +30,19 @@
     "karma-phantomjs-launcher": "^1.0.1",
     "lazypipe": "^0.2.4",
     "open": "0.0.5",
+    "phantomjs": "^2.1.7",
     "phantomjs-prebuilt": "^2.1.12",
+    "protractor": "3.0.0",
     "rimraf": "^2.4.0",
     "run-sequence": "^1.1.1",
-    "wiredep": "^2.2.2",
-    "protractor": "3.0.0",
-    "bower": "^1.7.9"
+    "selenium-server-standalone-jar": "^2.53.1",
+    "selenium-standalone": "^5.5.0",
+    "wiredep": "^2.2.2"
   },
   "engines": {
     "node": ">=0.10.0"
   },
   "scripts": {
-    "postinstall": "pushd app && ../node_modules/.bin/bower install && popd && node ./node_modules/protractor/bin/webdriver-manager update"
+    "postinstall": "pushd app && ../node_modules/.bin/bower install && popd"
   }
 }
