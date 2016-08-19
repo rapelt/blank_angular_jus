@@ -3,8 +3,14 @@
 set -e
 
 
-export STACK_NAME=$BUILD_STAGE
-export AWS_CLI_DIRECTORY=awscli-bundle
+STACK_NAME=$BUILD_STAGE
+AWS_CLI_DIRECTORY=awscli-bundle
+
+if [ -z "$bamboo.agentId" ]; then 
+  STACK_NAME="bamboo_"$BUILD_STAGE
+fi
+
+echo $STACK_NAME
 
 
 if [ ! -d "$AWS_CLI_DIRECTORY" ]; then
