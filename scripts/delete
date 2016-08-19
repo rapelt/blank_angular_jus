@@ -2,6 +2,11 @@
 
 STACK_NAME=$BUILD_STAGE
 
+if [ -z "$STACK_NAME" ]; then 
+  STACK_NAME=$bamboo_BUILD_STAGE
+  echo "change stack name to bamboo recognised variable"
+fi
+
 BUCKET_OUPUT=$(aws cloudformation describe-stacks --stack-name $STACK_NAME)
 
 S3BucketId=$(echo $BUCKET_OUPUT | python -c 'import sys, json; print json.load(sys.stdin)["Stacks"][0]["Outputs"][1]["OutputValue"]')
