@@ -13,7 +13,7 @@ var angularProtractor = require('gulp-angular-protractor');
 
 var yeoman = {
   app: 'app',
-  dist: 'dist'
+  dist: 'release'
 };
 
 var paths = {
