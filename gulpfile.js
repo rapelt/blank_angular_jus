@@ -157,9 +157,10 @@ gulp.task('clean:dist', function (cb) {
   rimraf('./dist', cb);
 });
 
-gulp.task('client:build',  function () {
+gulp.task('client:build', function () {
   var jsFilter = $.filter('**/*.js');
   var cssFilter = $.filter('**/*.css');
+  var jsCssFiler = $.filter(['**/*.css','**/*.js']);
 
   return gulp.src([paths.views.main, paths.views.error])
     .pipe($.useref({searchPath: [yeoman.app, '.tmp']}))
@@ -170,7 +171,9 @@ gulp.task('client:build',  function () {
     .pipe(cssFilter)
     .pipe($.minifyCss({cache: true}))
     .pipe(cssFilter.restore())
+    .pipe(jsCssFiler)
     .pipe($.rev())
+    .pipe(jsCssFiler.restore())
     .pipe($.revReplace())
     .pipe(gulp.dest(yeoman.dist));
 });
