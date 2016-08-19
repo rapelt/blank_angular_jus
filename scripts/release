@@ -10,7 +10,10 @@ if [ -z "$bamboo.agentId" ]; then
   STACK_NAME="bamboo_"$BUILD_STAGE
 fi
 
+echo "-----------"
 echo $STACK_NAME
+echo "-----------"
+echo $bamboo_BUILD_STAGE
 
 
 if [ ! -d "$AWS_CLI_DIRECTORY" ]; then
