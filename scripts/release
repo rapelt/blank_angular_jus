@@ -6,15 +6,10 @@ set -e
 STACK_NAME=$BUILD_STAGE
 AWS_CLI_DIRECTORY=awscli-bundle
 
-if [ -z "$bamboo.agentId" ]; then 
-  STACK_NAME="bamboo_"$BUILD_STAGE
+if [ -z "$STACK_NAME" ]; then 
+  echo "change stage name to bamboo recognised variable"
+  STACK_NAME=$bamboo_BUILD_STAGE
 fi
-
-echo "-----------"
-echo $STACK_NAME
-echo "-----------"
-echo $bamboo_BUILD_STAGE
-
 
 if [ ! -d "$AWS_CLI_DIRECTORY" ]; then
   echo "Installing aws cli"
