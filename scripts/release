@@ -7,6 +7,9 @@ STACK_NAME=$BUILD_STAGE
 AWS_CLI_DIRECTORY=awscli-bundle
 TEMPLATE_LOCATION=cfn-templates/cafe.template
 
+export AWS_ACCESS_KEY_ID=$bamboo_AWS_ACCESS_KEY_ID
+export AWS_SECRET_ACCESS_KEY=$bamboo_AWS_SECRET_ACCESS_KEY
+
 if [ -z "$STACK_NAME" ]; then 
   STACK_NAME=$bamboo_BUILD_STAGE
   TEMPLATE_LOCATION=cafe.template
@@ -48,10 +51,6 @@ else
   echo "Stack setup failed"
   exit 1
 fi
-
-##Copy files to release folder
-mkdir -p release
-cp *.html release/
 
 
 ##Upload release folder to s3 bucket
