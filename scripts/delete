@@ -1,8 +1,8 @@
 #!/bin/bash
 
 STACK_NAME=$BUILD_STAGE
-export AWS_ACCESS_KEY_ID=$bamboo_AWS_ACCESS_KEY_ID
-export AWS_SECRET_ACCESS_KEY=$bamboo_AWS_SECRET_ACCESS_KEY
+#export AWS_ACCESS_KEY_ID=$bamboo_AWS_ACCESS_KEY_ID
+#export AWS_SECRET_ACCESS_KEY=$bamboo_AWS_SECRET_ACCESS_KEY
 
 if [ -z "$STACK_NAME" ]; then 
   STACK_NAME=$bamboo_BUILD_STAGE
@@ -12,10 +12,9 @@ fi
 BUCKET_OUPUT=$(aws cloudformation describe-stacks --stack-name $STACK_NAME)
 
 S3BucketId=$(echo $BUCKET_OUPUT | python -c 'import sys, json; print json.load(sys.stdin)["Stacks"][0]["Outputs"][1]["OutputValue"]')
-echo $S3BucketId
 
 ##Remove s3 bucket content
-aws s3 rm s3://S3BucketId --recursive
+aws s3 rm s3://$S3BucketId --recursive
 
 ##Delete cloud formation stack
 aws cloudformation delete-stack \
