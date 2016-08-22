@@ -165,7 +165,7 @@ gulp.task('clean:dist', function (cb) {
 
 gulp.task('client:build', ['html', 'images'], function () {
   var jsFilter = $.filter('**/*.js');
-  var cssFilter = $.filter(['.tmp/styles/main.css']);
+  var cssFilter = $.filter(['.tmp/styles/main.css', 'app/bower']);
   //css,js,images, and views, not index.html or 404.html
   var assetFilter = $.filter(['**/*.*', '!*.html']);
 
@@ -201,12 +201,17 @@ gulp.task('copy:extras', function () {
 });
 
 gulp.task('copy:fonts', function () {
-  return gulp.src(yeoman.app + '/fonts/**/*')
+  return gulp.src(yeoman.app + '/bower_components/ep-glue-swe-templates-test/swe/assets/v3/fonts/**')
     .pipe(gulp.dest(yeoman.dist + '/fonts'));
 });
 
+gulp.task('copy:fontAwesome', function () {
+  return gulp.src(yeoman.app + '/bower_components/ep-glue-swe-templates-test/swe/assets/v3/lib/**')
+    .pipe(gulp.dest(yeoman.dist + '/lib'));
+});
+
 gulp.task('build', ['clean:dist'], function () {
-  runSequence(['styles','images', 'copy:extras', 'copy:fonts', 'client:build']);
+  runSequence(['styles','images', 'copy:extras', 'copy:fonts', 'copy:fontAwesome', 'client:build']);
 });
 
 gulp.task('default', ['build']);
