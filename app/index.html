@@ -16,53 +16,52 @@
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
   </head>
-  <body ng-app="ossCafeApp">
-    <!--[if lte IE 8]>
-      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
+  <body class="qg-glue-forms" ng-app="ossCafeApp">
 
-    <!-- Add your site or application content here -->
-    <div class="header">
-      <div class="navbar navbar-default" role="navigation">
-        <div class="container">
-          <div class="navbar-header">
+  <header id="qg-site-header" class="container-fluid qg-site-width">
+    <div class="row">
 
-            <a class="navbar-brand" href="#/">yo</a>
-          </div>
+      <div class="qg-coat-of-arms">
+        <img src="https://static.qgov.net.au/assets/v2/images/skin/qg-coa.svg" alt="Queensland Government" class="qg-hidden-sm-xs">
+        <img src="https://static.qgov.net.au/assets/v2/images/skin/qg-coa-stacked.svg" alt="Queensland Government home" class="qg-sm-img">
+      </div>
+      <ul class="qg-utilities list-inline">
 
-          <div class="collapse">
+        <li><button id="cart"><span class="fa fa-shopping-cart fa-2x" aria-hidden="true"></span> cart</button></li>
 
-            <ul class="nav navbar-nav">
-              <li class="active"><a href="#/">Home</a></li>
-              <li><a ng-href="#/about">About</a></li>
-              <li><a ng-href="#/">Contact</a></li>
-            </ul>
+        <li><button><span class="fa fa-user fa-2x" aria-hidden="true"></span> log in</button></li>
+
+        <li class="hidden-md hidden-lg"><button id="qg-show-search"><span class="fa fa-search fa-2x" aria-hidden="true"></span>search</button></li>
+        <li class="hidden-md hidden-lg"><button id="qg-show-menu"><span class="fa fa-bars fa-2x" aria-hidden="true"></span>menu</button></li>
+
+      </ul>
+
+
+      <form action="http://pan.search.qld.gov.au/search/search.cgi" id="qg-search-form" role="search" class="qg-visually-hidden-md">
+        <div>
+          <label for="qg-search-query" class="qg-visually-hidden">Search Queensland Government</label>
+          <div class="input-group">
+            <input type="text" id="qg-search-query" class="form-control" placeholder="Search for...">
+            <span class="input-group-btn">
+            <button class="btn btn-default" type="button"><span class="fa fa-search" aria-hidden="true"></span></button>
+            </span>
           </div>
         </div>
-      </div>
+      </form>    </div>
+
+    <div class="row" id="qg-site-name">
+      <h2>Cafe's</h2>
     </div>
-
-    <div class="container">
-    <div ng-view=""></div>
+    <div class="row">
+      <nav id="qg-site-nav" role="navigation" aria-label="Main navigation">
+        <ul class="list-inline">
+          <li><a href="#">For Queenslanders</a></li>
+          <li><a href="#">Business and industry</a></li>
+        </ul>
+      </nav>
     </div>
+  </header>
 
-    <div class="footer">
-      <div class="container">
-        <p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>
-      </div>
-    </div>
-
-
-    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
-     <script>
-       !function(A,n,g,u,l,a,r){A.GoogleAnalyticsObject=l,A[l]=A[l]||function(){
-       (A[l].q=A[l].q||[]).push(arguments)},A[l].l=+new Date,a=n.createElement(g),
-       r=n.getElementsByTagName(g)[0],a.src=u,r.parentNode.insertBefore(a,r)
-       }(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-       ga('create', 'UA-XXXXX-X');
-       ga('send', 'pageview');
-    </script>
     <script type="text/javascript" src="https://cdn.rawgit.com/qld-gov-au/glue-module-loader/master/htdocs/assets/js/loader.js"></script>
 
 

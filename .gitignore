@@ -5,3 +5,5 @@
 /.sass-cache
 /app/bower_components
 /awscli-bundle
+/.idea
+/.DS_Store
