@@ -10,7 +10,7 @@ exports.config = {
 
   capabilities: {
     'browserName': 'phantomjs',
-    'phantomjs.binary.path': require('phantomjs').path,
+    'phantomjs.binary.path': require('phantomjs-prebuilt').path,
     // 'phantomjs.ghostdriver.cli.args': ['--loglevel=DEBUG'],
     'chromeOptions': {'args': ['--disable-extensions']}
   },

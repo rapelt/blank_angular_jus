@@ -17,7 +17,7 @@ Clone project
 
 ## Build and Run
 
-Local developer preview
+Local developer preview   
 ```
     gulp serve
 ```
@@ -25,6 +25,11 @@ Local developer preview
 Unit tests with karma.js
 ```
     gulp test
+```
+
+E2E tests with phantom.js
+```
+    gulp teste2e
 ```
 
 Generate deployable artefact

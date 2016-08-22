@@ -8,8 +8,8 @@ var lazypipe = require('lazypipe');
 var rimraf = require('rimraf');
 var wiredep = require('wiredep').stream;
 var runSequence = require('run-sequence');
-var gulp = require('gulp');
 var angularProtractor = require('gulp-angular-protractor');
+var Server = require('karma').Server;
 
 var yeoman = {
   app: 'app',
@@ -20,17 +20,6 @@ var paths = {
   scripts: [yeoman.app + '/scripts/**/*.js'],
   styles: [yeoman.app + '/styles/**/*.scss'],
   test: ['test/spec/**/*.js'],
-  testRequire: [
-    yeoman.app + '/bower_components/angular/angular.js',
-    yeoman.app + '/bower_components/angular-mocks/angular-mocks.js',
-    yeoman.app + '/bower_components/angular-resource/angular-resource.js',
-    yeoman.app + '/bower_components/angular-cookies/angular-cookies.js',
-    yeoman.app + '/bower_components/angular-sanitize/angular-sanitize.js',
-    yeoman.app + '/bower_components/angular-route/angular-route.js',
-    'test/mock/**/*.js',
-    'test/spec/**/*.js'
-  ],
-  karma: 'test/karma.conf.js',
   views: {
     main: yeoman.app + '/index.html',
     error: yeoman.app + '/404.html',
@@ -130,15 +119,11 @@ gulp.task('serve:prod', function() {
   });
 });
 
-gulp.task('test', ['start:server:test'], function () {
-  var testToFiles = paths.testRequire.concat(paths.scripts, paths.test);
-  return gulp.src(testToFiles)
-    .pipe($.karma({
-      configFile: paths.karma,
-    }))
-    .once('end', function () {
-      process.exit();
-    });
+gulp.task('test', function(done){
+  new Server({
+    configFile: __dirname + '/test/karma.conf.js',
+    singleRun: true
+  }, done).start();
 });
 
 gulp.task('teste2e',['start:server:test'], function(cb){
@@ -149,7 +134,7 @@ gulp.task('teste2e',['start:server:test'], function(cb){
           'debug': false
       }))
       .on('error', function(e) {
-        console.log('error', e)
+        console.log('error', e);
         process.exit(1);
       })
       .on('end', function(e){
