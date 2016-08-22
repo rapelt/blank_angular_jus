@@ -5,6 +5,11 @@ set -e
 export STACK_NAME=$BUILD_STAGE
 export AWS_CLI_DIRECTORY=awscli-bundle
 
+if [ -z "$STACK_NAME" ]; then
+  STACK_NAME=$bamboo_BUILD_STAGE
+  echo "change stack name to bamboo recognised variable"
+fi
+
 
 if [ ! -d "$AWS_CLI_DIRECTORY" ]; then
   echo "Installing aws cli"

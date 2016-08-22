@@ -11,4 +11,4 @@ RUN npm link gulp
 
 EXPOSE 9000
 
-CMD [ "sh", "-c", "npm install && cd app && bower install --allow-root && gulp serve" ]
+CMD [ "sh", "-c", "npm install && cd app && bower install --allow-root && cd .. && gulp serve" ]
