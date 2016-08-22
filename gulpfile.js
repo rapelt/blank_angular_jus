@@ -165,7 +165,7 @@ gulp.task('clean:dist', function (cb) {
 
 gulp.task('client:build', ['html', 'images'], function () {
   var jsFilter = $.filter('**/*.js');
-  var cssFilter = $.filter('**/*.css');
+  var cssFilter = $.filter(['.tmp/styles/main.css']);
   //css,js,images, and views, not index.html or 404.html
   var assetFilter = $.filter(['**/*.*', '!*.html']);
 
