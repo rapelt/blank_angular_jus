@@ -6,8 +6,10 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-    <!-- build:css(.) styles/vendor.css -->
+    <!-- build:css({.tmp,app}) styles/vendor.css -->
     <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/ep-glue-swe-templates-test/swe/assets/v3/css/main.css"/>
+
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
@@ -61,13 +63,20 @@
        ga('create', 'UA-XXXXX-X');
        ga('send', 'pageview');
     </script>
+    <script type="text/javascript" src="https://cdn.rawgit.com/qld-gov-au/glue-module-loader/master/htdocs/assets/js/loader.js"></script>
+
 
     <!-- build:js({.tmp,app}) scripts/vendor.js -->
     <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
 
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/angular-resource/angular-resource.js"></script>
     <script src="bower_components/angular-route/angular-route.js"></script>
+
+
+    <script src="bower_components/ep-glue-swe-templates-test/swe/assets/v3/js/main.js"></script>
+
 
     <!-- endbower -->
     <!-- endbuild -->
