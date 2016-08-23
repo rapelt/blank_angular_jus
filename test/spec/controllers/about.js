@@ -2,22 +2,16 @@
 
 describe('Controller: AboutCtrl', function () {
 
-  // load the controller's module
   beforeEach(module('ossCafeApp'));
-
   var AboutCtrl,
     scope;
 
-  // Initialize the controller and a mock scope
-  beforeEach(inject(function ($controller, $rootScope) {
+  beforeEach(inject(function ($controller, $rootScope, $state) {
     scope = $rootScope.$new();
-    AboutCtrl = $controller('AboutCtrl', {
-      $scope: scope
-      // place here mocked dependencies
-    });
+    $controller('AboutCtrl', {$scope: scope});
   }));
 
   it('should attach a list of awesomeThings to the scope', function () {
-    expect(AboutCtrl.awesomeThings.length).toBe(3);
+    expect(scope.awesomeThings.length).toBe(3);
   });
 });
