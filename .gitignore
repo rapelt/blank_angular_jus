@@ -6,6 +6,5 @@
 /app/bower_components
 /awscli-bundle
 /.idea
-/.DS_Store
 /coverage
 .DS_Store
