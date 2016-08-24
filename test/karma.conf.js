@@ -7,6 +7,17 @@ module.exports = function(config) {
 
     basePath: '../',
 
+    preprocessors: {
+      'app/scripts/**/*.js': 'coverage'
+    },
+
+    reporters: ['dots','progress','coverage'],
+
+    coverageReporter:{
+      type : 'clover',
+      dir : 'coverage/'
+    },
+
     frameworks: [
       'jasmine'
     ],
@@ -30,6 +41,7 @@ module.exports = function(config) {
     ],
 
     plugins: [
+      'karma-phantomjs-launcher',
       'karma-phantomjs-launcher',
       'karma-jasmine',
       'karma-coverage'
