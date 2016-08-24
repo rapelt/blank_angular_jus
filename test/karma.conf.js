@@ -27,6 +27,7 @@ module.exports = function(config) {
       './app/bower_components/angular-mocks/angular-mocks.js',
       './app/bower_components/angular-resource/angular-resource.js',
       './app/bower_components/angular-ui-router/release/angular-ui-router.js',
+      './app/views/*.html',
       './app/scripts/**/*.js',
       './test/spec/**/*.js'
     ],
@@ -42,7 +43,7 @@ module.exports = function(config) {
 
     plugins: [
       'karma-phantomjs-launcher',
-      'karma-phantomjs-launcher',
+      'karma-ng-html2js-preprocessor',
       'karma-jasmine',
       'karma-coverage'
     ],
