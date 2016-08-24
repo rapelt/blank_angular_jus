@@ -6,7 +6,7 @@ angular
     'ui.router'
   ])
   .config(function ($stateProvider, $urlRouterProvider) {
-    //$urlRouterProvider.otherwise("/");
+    $urlRouterProvider.otherwise("/");
 
     $stateProvider
       .state('main', {

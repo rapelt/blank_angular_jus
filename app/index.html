@@ -17,41 +17,34 @@
     <!-- endbuild -->
   </head>
   <body class="qg-glue-forms" ng-app="ossCafeApp">
+    <div header></div>
+    <div breadcrumbs></div>
 
-  <header id="qg-site-header" class="container-fluid qg-site-width">
-    <div class="row">
-
-      <div class="qg-coat-of-arms">
-        <img src="https://static.qgov.net.au/assets/v2/images/skin/qg-coa.svg" alt="Queensland Government" class="qg-hidden-sm-xs">
-        <img src="https://static.qgov.net.au/assets/v2/images/skin/qg-coa-stacked.svg" alt="Queensland Government home" class="qg-sm-img">
-      </div>
-    </div>
-  </header>
-
-  <div ui-view></div>
+    <div ui-view></div>
+    <div footer></div>
 
     <script type="text/javascript" src="https://cdn.rawgit.com/qld-gov-au/glue-module-loader/master/htdocs/assets/js/loader.js"></script>
 
     <!-- build:js({.tmp,app}) scripts/vendor.js -->
     <!-- bower:js -->
     <script src="bower_components/jquery/dist/jquery.js"></script>
-
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/angular-resource/angular-resource.js"></script>
     <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
-
-
-
-  <script src="bower_components/ep-glue-swe-templates-test/swe/assets/v3/js/main.js"></script>
-
+    <script src="bower_components/ep-glue-swe-templates-test/swe/assets/v3/js/main.js"></script>
 
     <!-- endbower -->
     <!-- endbuild -->
 
-        <!-- build:js({.tmp,app}) scripts/scripts.js -->
-        <script src="scripts/app.js"></script>
-        <script src="scripts/controllers/main.js"></script>
-        <script src="scripts/controllers/about.js"></script>
-        <!-- endbuild -->
+    <!-- build:js({.tmp,app}) scripts/scripts.js -->
+    <script src="scripts/app.js"></script>
+    <script src="scripts/controllers/main.js"></script>
+    <script src="scripts/controllers/about.js"></script>
+    <script src="scripts/directives/header.js"></script>
+    <script src="scripts/directives/footer.js"></script>
+    <script src="scripts/directives/breadcrumbs.js"></script>
+
+
+    <!-- endbuild -->
 </body>
 </html>
