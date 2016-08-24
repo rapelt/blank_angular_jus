@@ -51,11 +51,12 @@ module.exports = function(config) {
       'app/scripts/**/*.js': 'coverage'
     },
 
-    reporters: ['progress', 'coverage'],
+    reporters: ['dots','progress', 'coverage'],
 
     coverageReporter:{
-      type : 'html',
-      dir : 'coverage/'
+      type : 'clover',
+      dir : 'coverage/',
+      subdir: '.'
     },
 
     singleRun: true,
