@@ -7,16 +7,4 @@ describe('angularjs homepage', function() {
     browser.get('http://localhost:9001');
     expect(true).toBe(true);
   });
-  it('should check our CAFE PAGE2',function() {
-    browser.get('http://localhost:9001');
-    expect(true).toBe(true);
-  });
-  it('should check our CAFE PAGE',function() {
-    browser.get('http://localhost:9001');
-    expect(true).toBe(true);
-  });
-  it('should check our CAFE PAGE2',function() {
-    browser.get('http://localhost:9001');
-    expect(true).toBe(true);
-  });
 });
