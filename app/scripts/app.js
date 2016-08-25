@@ -3,7 +3,8 @@
 angular
   .module('ossCafeApp', [
     'ngResource',
-    'ui.router'
+    'ui.router',
+    'AblisData'
   ])
   .config(function ($stateProvider, $urlRouterProvider) {
     $urlRouterProvider.otherwise("/");
