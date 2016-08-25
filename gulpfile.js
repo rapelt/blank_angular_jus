@@ -27,6 +27,8 @@ var paths = {
   }
 };
 
+console.log('path: ', paths.scripts);
+
 ////////////////////////
 // Reusable pipelines //
 ////////////////////////
