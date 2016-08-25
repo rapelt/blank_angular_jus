@@ -81,22 +81,15 @@ This should setup your environment by installing the necessary dependencies your
  ```
 Take note of the container id.
 
-<<<<<<< 2d6684e7418be92ef87929587f82a5578e7fb8bb
-<<<<<<< f8827c484a66756a5ec157355813327e2c646f5d
-You can ssh into the docker container with `docker exec -it ## bash`. Where is the container id.
-=======
 You can ssh into the docker container with `docker exec -it ## bash`. Where ## is the container id.
->>>>>>> [TS] document setting up dev environment
-=======
-You can ssh into the docker container with `docker exec -it ## bash`. Where ## is the container id.
->>>>>>> [TS] document setting up dev environment
-```
+  ```
   root@055d88ec79fd:/src/app#
 ```
 
 The '/src/app' is the code directory within the docker container.
 Within this directory you can run any gulp tasks or install npm dependencies.
 e.g Running the unit test.
+
 ```
 root@055d88ec79fd:/src/app# gulp test
 [03:48:06] Using gulpfile /src/app/gulpfile.js
