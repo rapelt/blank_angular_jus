@@ -59,7 +59,7 @@ yo angular:controller users
 This project uses an angular.js project structure taken from the [angular.js yeoman generator] (https://github.com/yeoman/generator-angular)
 
 ### Setting up development environment
- Install Docker see [here][1] for MAC and [here][2] for windows.
+ Install Docker. See [here][1] for MAC and [here][2] for windows.
 
  [1]: https://www.docker.com/products/docker#/mac
  [2]: https://www.docker.com/products/docker#/windows
@@ -81,14 +81,15 @@ This should setup your environment by installing the necessary dependencies your
  ```
 Take note of the container id.
 
-You can ssh into the docker container with `docker exec -it ## bash`. Where is the container id.
-```
+You can ssh into the docker container with `docker exec -it ## bash`. Where ## is the container id.
+  ```
   root@055d88ec79fd:/src/app#
 ```
 
 The '/src/app' is the code directory within the docker container.
 Within this directory you can run any gulp tasks or install npm dependencies.
 e.g Running the unit test.
+
 ```
 root@055d88ec79fd:/src/app# gulp test
 [03:48:06] Using gulpfile /src/app/gulpfile.js
@@ -102,3 +103,5 @@ root@055d88ec79fd:/src/app# gulp test
 PhantomJS 2.1.1 (Linux 0.0.0): Executed 3 of 3 SUCCESS (0.042 secs / 0.033 secs)
 [03:48:09] Finished 'test' after 2.6 s
 ```
+
+Once the container is running, you can access the app on `http://localhost:9000/#/`
