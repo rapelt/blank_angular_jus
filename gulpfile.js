@@ -222,17 +222,17 @@ gulp.task('copy:extras', function () {
 });
 
 gulp.task('copy:swe-templates', function () {
-  return gulp.src(yeoman.app + '/bower_components/ep-glue-swe-templates-test/swe/assets/includes/**')
-    .pipe(gulp.dest(yeoman.dist + '/bower_components/ep-glue-swe-templates-test/swe/assets/includes'));
+  return gulp.src(yeoman.app + '/bower_components/glue-swe-template/assets/includes/**')
+    .pipe(gulp.dest(yeoman.dist + '/bower_components/glue-swe-template/assets/includes'));
 });
 
 gulp.task('copy:fonts', function () {
-  return gulp.src(yeoman.app + '/bower_components/ep-glue-swe-templates-test/swe/assets/v3/fonts/**')
+  return gulp.src(yeoman.app + '/bower_components/glue-swe-template/assets/v3/fonts/**')
     .pipe(gulp.dest(yeoman.dist + '/fonts'));
 });
 
 gulp.task('copy:fontAwesome', function () {
-  return gulp.src(yeoman.app + '/bower_components/ep-glue-swe-templates-test/swe/assets/v3/lib/**')
+  return gulp.src(yeoman.app + '/bower_components/glue-swe-template/assets/v3/lib/**')
     .pipe(gulp.dest(yeoman.dist + '/lib'));
 });
 
