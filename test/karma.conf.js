@@ -7,17 +7,6 @@ module.exports = function(config) {
 
     basePath: '../',
 
-    preprocessors: {
-      'app/features/**/*.js': 'coverage'
-    },
-
-    reporters: ['dots','progress','coverage'],
-
-    coverageReporter:{
-      type : 'clover',
-      dir : 'coverage/'
-    },
-
     frameworks: [
       'jasmine'
     ],
