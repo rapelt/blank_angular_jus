@@ -19,5 +19,10 @@ angular
         url: '/about',
         templateUrl: 'features/home/about.html',
         controller: 'AboutCtrl'
+      })
+      .state('results', {
+        url: '/results',
+        templateUrl: 'features/results/_results.html',
+        controller: 'ResultsController'
       });
   });
