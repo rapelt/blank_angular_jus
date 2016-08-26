@@ -1,6 +1,7 @@
 [
     {
         "title": "Industry Specific Licenses",
+        "id": "sg1",
         "description": "These are licenses specific to starting a cafe business in Brisbane",
         "services": [
             {
@@ -22,6 +23,7 @@
     },
     {
         "title": "General Business Licenses",
+        "id": "sg2",
         "description": "These are licenses specific to starting any business in Brisbane",
         "services": [
             {
