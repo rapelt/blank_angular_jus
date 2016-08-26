@@ -15,7 +15,8 @@ module.exports = function(config) {
 
     coverageReporter:{
       type : 'clover',
-      dir : 'coverage/'
+      dir : 'coverage/',
+      subdir: '.'
     },
 
     frameworks: [
@@ -48,18 +49,6 @@ module.exports = function(config) {
       'karma-jasmine',
       'karma-coverage'
     ],
-
-    preprocessors: {
-      'app/features/**/*.js': 'coverage'
-    },
-
-    reporters: ['dots','progress', 'coverage'],
-
-    coverageReporter:{
-      type : 'clover',
-      dir : 'coverage/',
-      subdir: '.'
-    },
 
     singleRun: true,
 

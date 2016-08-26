@@ -4,7 +4,8 @@ angular
   .module('ossCafeApp', [
     'ngResource',
     'ui.router',
-    'AblisData'
+    'AblisData',
+    'Questions'
   ])
   .config(function ($stateProvider, $urlRouterProvider) {
     $urlRouterProvider.otherwise("/");
@@ -13,11 +14,11 @@ angular
       .state('main', {
         url: '/',
         templateUrl: 'features/home/main.html',
-        controller: "MainCtrl"
+        controller: "MainController"
       })
-      .state('about', {
-        url: '/about',
-        templateUrl: 'features/home/about.html',
-        controller: 'AboutCtrl'
+      .state('questions', {
+        url: '/questions',
+        templateUrl: 'features/questions/questions.html',
+        controller: 'QuestionsController'
       });
   });
