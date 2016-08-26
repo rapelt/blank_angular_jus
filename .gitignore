@@ -7,5 +7,4 @@
 /awscli-bundle
 /.idea
 /coverage
-/nodejs
 .DS_Store
