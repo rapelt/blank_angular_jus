@@ -42,8 +42,8 @@ module.exports = function(config) {
       'app/features/**/*.js': 'coverage'
     },
 
-    reporters: ['dots','progress', 'coverage'],
-
+    reporters: ['dots','progress'],
+    
     coverageReporter:{
       type : 'clover',
       dir : 'coverage/',
