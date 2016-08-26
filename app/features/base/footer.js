@@ -4,6 +4,6 @@ angular
   .module('ossCafeApp')
   .directive('footer', function () {
     return {
-      templateUrl: 'views/footer.html'
+      templateUrl: 'features/base/footer.html'
     };
   });

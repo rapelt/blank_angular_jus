@@ -17,17 +17,15 @@ var yeoman = {
 };
 
 var paths = {
-  scripts: [yeoman.app + '/scripts/**/*.js'],
-  styles: [yeoman.app + '/styles/**/*.scss'],
+  scripts: [yeoman.app + '/app.js', yeoman.app + '/features/**/*.js'],
+  styles: [yeoman.app + '/features/**/*.scss'],
   test: ['test/spec/**/*.js'],
   views: {
     main: yeoman.app + '/index.html',
     error: yeoman.app + '/404.html',
-    files: [yeoman.app + '/views/**/*.html']
+    files: [yeoman.app + '/features/**/*.html']
   }
 };
-
-console.log('path: ', paths.scripts);
 
 ////////////////////////
 // Reusable pipelines //

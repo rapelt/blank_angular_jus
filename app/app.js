@@ -12,12 +12,12 @@ angular
     $stateProvider
       .state('main', {
         url: '/',
-        templateUrl: 'views/main.html',
+        templateUrl: 'features/home/main.html',
         controller: "MainCtrl"
       })
       .state('about', {
         url: '/about',
-        templateUrl: 'views/about.html',
+        templateUrl: 'features/home/about.html',
         controller: 'AboutCtrl'
       });
   });

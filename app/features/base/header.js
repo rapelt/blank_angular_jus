@@ -4,7 +4,7 @@ angular
   .module('ossCafeApp')
   .directive('header', function () {
     return {
-      templateUrl: 'views/header.html'
+      templateUrl: 'features/base/header.html'
     };
   });
 
