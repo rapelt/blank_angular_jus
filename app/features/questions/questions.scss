@@ -1,0 +1,23 @@
+.questions-page {
+  padding-left: 150px;
+  padding-right: 150px;
+  padding-bottom: 70px;
+
+  .navigation-buttons {
+    float: right;
+    padding-top: 30px;
+    padding-bottom: 70px;
+  }
+
+  .question-checkbox {
+    float: right;
+    transform: scale(2, 2);
+  }
+
+  .question{
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+
+}

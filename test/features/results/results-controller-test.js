@@ -1,3 +1,5 @@
+'use strict';
+
 describe('Service results controller', function(){
   beforeEach(module('ossCafeApp'));
   var ablisDataService, scope, deferred;

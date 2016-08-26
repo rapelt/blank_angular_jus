@@ -1,16 +1,25 @@
 'use strict';
 
-describe('Controller: QuestionsController', function () {
+describe('Service results controller', function(){
+  beforeEach(module('ossCafeApp'));
+  var ablisDataService, scope, deferred;
 
-  // load the controller's module
-  beforeEach(module('Questions'));
+  beforeEach(function(){
+    ablisDataService = jasmine.createSpyObj('ablisDataService', ['getQuestions']);
+    inject(function($rootScope, $controller, $q, $templateCache){
+      scope = $rootScope.$new();
+      $templateCache.put('features/home/main.html', '');
 
-  var QuestionsController,
-    scope;
+      deferred = $q.defer();
+      ablisDataService.getQuestions.and.returnValue(deferred.promise);
 
-  // Initialize the controller and a mock scope
-  beforeEach(inject(function ($controller, $rootScope) {
-    scope = $rootScope.$new();
-    $controller('QuestionsController', {$scope: scope});
-  }));
+      $controller('QuestionsController', {$scope: scope, AblisDataService: ablisDataService});
+    });
+  });
+
+  it('Should get results', function(){
+    deferred.resolve({"data": "fred"});
+    scope.$apply();
+    expect(scope.ablisQuestions).toBe('fred');
+  });
 });
