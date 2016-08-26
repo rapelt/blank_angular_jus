@@ -134,6 +134,19 @@ gulp.task('testcoverage', function(done){
   }, done).start();
 });
 
+gulp.task('testcoverageci', function(done){
+  new Server({
+    configFile: __dirname + '/test/karma.conf.js',
+    singleRun: true,
+    reporters: ['dots','progress', 'coverage'],
+    coverageReporter:{
+      type : 'json',
+      dir : 'coverage/',
+      subdir: '.'
+    },
+  }, done).start();
+});
+
 gulp.task('teste2e',['start:server:test'], function(cb){
   gulp.src(['./E2E/spec/*.js'])
       .pipe(angularProtractor({
