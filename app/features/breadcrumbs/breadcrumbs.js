@@ -4,6 +4,6 @@ angular
   .module('ossCafeApp')
   .directive('breadcrumbs', function () {
     return {
-      templateUrl: 'views/breadcrumbs.html'
+      templateUrl: 'features/breadcrumbs/breadcrumbs.html'
     };
   });

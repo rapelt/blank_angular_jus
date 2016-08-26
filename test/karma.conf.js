@@ -8,7 +8,7 @@ module.exports = function(config) {
     basePath: '../',
 
     preprocessors: {
-      'app/scripts/**/*.js': 'coverage'
+      'app/features/**/*.js': 'coverage'
     },
 
     reporters: ['dots','progress','coverage'],
@@ -27,9 +27,10 @@ module.exports = function(config) {
       './app/bower_components/angular-mocks/angular-mocks.js',
       './app/bower_components/angular-resource/angular-resource.js',
       './app/bower_components/angular-ui-router/release/angular-ui-router.js',
-      './app/views/*.html',
-      './app/scripts/**/*.js',
-      './test/spec/**/*.js'
+      './app/app.js',
+      './app/features/**/*.html',
+      './app/features/**/*.js',
+      './test/features/**/*.js'
     ],
 
     exclude: [
@@ -49,7 +50,7 @@ module.exports = function(config) {
     ],
 
     preprocessors: {
-      'app/scripts/**/*.js': 'coverage'
+      'app/features/**/*.js': 'coverage'
     },
 
     reporters: ['dots','progress', 'coverage'],

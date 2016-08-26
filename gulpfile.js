@@ -19,7 +19,7 @@ var yeoman = {
 var paths = {
   scripts: [yeoman.app + '/app.js', yeoman.app + '/features/**/*.js'],
   styles: [yeoman.app + '/features/**/*.scss'],
-  test: ['test/spec/**/*.js'],
+  test: ['test/features/**/*.js'],
   views: {
     main: yeoman.app + '/index.html',
     error: yeoman.app + '/404.html',

@@ -5,8 +5,8 @@ describe('Directive: breadcrumbs', function(){
   beforeEach(function(){
     inject(function($compile, $rootScope, $templateCache){
       scope = $rootScope.$new();
-      $templateCache.put('views/main.html', '');
-      $templateCache.put('views/breadcrumbs.html', '<h1>Breadcrumbs</h1>');
+      $templateCache.put('features/home/main.html', '');
+      $templateCache.put('features/breadcrumbs/breadcrumbs.html', '<h1>Breadcrumbs</h1>');
       element = "<div breadcrumbs></div>"
       elem = $compile(element)(scope);
       scope.$apply();
