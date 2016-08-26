@@ -1,6 +1,6 @@
 'use strict';
 
-describe('Service results controller', function(){
+describe('Service questions controller', function(){
   beforeEach(module('ossCafeApp'));
   var ablisDataService, scope, deferred;
 
@@ -17,7 +17,7 @@ describe('Service results controller', function(){
     });
   });
 
-  it('Should get results', function(){
+  it('Should get questions', function(){
     deferred.resolve({"data": "fred"});
     scope.$apply();
     expect(scope.ablisQuestions).toBe('fred');
