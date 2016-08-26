@@ -7,6 +7,18 @@ module.exports = function(config) {
 
     basePath: '../',
 
+    preprocessors: {
+      'app/features/**/*.js': 'coverage'
+    },
+
+    reporters: ['dots','progress','coverage'],
+
+    coverageReporter:{
+      type : 'clover',
+      dir : 'coverage/',
+      subdir: '.'
+    },
+
     frameworks: [
       'jasmine'
     ],
@@ -37,19 +49,7 @@ module.exports = function(config) {
       'karma-jasmine',
       'karma-coverage'
     ],
-
-    preprocessors: {
-      'app/features/**/*.js': 'coverage'
-    },
-
-    reporters: ['dots','progress'],
     
-    coverageReporter:{
-      type : 'clover',
-      dir : 'coverage/',
-      subdir: '.'
-    },
-
     singleRun: true,
 
     colors: true,

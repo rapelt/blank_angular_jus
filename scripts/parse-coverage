@@ -1,0 +1,15 @@
+#!/bin/bash
+
+$(grep -A 1 project coverage/clover.xml | grep metrics | sed -e "s/.* statements=\"/export statements=/" -e "s/\"  coveredstatements=\"/\ncovered=/" -e "s/\".*//")
+
+PERCENT_FLOAT=$(echo "$covered $statements" | awk '{print $1/$2}')
+
+PERCENT=$(echo "$PERCENT_FLOAT 100" | awk '{printf("%.00f", $1*$2)}')
+THRESHOLD=80
+
+echo $PERCENT
+echo $THRESHOLD
+
+pr=$(echo "$PERCENT $THRESHOLD" | awk 'BEGIN { print ($1 >= $2) ? "YES" : "NO" }')
+
+echo $pr

@@ -1,0 +1,22 @@
+<!--[SWE-CSS] The class is Questions-page because the SWE Css already has a class called questions-->
+<div class="questions-page">
+  <img src="https://services.qld.gov.au/seniors-concessions/static/img/progress/progress-1.png" alt="Progress Bar 1" class="qg-hidden-sm-xs">
+
+
+  <h1>Please tell us some of the business activities you are likely to undertake in your café</h1>
+  <h5>This helps us to narrow down the information to only that which is relevant to you.</h5>
+
+  <ol>
+    <li class="question" ng-repeat="questions in ablisQuestions">{{questions.question}}
+      <input class="question-checkbox" type="checkbox">
+    </li>
+  </ol>
+
+  <div class="navigation-buttons">
+    <button class="btn btn-default" ui-sref="main"><span class="glyphicon glyphicon-arrow-left"></span> Back</button>
+    <button class="btn btn-primary" ui-sref="main">Next <span class="glyphicon glyphicon-arrow-right"></span> </button>
+
+  </div>
+
+
+</div>

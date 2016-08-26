@@ -5,21 +5,21 @@ describe('Service results controller', function(){
   var ablisDataService, scope, deferred;
 
   beforeEach(function(){
-    ablisDataService = jasmine.createSpyObj('ablisDataService', ['getResults']);
+    ablisDataService = jasmine.createSpyObj('ablisDataService', ['getQuestions']);
     inject(function($rootScope, $controller, $q, $templateCache){
       scope = $rootScope.$new();
       $templateCache.put('features/home/main.html', '');
 
       deferred = $q.defer();
-      ablisDataService.getResults.and.returnValue(deferred.promise);
+      ablisDataService.getQuestions.and.returnValue(deferred.promise);
 
-      $controller('ResultsController', {$scope: scope, AblisDataService: ablisDataService});
+      $controller('QuestionsController', {$scope: scope, AblisDataService: ablisDataService});
     });
   });
 
   it('Should get results', function(){
     deferred.resolve({"data": "fred"});
     scope.$apply();
-    expect(scope.serviceGroups).toBe('fred');
+    expect(scope.ablisQuestions).toBe('fred');
   });
 });

@@ -5,6 +5,10 @@ angular.module('AblisData', [])
   return {
     getResults: function(){
       return $http.get('../resources/results.json');
+    },
+
+    getQuestions: function(){
+      return $http.get('../resources/questions.json');
     }
   };
 });

@@ -1,0 +1,23 @@
+[
+  {
+  "question_id": "fe669ae7-5da5-479f-ad75-cbc6a344e8ac",
+  "question" : "Will you handle or transport food?"
+  },
+  {
+  "question_id": "aa6fe5d4-4639-411a-8466-05ad17d19839",
+  "question" : "Will you advertise or promote your business?"
+  },
+  {
+  "question_id": "fdc3b7e3-60f0-48c8-b6f1-0363c6d4abf6",
+  "question" : "Will you supply, sell, serve or offer alcohol?"
+  },
+  {
+    "question_id": "fdc3b7e3-60f0-48c8-b6f1-034f5d66d4abf6",
+    "question" : "Will you need a public space for any of your activities?"
+  },
+  {
+    "question_id": "fdc3b7e3-60f0-48c8-b6f1-0363c6d47a8b3",
+    "question" : "Will you offer education, training, auditing or assessments services?"
+  }
+]
+
