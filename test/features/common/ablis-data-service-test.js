@@ -16,4 +16,11 @@ describe('Ablis data services', function(){
     });
     scope.$apply();
   });
+
+  xit('Should return questions', function(){
+    ablisDataService.getQuestions().then(function(response){
+      expect(response.data[0].question).toBe('Will you handle or transport food?');
+    });
+    scope.$apply();
+  });
 });
