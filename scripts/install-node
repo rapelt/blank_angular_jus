@@ -1,0 +1,15 @@
+#!/bin/bash
+
+NODE_PATH=nodejs
+
+if [ ! -d "$NODE_PATH" ]; then
+  echo "Installing node"
+
+  curl "https://nodejs.org/dist/v4.5.0/node-v4.5.0-linux-x64.tar.xz" -o "nodejs"
+  tar -xvf nodejs
+
+  ##Remove zipped file
+  rm -rf nodejs
+  mv node-v4.5.0-linux-x64 nodejs
+  echo "nodejs successfully installed"
+fi

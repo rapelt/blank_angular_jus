@@ -49,7 +49,7 @@ module.exports = function(config) {
       'karma-jasmine',
       'karma-coverage'
     ],
-
+    
     singleRun: true,
 
     colors: true,
