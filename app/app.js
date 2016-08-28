@@ -16,6 +16,11 @@ angular
         templateUrl: 'features/home/main.html',
         controller: "MainController"
       })
+      .state('results', {
+        url: '/results',
+        templateUrl: 'features/results/_results.html',
+        controller: 'ResultsController'
+      })
       .state('questions', {
         url: '/questions',
         templateUrl: 'features/questions/questions.html',
