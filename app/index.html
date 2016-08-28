@@ -17,14 +17,18 @@
     <!-- endbuild -->
   </head>
   <body class="qg-glue-forms" ng-app="ossCafeApp">
-    <div header></div>
+
     <div class="container-fluid qg-site-width">
-      <div breadcrumbs></div>
-      <div id="qg-primary-content" role="main">
-        <div ui-view></div>
+      <div header></div>
+      <div id="qg-content">
+        <div breadcrumbs></div>
+        <div id="qg-primary-content" role="main">
+          <div ui-view></div>
+        </div>
       </div>
+      <div footer></div>
     </div>
-    <div footer></div>
+
 
     <script type="text/javascript" src="https://cdn.rawgit.com/qld-gov-au/glue-module-loader/master/htdocs/assets/js/loader.js"></script>
 
