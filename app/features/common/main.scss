@@ -3,14 +3,20 @@
 @import "../questions/questions";
 @import "../results/results";
 
-.oss-back-button {
-
-}
-
-.oss-button {
+.btn {
   border-radius: 0px;
 }
 
 .oss-back-button{
   background-color: grey;
+  color: white;
+
+  &:hover {
+    color: white;
+    background-color: dimgrey;
+  }
+}
+
+.oss-button {
+  padding: 10px 20px;
 }

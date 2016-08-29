@@ -30,9 +30,22 @@
 
   .question-border{
     border-bottom: 1px lightgrey solid;
-    padding-top: 10px;
+    padding-top: 12px;
     padding-bottom: 10px;
 
+  }
+
+  label {
+    margin: 0px;
+  }
+
+  .subquestion-label {
+    font-weight: normal;
+  }
+
+  .subquestion {
+    padding-top: 10px;
+    margin-left: 50px;
   }
 
 

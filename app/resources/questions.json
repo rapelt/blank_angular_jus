@@ -8,7 +8,7 @@
         "question": "Will you handle or transport food?",
         "answer": {
           "answer_id": "fe669ae7-5da5-479f-ad75-cbc6a344e8ab",
-          "sub_questions": [
+          "subquestions": [
             {
               "question_id": "fe669ae7-5da5-479f-ad75-cbc6a344e8ac",
               "question": "Will you handle or transport food?",
@@ -32,7 +32,7 @@
         "question": "Will you handle or transport food?",
         "answer": {
           "answer_id": "fe669ae7-5da5-479f-ad75-cbc6a344e8af",
-          "sub_questions": [
+          "subquestions": [
             {
               "question_id": "fe669ae7-5da5-479f-ad75-cbc6a344e8ag",
               "question": "Will you handle or transport food?",

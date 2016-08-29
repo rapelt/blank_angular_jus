@@ -9,13 +9,11 @@
         {{$index + 1}}. &nbsp; {{question.question}}
         <input class='question-checkbox' type='checkbox' data-toggle='collapse' data-target='#collapsible-{{question.question_id}}'>
       </div>
-      <div id='collapsible-{{question.question_id}}' class='collapse' ng-hide="!question.answer.sub_questions">
-        <ul>
-          <li ng-repeat='subquestion in question.answer.sub_questions'>
-            <label for='checkbox-{{subquestion.question_id}}'>{{subquestion.question}}</label>
-            <input type='checkbox' id='checkbox-{{subquestion.question_id}}'/>
-          </li>
-        </ul>
+      <div id='collapsible-{{question.question_id}}' class='collapse' ng-hide="!question.answer.subquestions">
+          <div class="subquestion" ng-repeat='subquestion in question.answer.subquestions'>
+            <label class='subquestion-label' for='checkbox-{{subquestion.question_id}}'>{{subquestion.question}}</label>
+            <input class='question-checkbox' type='checkbox' id='checkbox-{{subquestion.question_id}}'/>
+          </div>
       </div>
     </div>
 
