@@ -226,6 +226,11 @@ gulp.task('copy:swe-templates', function () {
     .pipe(gulp.dest(yeoman.dist + '/bower_components/glue-swe-template/assets/includes'));
 });
 
+gulp.task('copy:ng-templates', function () {
+  return gulp.src(yeoman.app + '/features/**/*.html')
+    .pipe(gulp.dest(yeoman.dist + '/features/'));
+});
+
 gulp.task('copy:fonts', function () {
   return gulp.src(yeoman.app + '/bower_components/glue-swe-template/assets/v3/fonts/**')
     .pipe(gulp.dest(yeoman.dist + '/fonts'));
@@ -237,7 +242,7 @@ gulp.task('copy:fontAwesome', function () {
 });
 
 gulp.task('build', ['clean:dist'], function () {
-  runSequence(['styles','images', 'copy:extras', 'copy:fonts', 'copy:fontAwesome','copy:swe-templates', 'client:build']);
+  runSequence(['styles','images', 'copy:extras', 'copy:fonts', 'copy:fontAwesome','copy:swe-templates', 'copy:ng-templates', 'client:build']);
 });
 
 gulp.task('default', ['build']);
