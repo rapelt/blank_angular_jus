@@ -18,7 +18,7 @@ angular
       })
       .state('results', {
         url: '/results',
-        templateUrl: 'features/results/_results.html',
+				template: '<div results></div>',
         controller: 'ResultsController'
       })
       .state('questions', {
