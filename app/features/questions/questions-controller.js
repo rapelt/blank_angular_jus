@@ -3,8 +3,9 @@
 angular.module('Questions', [])
   .controller('QuestionsController', function ($scope, AblisDataService) {
     $scope.ablisQuestions = "";
+    $scope.page =  0;
 
     AblisDataService.getQuestions().then(function(response){
-      $scope.ablisQuestions = response.data;
+      $scope.ablisData = response.data;
     });
   });

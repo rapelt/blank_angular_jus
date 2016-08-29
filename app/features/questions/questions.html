@@ -1,30 +1,27 @@
 <!--[SWE-CSS] The class is Questions-page because the SWE Css already has a class called questions-->
 <div class='questions-page'>
 
-
   <h1>Please tell us some of the business activities you are likely to undertake in your café</h1>
   <h5>This helps us to narrow down the information to only that which is relevant to you.</h5>
 
-  <div class="questions-table table-responsive">
-    <table class="table table-striped">
-      <tr ng-repeat='questions in ablisQuestions'>
-        <td>{{questions.question}}</td>
-        <td><input class='question-checkbox' type='checkbox'></td>
-
-      </tr>
-    </table>
-  </div>
-
-  <!--<ol>
-    <li class='question' ng-repeat='questions in ablisQuestions'>{{questions.question}}
-      <input class='question-checkbox' type='checkbox'>
-    </li>
-  </ol>-->
+    <div class='oss-accordian question-border' ng-repeat='question in ablisData[page].questions'>
+      <div>
+        {{$index + 1}}. &nbsp; {{question.question}}
+        <input class='question-checkbox' type='checkbox' data-toggle='collapse' data-target='#collapsible-{{question.question_id}}'>
+      </div>
+      <div id='collapsible-{{question.question_id}}' class='collapse' ng-hide="!question.answer.sub_questions">
+        <ul>
+          <li ng-repeat='subquestion in question.answer.sub_questions'>
+            <label for='checkbox-{{subquestion.question_id}}'>{{subquestion.question}}</label>
+            <input type='checkbox' id='checkbox-{{subquestion.question_id}}'/>
+          </li>
+        </ul>
+      </div>
+    </div>
 
   <div class='navigation-buttons'>
-    <button class='btn btn-default' ui-sref='main'><span class='glyphicon glyphicon-arrow-left'></span> Back</button>
-    <button class='btn btn-primary' ui-sref='main'>Next <span class='glyphicon glyphicon-arrow-right'></span> </button>
-
+    <button class='oss-back-button oss-button btn' ui-sref='main'>Back</button>
+    <button class='oss-back-next oss-button btn btn-primary' ui-sref='main'>Next</button>
   </div>
 
 
