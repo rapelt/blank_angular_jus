@@ -1,0 +1,11 @@
+  <div class='oss-accordian' ng-repeat='serviceGroup in serviceGroups'>
+    <div data-toggle='collapse' data-target='#collapsible-{{serviceGroup.id}}'>
+      {{serviceGroup.title}}<span class='oss-indicator glyphicon glyphicon-triangle-left'></span>
+    </div>
+    <div id='collapsible-{{serviceGroup.id}}' class='collapse'>
+      <ul>
+        <li ng-repeat='service in serviceGroup.services'><input type='checkbox' id='checkbox-{{service.service_id}}'/>
+          <label for='checkbox-{{service.service_id}}'>{{service.title}}</label></li>
+      </ul>
+    </div>
+  </div>
