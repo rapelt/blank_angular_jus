@@ -6,15 +6,15 @@
 
     <div class='oss-accordian question-border' ng-repeat='question in ablisData[page].questions'>
       <div>
-        {{$index + 1}}. &nbsp; {{question.question}}
-        <input class='question-checkbox' type='checkbox' data-toggle='collapse' data-target='#collapsible-{{question.question_id}}'>
+        <label for='checkbox-{{question.question_id}}'>{{$index + 1}}. {{question.question}}</label>
+        <input id='checkbox-{{question.question_id}}' class='question-checkbox' type='checkbox' data-toggle='collapse' data-target='#collapsible-{{question.question_id}}'>
       </div>
-      <div id='collapsible-{{question.question_id}}' class='collapse' ng-hide="!question.answer.subquestions">
-          <div class="subquestion" ng-repeat='subquestion in question.answer.subquestions'>
-            <label class='subquestion-label' for='checkbox-{{subquestion.question_id}}'>{{subquestion.question}}</label>
+      <ol type="a" id='collapsible-{{question.question_id}}' class='collapse' ng-hide="!question.answer.subquestions">
+          <li class="subquestion" ng-repeat='subquestion in question.answer.subquestions'>
+            <label for='checkbox-{{subquestion.question_id}}'>{{subquestion.question}}</label>
             <input class='question-checkbox' type='checkbox' id='checkbox-{{subquestion.question_id}}'/>
-          </div>
-      </div>
+          </li>
+      </ol>
     </div>
 
   <div class='navigation-buttons'>

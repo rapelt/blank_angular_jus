@@ -4,24 +4,8 @@
   padding-bottom: 70px;
   padding-top: 30px;
 
-  .navigation-buttons {
-    float: right;
-    padding-top: 30px;
-    padding-bottom: 70px;
-  }
-
   .question-checkbox {
     float: right;
-    transform: scale(1.2, 1.2);
-  }
-
-  .question{
-    margin-top: 20px;
-    margin-bottom: 20px;
-  }
-
-  table tr td {
-    border: none;
   }
 
   .questions-table {
@@ -29,24 +13,17 @@
   }
 
   .question-border{
-    border-bottom: 1px lightgrey solid;
+    border-bottom: 1px $oss-grey solid;
     padding-top: 12px;
     padding-bottom: 10px;
-
   }
 
   label {
     margin: 0px;
-  }
-
-  .subquestion-label {
     font-weight: normal;
   }
 
   .subquestion {
     padding-top: 10px;
-    margin-left: 50px;
   }
-
-
 }
