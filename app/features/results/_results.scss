@@ -12,11 +12,14 @@
     }
     .oss-service-group-header {
       border-top: solid $oss-blue 2px;
+      color: $oss-blue;
+      font-weight: bold;
     }
-    .collapsed {
+    .oss-service-group-header.collapsed {
       border-top: none;
       background-color: $oss-grey;
       border-bottom: solid $oss-darkgrey 1px;
+      color: $oss-bodytext;
     }
   }
   
