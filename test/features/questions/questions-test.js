@@ -9,8 +9,8 @@ describe('Service questions controller', function(){
     inject(function($rootScope, $controller, $q, $templateCache, $state){
       state = $state;
       scope = $rootScope.$new();
-      $templateCache.put('features/home/main.html', '');
       $templateCache.put('features/questions/questions.html', '');
+      $templateCache.put('features/home/main.html', '');
 
       deferred = $q.defer();
       ablisDataService.getQuestions.and.returnValue(deferred.promise);
@@ -29,6 +29,6 @@ describe('Service questions controller', function(){
   it('Should get questions', function(){
     deferred.resolve({"data": "fred"});
     scope.$apply();
-    expect(scope.ablisQuestions).toBe('fred');
+    expect(scope.ablisData).toBe('fred');
   });
 });
