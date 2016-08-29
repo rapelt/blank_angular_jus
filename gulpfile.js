@@ -241,8 +241,8 @@ gulp.task('copy:fontAwesome', function () {
     .pipe(gulp.dest(yeoman.dist + '/lib'));
 });
 
-gulp.task('build', ['clean:dist'], function () {
-  runSequence(['styles','images', 'copy:extras', 'copy:fonts', 'copy:fontAwesome','copy:swe-templates', 'copy:ng-templates', 'client:build']);
+gulp.task('build', ['clean:dist','styles'], function () {
+  runSequence(['images', 'copy:extras', 'copy:fonts', 'copy:fontAwesome','copy:swe-templates', 'copy:ng-templates', 'client:build']);
 });
 
 gulp.task('default', ['build']);
