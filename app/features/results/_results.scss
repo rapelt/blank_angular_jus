@@ -1,0 +1,23 @@
+.results-page {
+  .oss-accordian {
+    .oss-indicator {
+      float: right;
+      color: red;
+    }
+    li {
+       list-style-type: none;
+    }
+    .oss-service-group-body {
+      border-bottom: solid $oss-lightgrey 1px;
+    }
+    .oss-service-group-header {
+      border-top: solid blue 2px;
+    }
+      .collapsed {
+        border-top: none;
+        background-color: #CCC;
+        border-bottom: solid $oss-darkgrey 1px;
+      }
+  }
+  
+}
