@@ -8,8 +8,14 @@ module.exports = function(config) {
     basePath: '../',
 
     preprocessors: {
-      'app/features/**/*.js': 'coverage'
+      'app/features/**/*.js': 'coverage',
+			'app/features/**/*.html': ['ng-html2js']
     },
+
+		ngHtml2JsPreprocessor: {
+			stripPrefix: 'app',
+			moduleName: 'templates'
+		},
 
     reporters: ['dots','progress','coverage'],
 
