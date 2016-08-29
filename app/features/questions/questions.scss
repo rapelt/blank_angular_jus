@@ -2,6 +2,7 @@
   padding-left: 150px;
   padding-right: 150px;
   padding-bottom: 70px;
+  padding-top: 30px;
 
   .navigation-buttons {
     float: right;
@@ -11,12 +12,20 @@
 
   .question-checkbox {
     float: right;
-    transform: scale(2, 2);
+    transform: scale(1.2, 1.2);
   }
 
   .question{
     margin-top: 20px;
     margin-bottom: 20px;
+  }
+
+  table tr td {
+    border: none;
+  }
+
+  .questions-table {
+    padding-top: 20px;
   }
 
 
