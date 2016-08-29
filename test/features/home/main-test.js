@@ -1,20 +1,19 @@
 'use strict';
 
 describe('Controller: MainController', function () {
-
-  // load the controller's module
   beforeEach(module('ossCafeApp'));
+  var scope, state;
 
-  var MainController,
-    scope;
-
-  // Initialize the controller and a mock scope
-  beforeEach(inject(function ($controller, $rootScope) {
+  beforeEach(inject(function ($templateCache, $rootScope, $state) {
     scope = $rootScope.$new();
-    $controller('MainController', {$scope: scope});
+    state = $state;
+    $templateCache.put('features/home/main.html', '');
   }));
 
-  it('should attach a list of awesomeThings to the scope', function () {
-    expect(scope.awesomeThings.length).toBe(3);
+  it('should load home page', function () {
+    state.go('main');
+    scope.$apply();
+    expect(state.current.controller).toBe('MainController');
+    expect(state.current.url).toBe('/');
   });
 });
