@@ -231,6 +231,11 @@ gulp.task('copy:ng-templates', function () {
     .pipe(gulp.dest(yeoman.dist + '/features/'));
 });
 
+gulp.task('copy:json', function () {
+  return gulp.src(yeoman.app + '/resources/*.json')
+    .pipe(gulp.dest(yeoman.dist + '/resources/'));
+});
+
 gulp.task('copy:fonts', function () {
   return gulp.src(yeoman.app + '/bower_components/glue-swe-template/assets/v3/fonts/**')
     .pipe(gulp.dest(yeoman.dist + '/fonts'));
@@ -241,8 +246,8 @@ gulp.task('copy:fontAwesome', function () {
     .pipe(gulp.dest(yeoman.dist + '/lib'));
 });
 
-gulp.task('build', ['clean:dist'], function () {
-  runSequence(['styles','images', 'copy:extras', 'copy:fonts', 'copy:fontAwesome','copy:swe-templates', 'copy:ng-templates', 'client:build']);
+gulp.task('build', ['clean:dist','styles'], function () {
+  runSequence(['images', 'copy:extras', 'copy:fonts', 'copy:json','copy:fontAwesome','copy:swe-templates', 'copy:ng-templates', 'client:build']);
 });
 
 gulp.task('default', ['build']);
