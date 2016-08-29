@@ -17,14 +17,16 @@
     <!-- endbuild -->
 
   </head>
-  <body class="qg-glue-forms" ng-app="ossCafeApp">
+  <body ng-app="ossCafeApp">
 
     <div class="container-fluid qg-site-width">
       <div header></div>
       <div id="qg-content">
-        <div breadcrumbs></div>
-        <div id="qg-primary-content" role="main">
-          <div ui-view></div>
+        <div id="qg-full-width" class="clearfix row">
+          <div breadcrumbs></div>
+          <div id="qg-primary-content" role="main">
+            <div ui-view></div>
+          </div>
         </div>
       </div>
       <div footer></div>
