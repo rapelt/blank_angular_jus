@@ -2,22 +2,22 @@
   .oss-accordian {
     .oss-indicator {
       float: right;
-      color: red;
+      color: $oss-darkgrey;
     }
     li {
        list-style-type: none;
     }
     .oss-service-group-body {
-      border-bottom: solid $oss-lightgrey 1px;
+      border-bottom: solid $oss-darkgrey 1px;
     }
     .oss-service-group-header {
-      border-top: solid blue 2px;
+      border-top: solid $oss-blue 2px;
     }
-      .collapsed {
-        border-top: none;
-        background-color: #CCC;
-        border-bottom: solid $oss-darkgrey 1px;
-      }
+    .collapsed {
+      border-top: none;
+      background-color: $oss-grey;
+      border-bottom: solid $oss-darkgrey 1px;
+    }
   }
   
 }
