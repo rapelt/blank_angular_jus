@@ -1,5 +1,9 @@
 @import "variables";
 
+input[type="checkbox"] {
+    transform: scale(1.2, 1.2);
+}
+
 @import "../questions/questions";
 @import "../results/results";
 
