@@ -8,16 +8,30 @@ input[type="checkbox"] {
 @import "../results/results";
 
 .btn {
-  border-radius: 0px;
+  border-radius: 3px;
 }
 
 .oss-back-button{
-  background-color: grey;
-  color: white;
+  background-color: $oss-darkgrey;
+  color: black;
+  border-color: $oss-darkgrey;
 
   &:hover {
-    color: white;
-    background-color: dimgrey;
+    color: black;
+    background-color: $oss-grey;
+    border-color: $oss-darkgrey;
+  }
+}
+
+.oss-next-button{
+  background-color: $oss-primarygreen;
+  color: black;
+  border-color: $oss-primarygreen;
+
+  &:hover {
+    color: black;
+    background-color: $oss-lightgreen;
+    border-color: $oss-primarygreen;
   }
 }
 
