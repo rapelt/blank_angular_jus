@@ -7,6 +7,7 @@ describe('Directive: footer', function(){
       scope = $rootScope.$new();
       $templateCache.put('features/home/main.html', '');
       $templateCache.put('features/common/footer.html', '<h1>footer</h1>');
+      $templateCache.put('features/business-types/business-types.html', '');
       element = "<div footer></div>";
       elem = $compile(element)(scope);
       scope.$apply();

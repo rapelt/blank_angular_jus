@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('Questions', [])
-  .controller('QuestionsController', function ($scope, $location, AblisDataService) {
+  .controller('QuestionsController', function ($scope, $state, AblisDataService) {
     $scope.ablisQuestions = "";
     $scope.page =  0;
 
@@ -10,17 +10,16 @@ angular.module('Questions', [])
     });
 
     $scope.showNextPage = function () {
-      /*if($scope.page < 1){
+      if($scope.page < 1){
         $scope.page =  $scope.page + 1;
-      }*/
-
+      }
     };
 
     $scope.showPreviousPage = function () {
-      /*if($scope.page > 0){
+      if($scope.page > 0){
         $scope.page =  $scope.page - 1;
       } else {
-        $location.url('/');
-      }*/
+        $state.go('business-types');
+      }
     }
   });

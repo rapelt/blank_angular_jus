@@ -7,6 +7,7 @@ describe('Directive: breadcrumbs', function(){
       scope = $rootScope.$new();
       $templateCache.put('features/home/main.html', '');
       $templateCache.put('features/breadcrumbs/breadcrumbs.html', '<h1>Breadcrumbs</h1>');
+      $templateCache.put('features/business-types/business-types.html', '');
       element = "<div breadcrumbs></div>"
       elem = $compile(element)(scope);
       scope.$apply();

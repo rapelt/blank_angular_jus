@@ -11,7 +11,7 @@ describe('Service results controller', function(){
       scope = $rootScope.$new();
       $templateCache.put('features/home/main.html', '');
       $templateCache.put('features/results/_results.html', '');
-
+      $templateCache.put('features/business-types/business-types.html', '');
       deferred = $q.defer();
       ablisDataService.getResults.and.returnValue(deferred.promise);
 

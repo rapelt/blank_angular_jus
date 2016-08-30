@@ -1,5 +1,5 @@
 describe('Directive: results', function(){
-  var html 
+  var html
   var scope, element;
   beforeEach(function(){
     module("templates");
@@ -7,6 +7,7 @@ describe('Directive: results', function(){
     inject(function($compile, $rootScope, $templateCache){
       scope = $rootScope.$new();
       $templateCache.put('features/home/main.html', '');
+      $templateCache.put('features/business-types/business-types.html', '');
       element = $compile('<div results></div>')(scope);
      // including json from a file looks like a lot of work - http://stackoverflow.com/questions/17370427/loading-a-mock-json-file-within-karmaangularjs-test
       scope.serviceGroups = [
@@ -43,7 +44,7 @@ describe('Directive: results', function(){
       scope.$apply();
     });
   });
-  
+
  it('should have 2 groups', function() {
     expect(element[0].querySelectorAll('.oss-results-sg').length).toBe(2);
  });

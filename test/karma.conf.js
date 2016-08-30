@@ -20,7 +20,7 @@ module.exports = function(config) {
     reporters: ['dots','progress','coverage'],
 
     coverageReporter:{
-      type : 'clover',
+      type : 'html',
       dir : 'coverage/',
       subdir: '.'
     },

@@ -2,21 +2,22 @@
 
 describe('Service questions controller', function(){
   beforeEach(module('ossCafeApp'));
-  var ablisDataService, scope, state, deferred, location;
+  var ablisDataService, scope, state, deferred;
 
   beforeEach(function(){
     ablisDataService = jasmine.createSpyObj('ablisDataService', ['getQuestions']);
-    inject(function($rootScope, $controller, $q, $templateCache, $state, $location){
+    inject(function($rootScope, $controller, $q, $templateCache, $state){
       state = $state;
-      location = $location
       scope = $rootScope.$new();
-      $templateCache.put('features/questions/questions.html', '');
       $templateCache.put('features/home/main.html', '');
+      $templateCache.put('features/business-types/business-types.html', '');
+      $templateCache.put('features/questions/questions.html', '');
+
 
       deferred = $q.defer();
       ablisDataService.getQuestions.and.returnValue(deferred.promise);
 
-      $controller('QuestionsController', {$scope: scope, AblisDataService: ablisDataService});
+      $controller('QuestionsController', {$scope: scope, $state:state, AblisDataService: ablisDataService});
     });
   });
 
@@ -33,18 +34,28 @@ describe('Service questions controller', function(){
     expect(scope.ablisData).toBe('fred');
   });
 
-  xit('Should increase page number when next button is called', function(){
+  it('Should increase page number when next button is called', function(){
     deferred.resolve({"data": "fred"});
     scope.$apply();
     scope.showNextPage();
     expect(scope.page).toBe(1);
   });
 
-  xit('Should decrease page number when previous button is called', function(){
+  it('Should decrease page number when previous button is called', function(){
     deferred.resolve({"data": "fred"});
     scope.page = 1;
     scope.$apply();
     scope.showPreviousPage();
     expect(scope.page).toBe(0);
+  });
+
+  it('Should return to home when previous button is called', function(){
+    state.go('questions');
+    scope.page = 0;
+    scope.$apply();
+    expect(state.current.url).toBe('/questions');
+    scope.showPreviousPage();
+    scope.$apply();
+    expect(state.current.url).toBe('/');
   });
 });
