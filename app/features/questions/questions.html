@@ -1,18 +1,19 @@
 <!--[SWE-CSS] The class is Questions-page because the SWE Css already has a class called questions-->
 <div class='questions-page'>
 
-  <h1>Please tell us some of the {{ablisData[page].grouping_name}}</h1>
+  <h1>Please tell us some of the {{ablisData[page].group_name}}</h1>
   <h5>This helps us to narrow down the information to only that which is relevant to you.</h5>
 
-    <div class='oss-accordian question-border' ng-repeat='question in ablisData[page].questions'>
+    <div class='question' ng-repeat='question in ablisData[page].questions'>
       <div>
-        <label for='checkbox-{{question.question_id}}'>{{$index + 1}}. {{question.question}}</label>
-        <input id='checkbox-{{question.question_id}}' class='question-checkbox' type='checkbox' data-toggle='collapse' data-target='#collapsible-{{question.question_id}}'>
+        <label for='checkbox-{{question.id}}'>{{$index + 1}}. {{question.value}}</label>
+        <input id='checkbox-{{question.id}}' class='checkbox' type='checkbox' data-toggle='collapse' data-target='#collapsible-{{question.id}}'>
       </div>
-      <ol type='a' id='collapsible-{{question.question_id}}' class='collapse' ng-hide='!question.answer.subquestions'>
-          <li class='subquestion' ng-repeat='subquestion in question.answer.subquestions'>
-            <label for='checkbox-{{subquestion.question_id}}'>{{subquestion.question}}</label>
-            <input class='question-checkbox' type='checkbox' id='checkbox-{{subquestion.question_id}}'/>
+      <ol type='a' id='collapsible-{{question.id}}' class='collapse' ng-hide='!question.answer.subquestion'>
+          <div class="subquestion-value">{{question.answer.subquestion.value}}</div>
+          <li class='subquestion' ng-repeat='answer in question.answer.subquestion.answers'>
+            <label for='checkbox-{{answer.id}}'>{{answer.value}}</label>
+            <input class='checkbox' type='checkbox' id='checkbox-{{answer.id}}'/>
           </li>
       </ol>
     </div>

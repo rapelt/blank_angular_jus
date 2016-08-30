@@ -4,15 +4,18 @@
   padding-bottom: 70px;
   padding-top: 30px;
 
-  .question-checkbox {
-    float: right;
-  }
-
-  .questions-table {
+  @media screen and (max-width: 580px) {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
     padding-top: 20px;
   }
 
-  .question-border{
+  .checkbox {
+    float: right;
+  }
+
+  .question{
     border-bottom: 1px $oss-grey solid;
     padding-top: 12px;
     padding-bottom: 10px;
@@ -27,5 +30,10 @@
     padding-top: 10px;
     border-top: 1px $oss-grey solid;
     margin-top: 10px;
+  }
+
+  .subquestion-value{
+    padding-top: 12px;
+
   }
 }

@@ -1,212 +1,155 @@
 [
-  {          
-    "grouping_name": "Business activities you are likely to partake in",    
+  {
+    "group_name": "Business activities you are likely to partake in",
     "questions":
     [
       {
-        "question_id": "43f2deb6-720a-48be-911f-f29176acd965",
-        "question": "Will you advertise or promote your business?",
+        "id": "43f2deb6-720a-48be-911f-f29176acd965",
+        "value": "Will you advertise or promote your business?",
         "answer": {
-          "answer_id": "820c6607-7830-407c-b394-cd91537409aa",
-          "subquestion_title": "How will you advertise or promote your business:",
-          "subquestions": [
-            {
-              "question_id": "4cedcb3a-9732-4f05-a6a3-8dab656db5a1",
-              "question": "Internet website",
-              "answer": {
-                "answer_id": ""
+          "id": "820c6607-7830-407c-b394-cd91537409aa",
+          "subquestion" : {
+            "value": "How will you advertise or promote your business:",
+            "answers":
+            [
+              {
+                "id": "4cedcb3a-9732-4f05-a6a3-8dab656db5a1",
+                "value": "Internet website"
+              },
+              {
+                "id": "d2b7214c-78ea-4495-922a-4db5e6b0035d",
+                "value": "Distribute brochures, flyers or promotional materials"
               }
-            },
-            {
-              "question_id": "d2b7214c-78ea-4495-922a-4db5e6b0035d",
-              "question": "Distribute brochures, flyers or promotional materials",
-              "answer": {
-                "answer_id": ""
-              }
-            }
-          ]
+            ]
+          }
         }
       },
       {
-        "question_id": "70c52c2f-5f9c-4e4a-a26e-7bd116684e30",
-        "question": "Will you need to use public spaces for any of your activities?",
+        "id": "70c52c2f-5f9c-4e4a-a26e-7bd116684e30",
+        "value": "Will you need to use public spaces for any of your activities?",
         "answer": {
-          "answer_id": "0033065e-3168-4c43-baaf-fe2f182ca69f",
-          "subquestion_title": "In what way will you use a public space as part of your activities:",
-          "subquestions": [
-            {
-              "question_id": "580f982c-835d-44d4-9932-9a46e867f74d",
-              "question": "Conduct commercial activities in public or government parks, galleries or other locations",
-              "answer": {
-                "answer_id": ""
+          "id": "0033065e-3168-4c43-baaf-fe2f182ca69f",
+          "subquestion" : {
+            "value": "In what way will you use a public space as part of your activities:",
+            "answers": [
+              {
+                "id": "580f982c-835d-44d4-9932-9a46e867f74d",
+                "value": "Conduct commercial activities in public or government parks, galleries or other locations"
+              },
+              {
+                "id": "99ee85f7-64cc-4a0a-98bc-d89dbcdee443",
+                "value": "Conduct activities in a shopping precinct or mall"
+              },
+              {
+                "id": "44648545-c1d3-4ac6-aaac-d7c1a285375e",
+                "value": "Conduct commercial filming or photography"
+              },
+              {
+                "id": "44648545-c1d3-4ac6-aaac-d7c1a285370e",
+                "value": "Conduct works or events in or on a road or reserve"
+              },
+              {
+                "id": "ccec3aa0-efa4-4b57-a327-0328f28664a4",
+                "value": "Erect a structure in a public place"
+              },
+              {
+                "id": "9c81a7c7-7cb3-4cbf-a52d-14b2aabac7c9",
+                "value": "Gatherings for ceremonies, public entertainment or religious services"
+              },
+              {
+                "id": "50579e70-a6cf-4095-8e41-4de04659dd62",
+                "value": "Perform busking, street entertainment or conduct a carnival, festival or similar event"
+              },
+              {
+                "id": "9a1bf174-5130-440a-a46d-9ea6d1c09d79",
+                "value": "Place or keep vehicles, machinery or other items in a public place"
+              },
+              {
+                "id": "b77fa0aa-d181-4ac9-b73f-4175a6fba3ac",
+                "value": "Provide outdoor dining with tables or seating"
+              },
+              {
+                "id": "44648545-c1d3-4ac6-aaac-d7c1a285370e",
+                "value": "Set up a market stall, booth or table, or sell by the roadside or by door-to-door trading"
+              },
+              {
+                "id": "b77fa0aa-d181-4ac9-b73f-4175a6fba3ac",
+                "value": "Take or sell water from a council supply or pipe"
+              },
+              {
+                "id": "0df46a9e-7a9d-4eb2-b76c-c8bc84c265ff",
+                "value": "Use street furniture, such as sandwich 'A' boards, planter boxes or barriers"
               }
-            },
-            {
-              "question_id": "99ee85f7-64cc-4a0a-98bc-d89dbcdee443",
-              "question": "Conduct activities in a shopping precinct or mall",
-              "answer": {
-                "answer_id": ""
-              }
-            },
-            {
-              "question_id": "44648545-c1d3-4ac6-aaac-d7c1a285375e",
-              "question": "Conduct commercial filming or photography",
-              "answer": {
-                "answer_id": ""
-              }
-            },
-            {
-              "question_id": "44648545-c1d3-4ac6-aaac-d7c1a285370e",
-              "question": "Conduct works or events in or on a road or reserve",
-              "answer": {
-                "answer_id": ""
-              }
-            },
-            {
-              "question_id": "ccec3aa0-efa4-4b57-a327-0328f28664a4",
-              "question": "Erect a structure in a public place",
-              "answer": {
-                "answer_id": ""
-              }
-            },
-            {
-              "question_id": "9c81a7c7-7cb3-4cbf-a52d-14b2aabac7c9",
-              "question": "Gatherings for ceremonies, public entertainment or religious services",
-              "answer": {
-                "answer_id": ""
-              }
-            },
-            {
-              "question_id": "50579e70-a6cf-4095-8e41-4de04659dd62",
-              "question": "Perform busking, street entertainment or conduct a carnival, festival or similar event",
-              "answer": {
-                "answer_id": ""
-              }
-            },
-            {
-              "question_id": "9a1bf174-5130-440a-a46d-9ea6d1c09d79",
-              "question": "Place or keep vehicles, machinery or other items in a public place",
-              "answer": {
-                "answer_id": ""
-              }
-            },
-            {
-              "question_id": "b77fa0aa-d181-4ac9-b73f-4175a6fba3ac",
-              "question": "Provide outdoor dining with tables or seating",
-              "answer": {
-                "answer_id": ""
-              }
-            },
-            {
-              "question_id": "44648545-c1d3-4ac6-aaac-d7c1a285370e",
-              "question": "Set up a market stall, booth or table, or sell by the roadside or by door-to-door trading",
-              "answer": {
-                "answer_id": ""
-              }
-            },
-            {
-              "question_id": "b77fa0aa-d181-4ac9-b73f-4175a6fba3ac",
-              "question": "Take or sell water from a council supply or pipe",
-              "answer": {
-                "answer_id": ""
-              }
-            },
-            {
-              "question_id": "0df46a9e-7a9d-4eb2-b76c-c8bc84c265ff",
-              "question": "Use street furniture, such as sandwich 'A' boards, planter boxes or barriers",
-              "answer": {
-                "answer_id": ""
-              }
-            }
-          ]
+            ]
+          }
         }
       }
-    ]            
+    ]
   },
   {
-    "grouping_name": "Services related to administrative duties you may need to conduct",
+    "group_name": "Services related to administrative duties you may need to conduct",
     "questions":
     [
       {
-        "question_id": "6f132247-d611-4e4f-8974-b925967c7a88",
-        "question": "Will your business need to 'protect' its intellectual property, such as its designs or logos?",
+        "id": "6f132247-d611-4e4f-8974-b925967c7a88",
+        "value": "Will your business need to 'protect' its intellectual property, such as its designs or logos?",
         "answer": {
-          "answer_id": "b9291d43-e9cc-455b-ae7e-b9ec02dc6a98",
-          "subquestion_title": "Select the type of business asset you want to protect:",
-          "subquestions": [
-            {
-              "question_id": "e28a312c-c271-459f-a8b3-1c0198c08bcb",
-              "question": "Logos, packaging, words or branding of your products or business",
-              "answer": {
-                "answer_id": ""
+          "id": "b9291d43-e9cc-455b-ae7e-b9ec02dc6a98",
+          "subquestion": {
+            "value": "Select the type of business asset you want to protect:",
+            "answers": [
+              {
+                "id": "e28a312c-c271-459f-a8b3-1c0198c08bcb",
+                "value": "Logos, packaging, words or branding of your products or business"
+              },
+              {
+                "id": "2718738e-7070-44d3-b4e2-e890230e16b7",
+                "value": "Plant breeder's rights"
+              },
+              {
+                "id": "f937f55f-541e-4873-bcf4-f2582442680d",
+                "value": "Visual design of manufactured products"
+              },
+              {
+                "id": "e90bb163-1fd2-45a5-8a01-dd16609265ca",
+                "value": "Idea, device, substance, method or process"
               }
-            },
-            {
-              "question_id": "2718738e-7070-44d3-b4e2-e890230e16b7",
-              "question": "Plant breeder's rights",
-              "answer": {
-                "answer_id": ""
-              }
-            },
-            {
-              "question_id": "f937f55f-541e-4873-bcf4-f2582442680d",
-              "question": "Visual design of manufactured products",
-              "answer": {
-                "answer_id": ""
-              }
-            },
-            {
-              "question_id": "e90bb163-1fd2-45a5-8a01-dd16609265ca",
-              "question": "Idea, device, substance, method or process",
-              "answer": {
-                "answer_id": ""
-              }
-            }
-          ]
+            ]
+          }
         }
       }
-    ]              
+    ]
   },
-  {          
-    "grouping_name": "Employing staff or contractors in your business",
+  {
+    "group_name": "Employing staff or contractors in your business",
     "questions":
     [
       {
-        "question_id": "b1cb7917-b174-4711-b42a-4a899db7dc87",
-        "question": "Will you employ staff or contractors?",
+        "id": "b1cb7917-b174-4711-b42a-4a899db7dc87",
+        "value": "Will you employ staff or contractors?",
         "answer": {
-          "answer_id": "e58fbdef-4e40-473d-9970-20f643164cbb",
-          "subquestion_title": "Will you employ:",
-          "subquestions": [
-            {
-              "question_id": "801998e3-f1e7-4471-a81a-ddd4fce7284e",
-              "question": "Staff from overseas",
-              "answer": {
-                "answer_id": ""
+          "id": "e58fbdef-4e40-473d-9970-20f643164cbb",
+          "subquestion": {
+            "value": "Will you employ:",
+            "answers": [
+              {
+                "id": "801998e3-f1e7-4471-a81a-ddd4fce7284e",
+                "value": "Staff from overseas"
+              },
+              {
+                "id": "f620e859-f5ed-4fa3-9bb2-ecad403278d9",
+                "value": "Apprentices or trainees"
+              },
+              {
+                "id": "fa3fe0fe-a24b-4524-aa4c-e3aa4127279d",
+                "value": "Indigenous Australians"
+              },
+              {
+                "id": "e3247652-6f40-405e-a1cf-f961986cb704",
+                "value": "Children under 15 years of age"
               }
-            },
-            {
-              "question_id": "f620e859-f5ed-4fa3-9bb2-ecad403278d9",
-              "question": "Apprentices or trainees",
-              "answer": {
-                "answer_id": ""
-              }
-            },
-            {
-              "question_id": "fa3fe0fe-a24b-4524-aa4c-e3aa4127279d",
-              "question": "Indigenous Australians",
-              "answer": {
-                "answer_id": ""
-              }
-            },
-            {
-              "question_id": "e3247652-6f40-405e-a1cf-f961986cb704",
-              "question": "Children under 15 years of age",
-              "answer": {
-                "answer_id": ""
-              }
-            }
-          ]
+            ]
+          }
         }
       }
     ]
