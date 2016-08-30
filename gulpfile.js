@@ -155,7 +155,6 @@ gulp.task('e2e-phantom',['start:server:test'], function(cb){
           'debug': false
       }))
       .on('error', function(e) {
-        console.log('error', e);
         process.exit(1);
       })
       .on('end', function(e){
@@ -179,7 +178,6 @@ gulp.task('e2e',['start:server:test'], function(cb){
           ]
       }))
       .on('error', function(e) {
-        console.log('error', e);
         process.exit(1);
       })
       .on('end', function(e){
