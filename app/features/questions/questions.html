@@ -1,7 +1,7 @@
 <!--[SWE-CSS] The class is Questions-page because the SWE Css already has a class called questions-->
 <div class='questions-page'>
 
-  <h1>Please tell us some of the business activities you are likely to undertake in your café</h1>
+  <h1>Please tell us some of the {{ablisData[page].grouping_name}}</h1>
   <h5>This helps us to narrow down the information to only that which is relevant to you.</h5>
 
     <div class='oss-accordian question-border' ng-repeat='question in ablisData[page].questions'>
@@ -9,8 +9,8 @@
         <label for='checkbox-{{question.question_id}}'>{{$index + 1}}. {{question.question}}</label>
         <input id='checkbox-{{question.question_id}}' class='question-checkbox' type='checkbox' data-toggle='collapse' data-target='#collapsible-{{question.question_id}}'>
       </div>
-      <ol type="a" id='collapsible-{{question.question_id}}' class='collapse' ng-hide="!question.answer.subquestions">
-          <li class="subquestion" ng-repeat='subquestion in question.answer.subquestions'>
+      <ol type='a' id='collapsible-{{question.question_id}}' class='collapse' ng-hide='!question.answer.subquestions'>
+          <li class='subquestion' ng-repeat='subquestion in question.answer.subquestions'>
             <label for='checkbox-{{subquestion.question_id}}'>{{subquestion.question}}</label>
             <input class='question-checkbox' type='checkbox' id='checkbox-{{subquestion.question_id}}'/>
           </li>
@@ -19,7 +19,7 @@
 
   <div class='navigation-buttons'>
     <button class='oss-back-button oss-button btn' ui-sref='main'>Back</button>
-    <button class='oss-back-next oss-button btn btn-primary' ui-sref='main'>Next</button>
+    <button class='oss-back-next oss-button btn btn-primary' ng-click='showNextPage()'>Next</button>
   </div>
 
 

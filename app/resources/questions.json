@@ -1,6 +1,6 @@
 [
   {
-    "grouping_name": "Group 1",
+    "grouping_name": "business activities you are likely to partake in",
     "questions":
     [
       {
@@ -54,7 +54,7 @@
   },
 
   {
-    "grouping_name": "Group 2",
+    "grouping_name": "services related to your business premises",
     "questions": [
       {
         "question_id": "fe669ae7-5da5-479f-ad75-cbc6a344e8ai",

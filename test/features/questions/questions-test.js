@@ -2,12 +2,13 @@
 
 describe('Service questions controller', function(){
   beforeEach(module('ossCafeApp'));
-  var ablisDataService, scope, state, deferred;
+  var ablisDataService, scope, state, deferred, location;
 
   beforeEach(function(){
     ablisDataService = jasmine.createSpyObj('ablisDataService', ['getQuestions']);
-    inject(function($rootScope, $controller, $q, $templateCache, $state){
+    inject(function($rootScope, $controller, $q, $templateCache, $state, $location){
       state = $state;
+      location = $location
       scope = $rootScope.$new();
       $templateCache.put('features/questions/questions.html', '');
       $templateCache.put('features/home/main.html', '');
@@ -30,5 +31,20 @@ describe('Service questions controller', function(){
     deferred.resolve({"data": "fred"});
     scope.$apply();
     expect(scope.ablisData).toBe('fred');
+  });
+
+  xit('Should increase page number when next button is called', function(){
+    deferred.resolve({"data": "fred"});
+    scope.$apply();
+    scope.showNextPage();
+    expect(scope.page).toBe(1);
+  });
+
+  xit('Should decrease page number when previous button is called', function(){
+    deferred.resolve({"data": "fred"});
+    scope.page = 1;
+    scope.$apply();
+    scope.showPreviousPage();
+    expect(scope.page).toBe(0);
   });
 });
