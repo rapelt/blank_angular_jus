@@ -1,6 +1,36 @@
 .business-types-page {
+
   padding-left: 150px;
   padding-right: 150px;
   padding-bottom: 70px;
   padding-top: 30px;
+
+  @media screen and (max-width: 580px) {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+  }
+
+  .main-title{
+    float: left;
+  }
+
+  .business-type-box{
+    border: 1px solid black;
+    text-align: center;
+    padding: 20px;
+    width: 180px;
+    height: 180px;
+    margin: 20px;
+    display: inline-block;
+  }
+
+  .navigation-buttons{
+    display: block;
+  }
+
+  .business-types{
+    text-align: center;
+  }
 }
