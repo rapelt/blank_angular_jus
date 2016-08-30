@@ -9,8 +9,12 @@
       <div id='collapsible-{{serviceGroup.id}}' class='collapse oss-results-sg-body' >
         <div class='oss-results-sg-description'> {{serviceGroup.description}} </div>
         <ul>
-          <li ng-repeat='service in serviceGroup.services' class='oss-results-service'><input type='checkbox' id='checkbox-{{service.service_id}}'/>
-            <label for='checkbox-{{service.service_id}}'>{{service.title}}</label></li>
+          <li ng-repeat='service in serviceGroup.services' class='oss-results-service'>
+          
+          <label>
+            <input type='checkbox' id='checkbox-{{service.service_id}}'/>
+            {{service.title}}
+          </label></li>
         </ul>
       </div>
     </div>
