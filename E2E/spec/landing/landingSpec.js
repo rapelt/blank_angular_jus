@@ -1,13 +1,20 @@
 'use strict';
 
-var landingPage = require('../pages/landing/landingPage.js');
+var landingPage = require('../../pages/landing/landingPage.js');
 
 describe ('landing screen', function(){
 
- it('should check our CAFE PAGE',function() {
-    browser.get('http://localhost:9001');
+	beforeEach(function(){
+		browser.get('http://localhost:9000');
+	});
+
+ it('should check we are on the main QLD page',function() {
     expect(true).toBe(true);
   });
 
+ it('should check the title', function(){
+ 	expect(browser.getCurrentUrl()).toContain("9000");
+ }) ;
+
 	
-})
+});
