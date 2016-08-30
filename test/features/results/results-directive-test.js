@@ -45,7 +45,7 @@ describe('Directive: results', function(){
   });
   
  it('should have 2 groups', function() {
-    expect(element[0].querySelectorAll('.oss-results-group').length).toBe(2);
+    expect(element[0].querySelectorAll('.oss-results-sg').length).toBe(2);
  });
  it('should have 3 services', function() {
     expect(element[0].querySelectorAll('.oss-results-service').length).toBe(3);

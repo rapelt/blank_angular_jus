@@ -1,26 +1,33 @@
 .results-page {
-  .oss-accordian {
-    .oss-indicator {
-      float: right;
-      color: $oss-darkgrey;
-    }
-    li {
-       list-style-type: none;
-    }
-    .oss-service-group-body {
-      border-bottom: solid $oss-darkgrey 1px;
-    }
-    .oss-service-group-header {
-      border-top: solid $oss-blue 2px;
-      color: $oss-blue;
-      font-weight: bold;
-    }
-    .oss-service-group-header.collapsed {
-      border-top: none;
-      background-color: $oss-grey;
-      border-bottom: solid $oss-darkgrey 1px;
-      color: $oss-bodytext;
-    }
+  .oss-indicator {
+    float: right;
+    color: $oss-darkgrey;
   }
-  
+  li {
+     list-style-type: none;
+  }
+  .oss-results {
+    border-bottom: solid $oss-darkgrey 1px;
+    border-left: solid $oss-darkgrey 1px;
+    border-right: solid $oss-darkgrey 1px;
+    margin-bottom: 16px;
+  }
+  .oss-results-sg-header {
+    border-top: solid $oss-blue 2px;
+    color: $oss-blue;
+    font-weight: bold;
+    padding: 12px;
+  }
+  .oss-results-sg-header.collapsed {
+    border-top: solid $oss-darkgrey 1px;
+    background-color: $oss-grey;
+    color: $oss-bodytext;
+    font-weight: bold;
+    padding: 12px;
+  }
+  .oss-results-sg-description {
+    padding-bottom: 12px;
+    padding-left: 12px;
+    padding-top: 6px;
+  }
 }
