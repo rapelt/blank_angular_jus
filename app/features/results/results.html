@@ -1,7 +1,7 @@
 <div class='results-page'>
   <div class='oss-results'>
     <div class='oss-results-sg' ng-repeat='serviceGroup in serviceGroups'>
-      <div data-toggle='collapse' ng-click='serviceGroup.toggleCollapse()' id='heading-{{serviceGroup.id}}' data-target='#collapsible-{{serviceGroup.id}}' class='oss-results-sg-header collapsed'>
+      <div data-toggle='collapse' ng-click='serviceGroup.toggleExpanded()' id='heading-{{serviceGroup.id}}' data-target='#collapsible-{{serviceGroup.id}}' class='oss-results-sg-header collapsed'>
         {{serviceGroup.title}}
         <i ng-show='serviceGroup.expanded' class="oss-indicator fa fa-caret-down fa-2" aria-hidden="true"></i>
         <i ng-hide='serviceGroup.expanded' class="oss-indicator fa fa-caret-left fa-2" aria-hidden="true"></i>
