@@ -27,8 +27,8 @@ describe('Service results controller', function(){
   });
 
   it('Should get results', function(){
-    deferred.resolve({"data": "fred"});
+    deferred.resolve({ "data": [{ "fred" : "nothing" }] });
     scope.$apply();
-    expect(scope.serviceGroups).toBe('fred');
+    expect(scope.serviceGroups[0].fred).toBe('nothing');
   });
 });
