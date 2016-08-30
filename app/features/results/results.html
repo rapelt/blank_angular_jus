@@ -1,7 +1,7 @@
 <div class='results-page'>
   <div class='oss-results'>
     <div class='oss-results-sg' ng-repeat='serviceGroup in serviceGroups'>
-      <div data-toggle='collapse' ng-click='serviceGroup.toggleCollapse()' id='heading-{{serviceGroup.id}}' data-target='#collapsible-{{serviceGroup.id}}' class='oss-results-sg-header collapsed'>
+      <div data-toggle='collapse' ng-click='serviceGroup.toggleExpanded()' id='heading-{{serviceGroup.id}}' data-target='#collapsible-{{serviceGroup.id}}' class='oss-results-sg-header collapsed'>
         {{serviceGroup.title}}
         <i ng-show='serviceGroup.expanded' class="oss-indicator fa fa-caret-down fa-2" aria-hidden="true"></i>
         <i ng-hide='serviceGroup.expanded' class="oss-indicator fa fa-caret-left fa-2" aria-hidden="true"></i>
@@ -9,8 +9,12 @@
       <div id='collapsible-{{serviceGroup.id}}' class='collapse oss-results-sg-body' >
         <div class='oss-results-sg-description'> {{serviceGroup.description}} </div>
         <ul>
-          <li ng-repeat='service in serviceGroup.services' class='oss-results-service'><input type='checkbox' id='checkbox-{{service.service_id}}'/>
-            <label for='checkbox-{{service.service_id}}'>{{service.title}}</label></li>
+          <li ng-repeat='service in serviceGroup.services' class='oss-results-service'>
+          
+          <label>
+            <input type='checkbox' id='checkbox-{{service.service_id}}'/>
+            {{service.title}}
+          </label></li>
         </ul>
       </div>
     </div>

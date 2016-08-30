@@ -31,4 +31,13 @@ describe('Service results controller', function(){
     scope.$apply();
     expect(scope.serviceGroups[0].fred).toBe('nothing');
   });
+  it('Should collapse service groups', function(){
+    deferred.resolve({ "data": [{ "fred" : "nothing" }] });
+    scope.$apply();
+    expect(scope.serviceGroups[0].expanded).toBe(false);
+    scope.serviceGroups[0].toggleExpanded();
+    expect(scope.serviceGroups[0].expanded).toBe(true);
+    scope.serviceGroups[0].toggleExpanded();
+    expect(scope.serviceGroups[0].expanded).toBe(false);
+  });
 });

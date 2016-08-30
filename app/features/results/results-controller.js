@@ -5,7 +5,7 @@ angular.module('ossCafeApp')
   AblisDataService.getResults().then(function(response){
     $scope.serviceGroups = response.data.map(function(serviceGroup){
       serviceGroup.expanded = false;
-      serviceGroup.toggleCollapse = function(){
+      serviceGroup.toggleExpanded = function(){
         serviceGroup.expanded = !serviceGroup.expanded;
       }
       return serviceGroup;
