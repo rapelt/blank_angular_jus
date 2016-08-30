@@ -1,10 +1,20 @@
 .results-page {
+
+  $base-padding: 12px;
+
   .oss-indicator {
     float: right;
     color: $oss-darkgrey;
+    font-size: 22px;
+  }
+  ul {
+    padding-left: $base-padding;
   }
   li {
-     list-style-type: none;
+    list-style-type: none;
+  }
+  label {
+    padding-left: $base-padding;
   }
   .oss-results {
     border-bottom: solid $oss-darkgrey 1px;
@@ -16,18 +26,18 @@
     border-top: solid $oss-blue 2px;
     color: $oss-blue;
     font-weight: bold;
-    padding: 12px;
+    padding: $base-padding;
   }
   .oss-results-sg-header.collapsed {
     border-top: solid $oss-darkgrey 1px;
     background-color: $oss-grey;
     color: $oss-bodytext;
     font-weight: bold;
-    padding: 12px;
+    padding: $base-padding;
   }
   .oss-results-sg-description {
-    padding-bottom: 12px;
-    padding-left: 12px;
+    padding-bottom: $base-padding;
+    padding-left: $base-padding;
     padding-top: 6px;
   }
 }

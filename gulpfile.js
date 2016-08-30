@@ -126,7 +126,7 @@ gulp.task('test', function(done){
   }, done).start();
 });
 
-gulp.task('testcoverage', function(done){
+gulp.task('testcoverageci', function(done){
   new Server({
     configFile: __dirname + '/test/karma.conf.js',
     singleRun: true,
@@ -134,21 +134,21 @@ gulp.task('testcoverage', function(done){
   }, done).start();
 });
 
-gulp.task('testcoverageci', function(done){
+gulp.task('testcoverage', function(done){
   new Server({
     configFile: __dirname + '/test/karma.conf.js',
     singleRun: true,
     reporters: ['dots','progress', 'coverage'],
     coverageReporter:{
-      type : 'json',
+      type : 'html',
       dir : 'coverage/',
       subdir: '.'
     },
   }, done).start();
 });
 
-gulp.task('teste2e',['start:server:test'], function(cb){
-  gulp.src(['./E2E/spec/*.js'])
+gulp.task('e2e-phantom',['start:server:test'], function(cb){
+  gulp.src(['./E2E/spec/**/*.js'])
       .pipe(angularProtractor({
           'configFile': './E2E/conf.js',
           'autoStartStopServer': true,
@@ -164,6 +164,29 @@ gulp.task('teste2e',['start:server:test'], function(cb){
       });
 })
 
+
+gulp.task('e2e',['start:server:test'], function(cb){
+  gulp.src(['./E2E/spec/**/*.js'])
+      .pipe(angularProtractor({
+          'configFile': './E2E/conf.js',
+          'autoStartStopServer': true,
+          'debug': false,
+          'args': [
+            '--chromeOnly', true,
+            '--directConnect', true,
+            '--capabilities.browserName', 'chrome',
+            '--capabilities.chromeOptions.args', '--disable-extensions'
+          ]
+      }))
+      .on('error', function(e) {
+        console.log('error', e);
+        process.exit(1);
+      })
+      .on('end', function(e){
+        $.connect.serverClose();
+        process.exit(0);
+      });
+})
 
 
 // inject bower components

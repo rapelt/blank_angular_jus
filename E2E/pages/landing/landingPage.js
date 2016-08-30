@@ -4,4 +4,4 @@ var LandingPage = function (){
 
 
 };
-module.exports = new LandinPage();
+module.exports = new LandingPage();
