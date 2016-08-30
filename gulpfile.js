@@ -126,7 +126,7 @@ gulp.task('test', function(done){
   }, done).start();
 });
 
-gulp.task('testcoverage', function(done){
+gulp.task('testcoverageci', function(done){
   new Server({
     configFile: __dirname + '/test/karma.conf.js',
     singleRun: true,
@@ -134,13 +134,13 @@ gulp.task('testcoverage', function(done){
   }, done).start();
 });
 
-gulp.task('testcoverageci', function(done){
+gulp.task('testcoverage', function(done){
   new Server({
     configFile: __dirname + '/test/karma.conf.js',
     singleRun: true,
     reporters: ['dots','progress', 'coverage'],
     coverageReporter:{
-      type : 'json',
+      type : 'html',
       dir : 'coverage/',
       subdir: '.'
     },
@@ -171,7 +171,7 @@ gulp.task('e2e',['start:server:test'], function(cb){
           'configFile': './E2E/conf.js',
           'autoStartStopServer': true,
           'debug': false,
-          'args': [ 
+          'args': [
             '--chromeOnly', true,
             '--directConnect', true,
             '--capabilities.browserName', 'chrome',
