@@ -7,6 +7,9 @@
     color: $oss-darkgrey;
     font-size: 22px;
   }
+  input {
+    margin-right: 10px;
+  }
   ul {
     padding-left: $base-padding;
   }
@@ -15,6 +18,7 @@
   }
   label {
     padding-left: $base-padding;
+    font-weight: normal;
   }
   .oss-results {
     border-bottom: solid $oss-darkgrey 1px;
