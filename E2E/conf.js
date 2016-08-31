@@ -1,5 +1,5 @@
 exports.config = {
-  
+
   // The address of a running selenium server.
   seleniumAddress: 'http://localhost:4444/wd/hub',
 
@@ -11,7 +11,7 @@ exports.config = {
   // A base URL for your application under test. Calls to protractor.get()
   // with relative paths will be prepended with this.
   baseUrl: 'http://localhost:9001',
-  
+
   capabilities: {
     'browserName': 'phantomjs',
     'phantomjs.binary.path': require('phantomjs-prebuilt').path,

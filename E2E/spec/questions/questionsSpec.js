@@ -14,7 +14,7 @@ describe('questions screen', function () {
    });
 
   it('should be able to select differect questions', function(){
-    expect(questionsPage.questionCheckbox.get(0).waitReady()).toBeTruthy()
+    expect(questionsPage.questionCheckbox.get(0).waitReady()).toBeTruthy();
     questionsPage.question()
     questionsPage.question2()
     questionsPage.next();

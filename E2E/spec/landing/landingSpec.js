@@ -5,7 +5,7 @@ var landingPage = require('../../pages/landing/landingPage.js');
 
 describe('landing screen', function () {
   beforeEach(function () {
-    browser.get('http://localhost:9001');
+		browser.driver.get('http://localhost:9001');
   });
 
   it('should check the title', function () {
