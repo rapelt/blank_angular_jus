@@ -11,17 +11,20 @@
   "undef": true,
   "unused": true,
   "asi": true,
+  "jasmine": true,
+  "mocha": true,
   "globals": {
     "angular": false,
-    "describe": false,
-    "beforeEach": false,
-    "browser": false,
-    "it": false,
-    "expect": false,
-    "element": false,
-    "by": false,
-    "inject": false,
-    "xit": false,
-    "jasmine": false
+     "browser": false,
+     "inject": false,
+     "_": false,
+     "driver": false,
+     "protractor": false,
+     "browser": false,
+     "$": false,
+     "$$": false,
+     "element": false,
+     "by": false,
+     "list": false
   }
 }

@@ -47,6 +47,8 @@ Preview deployable artefact in the browser
 
 This project uses .editorconfig for code conventions, you may have to install a plugin for your editor to support .editorconfig files
 
+.jshintrc can be customised based on [this jshintrc example] (https://github.com/jshint/jshint/blob/master/examples/.jshintrc)
+
 ### Project structure and architecture
 
 This project uses an angular.js project structure taken from the [angular.js yeoman generator] (https://github.com/yeoman/generator-angular)
