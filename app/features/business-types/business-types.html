@@ -3,24 +3,25 @@
   <div class="business-types">
     <h1 class="main-title">What type of Café are you starting?</h1>
     <div class="col-md-12">
-      <div class="business-type-box">
+
+      <label class="business-type-box" ng-class="{'selected-business-type':cafe}">
         <h2>Café</h2>
-        <input type="checkbox">
-      </div>
+        <input type="checkbox" ng-model="$root.cafe">
+      </label>
 
-      <div class="business-type-box">
+      <label class="business-type-box" ng-class="{'selected-business-type':mobileFood}">
         <h2>Mobile food</h2>
-        <input type="checkbox">
-      </div>
+        <input type="checkbox" ng-model="$root.mobileFood">
+      </label>
 
-      <div class="business-type-box">
+      <label class="business-type-box" ng-class="{'selected-business-type':takeaway}">
         <h2>Takeaway food</h2>
-        <input type="checkbox">
-      </div>
+        <input type="checkbox" ng-model="$root.takeaway">
+      </label>
     </div>
 
     <div class='navigation-buttons'>
-      <button id="questions-button" class='oss-next-button oss-button btn btn-primary' ng-click='showNextPage()'>Next</button>
+      <button id="questions-button" class='oss-next-button oss-button btn btn-primary' ng-disabled="!isNextButtonEnabled()" ng-click='showNextPage()'>Next</button>
     </div>
   </div>
 </div>

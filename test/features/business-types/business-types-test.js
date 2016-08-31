@@ -3,12 +3,13 @@
 describe('Business types controller', function(){
   beforeEach(module('ossCafeApp'));
   beforeEach(module('Business-types'));
-  var scope, state;
+  var scope, state, rootScope;
 
   beforeEach(function(){
     inject(function($rootScope, $controller, $q, $templateCache, $state){
       state = $state;
       scope = $rootScope.$new();
+      rootScope = $rootScope;
       $templateCache.put('features/home/main.html', '');
       $templateCache.put('features/results/_results.html', '');
       $templateCache.put('features/questions/questions.html', '');
@@ -39,5 +40,18 @@ describe('Business types controller', function(){
     scope.$apply();
     expect(state.current.controller).toBe('QuestionsController');
     expect(state.current.url).toBe('/questions');
+  });
+
+  it('Should restrict access to the next button ', function(){
+    scope.isNextButtonEnabled();
+    scope.$apply();
+    expect(scope.isNextButtonEnabled()).toBeFalsy();
+  });
+
+  it('Should enable access to the next button ', function(){
+    rootScope.cafe = true;
+    scope.isNextButtonEnabled();
+    scope.$apply();
+    expect(scope.isNextButtonEnabled()).toBeTruthy();
   });
 });

@@ -16,6 +16,7 @@ describe ('landing screen', function(){
  	expect(browser.getCurrentUrl()).toContain("9001");
  }) ;
  it ('should take you to the Questions', function(){
+  element.all(by.css('.business-type-box')).get(0).click();
  	element(by.id("questions-button")).click();
  	browser.sleep(2000);
  	expect(browser.getCurrentUrl()).toContain("9001");
@@ -23,8 +24,5 @@ describe ('landing screen', function(){
  	browser.sleep(3000);
  	element.all(by.css('.checkbox')).get(2).click();
  	browser.sleep(2000);
-
  })
-
-
 });

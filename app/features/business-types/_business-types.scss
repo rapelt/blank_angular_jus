@@ -24,6 +24,17 @@
     height: 180px;
     margin: 20px;
     display: inline-block;
+    color: $oss-blue;
+
+    &:hover {
+      background-color: $oss-blue;
+      color: white;
+    }
+  }
+
+  .selected-business-type{
+    background-color: $oss-blue;
+    color: white;
   }
 
   .navigation-buttons{
