@@ -11,5 +11,4 @@ describe('landing screen', function () {
   it('should check the title', function () {
     expect(browser.getCurrentUrl()).toContain("results");
   });
-
 });
