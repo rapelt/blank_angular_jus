@@ -7,13 +7,15 @@
     <div class='question' ng-repeat='question in ablisData[page].questions'>
       <div>
         <label for='checkbox-{{question.id}}'>{{$index + 1}}. {{question.value}}</label>
-        <input id='checkbox-{{question.id}}' class='checkbox' type='checkbox' data-toggle='collapse' data-target='#collapsible-{{question.id}}'>
+        <input id='checkbox-{{question.id}}' ng-model="$root.qanswers[question.id]" class='checkbox'
+               type='checkbox' data-toggle='collapse' data-target='#collapsible-{{question.id}}'
+        >
       </div>
-      <ol type='a' id='collapsible-{{question.id}}' class='collapse' ng-hide='!question.answer.subquestion'>
+      <ol type='a' id='collapsible-{{question.id}}' class='{{$root.qanswers[question.id] ? "" : "collapse"}}' ng-hide='!question.answer.subquestion'>
           <div class="subquestion-value">{{question.answer.subquestion.value}}</div>
           <li class='subquestion' ng-repeat='answer in question.answer.subquestion.answers'>
             <label for='checkbox-{{answer.id}}'>{{answer.value}}</label>
-            <input class='checkbox' type='checkbox' id='checkbox-{{answer.id}}'/>
+            <input ng-model="$root.qanswers[answer.id]" class='checkbox' type='checkbox' id='checkbox-{{answer.id}}'/>
           </li>
       </ol>
     </div>

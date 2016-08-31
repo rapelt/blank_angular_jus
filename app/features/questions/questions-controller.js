@@ -1,9 +1,10 @@
 'use strict';
 
 angular.module('Questions', [])
-  .controller('QuestionsController', function ($scope, $state, AblisDataService) {
+  .controller('QuestionsController', function ($scope, $state, $rootScope, AblisDataService) {
     $scope.ablisQuestions = "";
     $scope.page =  0;
+    $rootScope.qanswers = $rootScope.qanswers || {};
 
     AblisDataService.getQuestions().then(function(response){
       $scope.ablisData = response.data;
