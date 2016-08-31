@@ -6,6 +6,7 @@ var questionsPage = require('../../pages/questions/questionsPage.js');
 
 describe('questions screen', function () {
   beforeEach(function () {
+    browser.ignoreSynchronization = true;
     browser.get('http://localhost:9000/#/questions');
   })
 

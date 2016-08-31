@@ -5,12 +5,13 @@ var landingPage = require('../../pages/landing/landingPage.js');
 
 describe('landing screen', function () {
   beforeEach(function () {
+    browser.ignoreSynchronization = true;
 		browser.driver.get('http://localhost:9001');
   });
 
   it('should check the title', function () {
-    expect(browser.getCurrentUrl()).toContain("9001");
     expect(landingPage.isCafeDisplayed()).toBeTruthy();
+    expect(browser.getCurrentUrl()).toContain("9001");
   });
 
   it('should take you to the Questions', function () {
