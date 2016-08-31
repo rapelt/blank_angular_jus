@@ -1,31 +1,31 @@
-<div class="business-types-page">
-  <div class="boxes clearfix">
+<div class='business-types-page'>
+  <div class='boxes clearfix'>
     <h1>What type of Café are you starting?</h1>
     <!--TODO Alt text confirmation-->
-    <label class="box" ng-class="{'selected-box':cafe}">
+    <label class='box' ng-class='{"selected-box":cafe}'>
       <h2>Café</h2>
-      <img class="icon icon-inactive" src="/resources/images/coffee-cup{{$root.cafe ? '-white' : ''}}.png" alt="Coffee Cup" aria-hidden="true">
-      <img class="icon icon-active" src="/resources/images/coffee-cup-white.png" alt="White Coffee Cup" aria-hidden="true">
-      <input type="checkbox" ng-model="$root.cafe">
+      <img class='icon icon-inactive' src='/resources/images/coffee-cup{{$root.cafe ? "-white" : ""}}.png' alt='Coffee Cup' aria-hidden='true'>
+      <img class='icon icon-active' src='/resources/images/coffee-cup-white.png' alt='White Coffee Cup' aria-hidden='true'>
+      <input type='checkbox' ng-model='$root.cafe'>
     </label>
 
-    <label class="box" ng-class="{'selected-box':mobileFood}">
+    <label class='box' ng-class='{"selected-box":mobileFood}'>
       <h2>Mobile food</h2>
-      <img class="icon icon-inactive" src="/resources/images/transport{{$root.mobileFood ? '-white' : ''}}.png" alt="Transport" aria-hidden="true">
-      <img class="icon icon-active" src="/resources/images/transport-white.png" alt="White Transport" aria-hidden="true">
-      <input type="checkbox" ng-model="$root.mobileFood">
+      <img class='icon icon-inactive' src='/resources/images/transport{{$root.mobileFood ? "-white" : ""}}.png' alt='Transport' aria-hidden='true'>
+      <img class='icon icon-active' src='/resources/images/transport-white.png' alt='White Transport' aria-hidden='true'>
+      <input type='checkbox' ng-model='$root.mobileFood'>
     </label>
 
-    <label class="box" ng-class="{'selected-box':takeaway}">
+    <label class='box' ng-class='{"selected-box":takeaway}'>
       <h2>Takeaway food</h2>
-      <img class="icon icon-inactive" src="/resources/images/food{{$root.takeaway ? '-white' : ''}}.png" alt="Takeaway food" aria-hidden="true">
-      <img class="icon icon-active" src="/resources/images/food-white.png" alt="White Takeaway food" aria-hidden="true">
-      <input type="checkbox" ng-model="$root.takeaway">
+      <img class='icon icon-inactive' src='/resources/images/food{{$root.takeaway ? "-white" : ""}}.png' alt='Takeaway food' aria-hidden='true'>
+      <img class='icon icon-active' src='/resources/images/food-white.png' alt='White Takeaway food' aria-hidden='true'>
+      <input type='checkbox' ng-model='$root.takeaway'>
     </label>
   </div>
 
-  <div class='col-md-12 navigation-buttons'>
-    <button id="questions-button" class='oss-next-button oss-button btn btn-primary' ng-disabled="!isNextButtonEnabled()" ng-click='showNextPage()'>Next</button>
+  <div class="col-md-12 navigation-buttons">
+    <button id='questions-button' class="oss-next-button oss-button btn btn-primary" ng-disabled='!isNextButtonEnabled()' ng-click="showNextPage()">Next</button>
   </div>
 
 </div>
