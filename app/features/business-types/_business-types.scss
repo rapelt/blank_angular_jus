@@ -1,14 +1,11 @@
 .business-types-page {
-  $business-type-boxes-width: 180px * 3 + 10px *6 +1;
+  $boxes-width: 180px * 3 + 10px *6 +1;
 
   @media screen and (max-width: 580px) {
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-bottom: 20px;
-    padding-top: 20px;
+    padding: 20px;
   }
 
-  .main-title{
+  h1 {
     margin-left: 10px;
   }
 
@@ -18,9 +15,18 @@
     margin-bottom: 16px;
   }
 
-  .business-type-box{
+  .boxes {
+    margin: 0 auto;
+    width: $boxes-width;
+
+    @media screen and (max-width: $boxes-width + 20px) {
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+  .box {
     border: 1px solid black;
-    //padding: 20px;
     width: 180px;
     height: 180px;
     margin: 10px;
@@ -28,7 +34,7 @@
     color: $oss-blue;
     text-align: center;
 
-    @media screen and (max-width: $business-type-boxes-width + 20px) {
+    @media screen and (max-width: $boxes-width + 20px) {
       float: none;
       text-align: center;
     }
@@ -36,40 +42,36 @@
     .icon-active {
       display: none;
     }
+
     .icon-inactive {
       display: block;
     }
 
     &:hover {
+      background-color: $oss-blue;
+      color: white;
+
       .icon-inactive {
         display: none;
       }
       .icon-active {
         display: block;
       }
-      background-color: $oss-blue;
-      color: white;
     }
   }
 
-  .selected-business-type{
+  .selected-box {
     background-color: $oss-blue;
     color: white;
   }
 
-  .navigation-buttons{
+  .navigation-buttons {
     display: block;
     text-align: right;
-  }
-  
-  .business-types {
-    margin: 0 auto;
-    width: $business-type-boxes-width;
+    padding-right: 150px;
 
-    @media screen and (max-width: $business-type-boxes-width + 20px) {
-      width: 100%;
-      text-align: center;
+    @media screen and (max-width: $boxes-width + 20px) {
+      padding-right: 20px;
     }
   }
-
 }
