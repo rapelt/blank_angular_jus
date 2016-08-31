@@ -1,11 +1,7 @@
 .business-types-page {
+  $business-type-boxes-width: 180px * 3 + 10px *6 +1;
 
-  padding-left: 150px;
-  padding-right: 150px;
-  padding-bottom: 70px;
-  padding-top: 30px;
-
-  @media screen and (max-width: 1040px) {
+  @media screen and (max-width: 580px) {
     padding-left: 20px;
     padding-right: 20px;
     padding-bottom: 20px;
@@ -13,26 +9,29 @@
   }
 
   .main-title{
-    text-align: left;
+    margin-left: 10px;
   }
 
   .icon {
     height: 47px;
     margin: auto;
     margin-bottom: 16px;
-    //display: block;
-    text-align: center;
   }
 
   .business-type-box{
     border: 1px solid black;
-    text-align: center;
-    padding: 20px;
+    //padding: 20px;
     width: 180px;
     height: 180px;
-    margin: 20px;
-    display: inline-block;
+    margin: 10px;
+    float: left;
     color: $oss-blue;
+    text-align: center;
+
+    @media screen and (max-width: $business-type-boxes-width + 20px) {
+      float: none;
+      text-align: center;
+    }
 
     .icon-active {
       display: none;
@@ -60,13 +59,17 @@
 
   .navigation-buttons{
     display: block;
+    text-align: right;
+  }
+  
+  .business-types {
+    margin: 0 auto;
+    width: $business-type-boxes-width;
+
+    @media screen and (max-width: $business-type-boxes-width + 20px) {
+      width: 100%;
+      text-align: center;
+    }
   }
 
-  .business-types{
-    text-align: center;
-  }
-
-  .boxes{
-    text-align: center;
-  }
 }
