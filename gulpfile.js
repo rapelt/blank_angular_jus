@@ -19,7 +19,7 @@ var yeoman = {
 var paths = {
   scripts: [yeoman.app + '/app.js', yeoman.app + '/features/**/*.js'],
   styles: [yeoman.app + '/features/**/*.scss'],
-  test: ['test/features/**/*.js'],
+  test: ['test/features/**/*.js','E2E/**/*.js'],
   views: {
     main: yeoman.app + '/index.html',
     error: yeoman.app + '/404.html',
@@ -43,6 +43,17 @@ var styles = lazypipe()
   .pipe($.autoprefixer, 'last 1 version')
   .pipe(gulp.dest, '.tmp/styles');
 
+function runProtractor(protractorConfig) {
+    return gulp.src(['./E2E/spec/**/*.js'])
+      .pipe(angularProtractor(protractorConfig))
+      .on('error', function(e) {
+        process.exit(1);
+      })
+      .on('end', function(e){
+        $.connect.serverClose();
+        process.exit(0);
+      });
+}
 ///////////
 // Tasks //
 ///////////
@@ -53,7 +64,7 @@ gulp.task('styles', function () {
 });
 
 gulp.task('lint:scripts', function () {
-  return gulp.src(paths.scripts)
+  return gulp.src(paths.scripts.concat(paths.test))
     .pipe(lintScripts());
 });
 
@@ -148,42 +159,26 @@ gulp.task('testcoverage', function(done){
 });
 
 gulp.task('e2e-phantom',['start:server:test'], function(cb){
-  gulp.src(['./E2E/spec/**/*.js'])
-      .pipe(angularProtractor({
-          'configFile': './E2E/conf.js',
-          'autoStartStopServer': true,
-          'debug': false
-      }))
-      .on('error', function(e) {
-        process.exit(1);
-      })
-      .on('end', function(e){
-        $.connect.serverClose();
-        process.exit(0);
-      });
+  runProtractor({
+      'configFile': './E2E/conf.js',
+      'autoStartStopServer': true,
+      'debug': false
+  });
 })
 
 
-gulp.task('e2e',['start:server:test'], function(cb){
-  gulp.src(['./E2E/spec/**/*.js'])
-      .pipe(angularProtractor({
-          'configFile': './E2E/conf.js',
-          'autoStartStopServer': true,
-          'debug': false,
-          'args': [
-            '--chromeOnly', true,
-            '--directConnect', true,
-            '--capabilities.browserName', 'chrome',
-            '--capabilities.chromeOptions.args', '--disable-extensions'
-          ]
-      }))
-      .on('error', function(e) {
-        process.exit(1);
-      })
-      .on('end', function(e){
-        $.connect.serverClose();
-        process.exit(0);
-      });
+gulp.task('e2e',['start:server:test', 'lint:scripts'], function(cb){
+  runProtractor({
+      'configFile': './E2E/conf.js',
+      'autoStartStopServer': true,
+      'debug': false,
+      'args': [
+        '--chromeOnly', true,
+        '--directConnect', true,
+        '--capabilities.browserName', 'chrome',
+        '--capabilities.chromeOptions.args', '--disable-extensions'
+      ]
+  });
 })
 
 

@@ -7,10 +7,21 @@
   "latedef": true,
   "noarg": true,
   "node": true,
-  "strict": true,
+  "strict": false,
   "undef": true,
   "unused": true,
+  "asi": true,
   "globals": {
-    "angular": false
+    "angular": false,
+    "describe": false,
+    "beforeEach": false,
+    "browser": false,
+    "it": false,
+    "expect": false,
+    "element": false,
+    "by": false,
+    "inject": false,
+    "xit": false,
+    "jasmine": false
   }
 }
