@@ -5,7 +5,7 @@
   padding-bottom: 70px;
   padding-top: 30px;
 
-  @media screen and (max-width: 580px) {
+  @media screen and (max-width: 1040px) {
     padding-left: 20px;
     padding-right: 20px;
     padding-bottom: 20px;
@@ -13,7 +13,15 @@
   }
 
   .main-title{
-    float: left;
+    text-align: left;
+  }
+
+  .icon {
+    height: 47px;
+    margin: auto;
+    margin-bottom: 16px;
+    //display: block;
+    text-align: center;
   }
 
   .business-type-box{
@@ -26,7 +34,20 @@
     display: inline-block;
     color: $oss-blue;
 
+    .icon-active {
+      display: none;
+    }
+    .icon-inactive {
+      display: block;
+    }
+
     &:hover {
+      .icon-inactive {
+        display: none;
+      }
+      .icon-active {
+        display: block;
+      }
       background-color: $oss-blue;
       color: white;
     }
@@ -42,6 +63,10 @@
   }
 
   .business-types{
+    text-align: center;
+  }
+
+  .boxes{
     text-align: center;
   }
 }

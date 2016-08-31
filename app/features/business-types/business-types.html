@@ -2,20 +2,26 @@
 
   <div class="business-types">
     <h1 class="main-title">What type of Café are you starting?</h1>
-    <div class="col-md-12">
-
+    <div class="col-md-12 boxes">
+<!--TODO Alt text confirmation-->
       <label class="business-type-box" ng-class="{'selected-business-type':cafe}">
         <h2>Café</h2>
+        <img class="icon icon-inactive" src="/resources/images/coffee-cup{{$root.cafe ? '-white' : ''}}.png" alt="Coffee Cup">
+        <img class="icon icon-active" src="/resources/images/coffee-cup-white.png" alt="Coffee Cup">
         <input type="checkbox" ng-model="$root.cafe">
       </label>
 
       <label class="business-type-box" ng-class="{'selected-business-type':mobileFood}">
         <h2>Mobile food</h2>
+        <img class="icon icon-inactive" src="/resources/images/transport{{$root.mobileFood ? '-white' : ''}}.png" alt="Coffee Cup">
+        <img class="icon icon-active" src="/resources/images/transport-white.png" alt="Coffee Cup">
         <input type="checkbox" ng-model="$root.mobileFood">
       </label>
 
       <label class="business-type-box" ng-class="{'selected-business-type':takeaway}">
         <h2>Takeaway food</h2>
+        <img class="icon icon-inactive" src="/resources/images/food{{$root.takeaway ? '-white' : ''}}.png" alt="Coffee Cup">
+        <img class="icon icon-active" src="/resources/images/food-white.png" alt="Coffee Cup">
         <input type="checkbox" ng-model="$root.takeaway">
       </label>
     </div>
