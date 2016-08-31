@@ -1,11 +1,9 @@
-'use strict'; 
+'use strict';
 
 var QuestionsPage = function (){
 
 	this.questionCheckbox = element.all(by.css('.checkbox'));
 	this.nextbutton = element(by.css('.oss-next-button'));
-
-
 
 	this.question = function(){
 		this.questionCheckbox.get(0).click();
