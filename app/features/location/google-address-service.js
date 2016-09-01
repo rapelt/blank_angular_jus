@@ -6,8 +6,6 @@
 // <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places">
 angular.module('Map', [])
  .factory('MapService', function(){
-   var placeSearch;
-
    return {
      geolocate: function(){
        //return users location

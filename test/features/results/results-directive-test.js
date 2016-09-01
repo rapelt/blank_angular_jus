@@ -1,5 +1,4 @@
 describe('Directive: results', function(){
-  var html
   var scope, element;
   beforeEach(function(){
     module("templates");

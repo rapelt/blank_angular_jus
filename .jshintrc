@@ -25,6 +25,7 @@
      "$$": false,
      "element": false,
      "by": false,
-     "list": false
+     "list": false,
+     "google": false
   }
 }

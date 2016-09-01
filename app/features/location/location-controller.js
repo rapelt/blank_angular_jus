@@ -8,7 +8,7 @@ angular.module('Location', ['Map'])
     return {
       restrict: 'E',
       template: '<input class="location-search-input" id="autocomplete" type="text" placeholder="Your cafe\'s location"/>',
-      link: function(scope, elem, attr){
+      link: function(scope, elem){
         var autocomplete = MapService.initAutocomplete(elem.children('#autocomplete')[0]);
         var brisbaneBounds = MapService.getLocationBounds();
         autocomplete.setBounds(brisbaneBounds);

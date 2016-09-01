@@ -1,7 +1,7 @@
 
 'use strict';
 
-var resultsPage = require('../../pages/results/resultsPage.js');
+// var resultsPage = require('../../pages/results/resultsPage.js');
 
 describe('landing screen', function () {
   beforeEach(function () {
