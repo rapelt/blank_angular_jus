@@ -2,10 +2,10 @@
 
 describe('Service results controller', function(){
   beforeEach(module('ossCafeApp'));
-  var ablisDataService, scope, state, deferred;
+  var resultsService, scope, state, deferred;
 
   beforeEach(function(){
-    ablisDataService = jasmine.createSpyObj('ablisDataService', ['getResults']);
+    resultsService = jasmine.createSpyObj('ResultsService', ['get']);
     inject(function($rootScope, $controller, $q, $templateCache, $state){
       state = $state;
       scope = $rootScope.$new();
@@ -13,9 +13,9 @@ describe('Service results controller', function(){
       $templateCache.put('features/results/_results.html', '');
       $templateCache.put('features/business-types/business-types.html', '');
       deferred = $q.defer();
-      ablisDataService.getResults.and.returnValue(deferred.promise);
+      resultsService.get.and.returnValue(deferred.promise);
 
-      $controller('ResultsController', {$scope: scope, AblisDataService: ablisDataService});
+      $controller('ResultsController', {$scope: scope, ResultsService: resultsService});
     });
   });
 

@@ -1,8 +1,8 @@
 'use strict';
 
 angular.module('ossCafeApp')
-.controller('ResultsController', function(AblisDataService, $scope){
-  AblisDataService.getResults().then(function(response){
+.controller('ResultsController', function(ResultsService, $scope){
+  ResultsService.get().then(function(response){
     $scope.serviceGroups = response.data.map(function(serviceGroup){
       serviceGroup.expanded = false;
       serviceGroup.toggleExpanded = function(){
