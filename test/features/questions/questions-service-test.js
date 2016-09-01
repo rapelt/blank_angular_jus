@@ -43,7 +43,7 @@ describe('Questions services', function(){
   var testQuestions =
     [
       {
-        "group_name": "This is a g",
+        "group_name": "This is a group",
         "questions": [ cafeQuestion, takeawayQuestion, cafeAndTakeawayQuestion ]
       }
     ];
@@ -56,6 +56,13 @@ describe('Questions services', function(){
       spyOn(QuestionsRepository, 'get').and.returnValue(deferred.promise);
     });
   });
+  
+  it('Should return the questions for a group type', function(){
+    deferred.resolve(testQuestions);
+    questionsService.get({group_type:"This is a group"}).then(function(response){
+      expect(response[0])
+    })
+  })
 
   it('Should return all questions when no business type selected', function(){
     deferred.resolve(testQuestions);

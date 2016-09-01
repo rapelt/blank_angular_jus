@@ -1,0 +1,17 @@
+{
+  "1a": {
+    "id": "1a",
+    "value": "yes",
+    "question_id": "1q"
+  },
+  "2a": {
+    "id": "2a",
+    "value": "Internet website",
+    "question_id": "2q"
+  },
+  "3a": {
+    "id": "3a",
+    "value": "yes",
+    "question_id": "3q"
+  }
+}
