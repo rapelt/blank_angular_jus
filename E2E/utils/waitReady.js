@@ -31,7 +31,7 @@ ElementFinder.prototype.waitReady = function (opt_optStr) {
   }
 
   function _isPresentError (err) {
-    lastWebdriverError = (err != null) ? err.toString() : err
+    lastWebdriverError = (err !== null) ? err.toString() : err
     return false
   }
 
@@ -67,5 +67,5 @@ ElementFinder.prototype.waitReady = function (opt_optStr) {
 // Helpers
 function _refreshPage () {
   // Swallow useless refresh page webdriver errors
-  browser.navigate().refresh().then(function () {}, function (e) {})
+  browser.navigate().refresh().then(function () {}, function () {})
 }

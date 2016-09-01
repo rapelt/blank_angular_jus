@@ -9,7 +9,9 @@ angular
     'ResultsService',
     'QuestionsService',
     'Business-types',
-    'QuestionsRepository'
+    'QuestionsRepository',
+    'Location',
+    'Business-types'
   ])
   .config(function ($stateProvider, $urlRouterProvider) {
     $urlRouterProvider.otherwise("/");
@@ -19,6 +21,11 @@ angular
         url: '/results',
 				template: '<div results></div>',
         controller: 'ResultsController'
+      })
+      .state('location', {
+        url: '/location',
+        templateUrl: 'features/location/location.html',
+        controller: 'LocationController'
       })
       .state('questions', {
         url: '/questions',
