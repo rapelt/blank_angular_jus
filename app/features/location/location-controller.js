@@ -1,21 +1,22 @@
 'use strict';
 
-angular.module('Location', [])
+angular.module('Location', ['Map'])
   .controller('LocationController', function(){
 
   })
-  .directive('locationDirective', function ($window, MapService ) {
+  .directive('locationDirective', function (MapService ) {
     return {
       restrict: 'E',
-      template:'<input class="location-search-input"  id="autocomplete" type="text" placeholder="Your cafe\'s location"/>',
+      template: '<input class="location-search-input" id="autocomplete" type="text" placeholder="Your cafe\'s location"/>',
       link: function(scope, elem, attr){
-        var autocomplete = new google.maps.places.Autocomplete(
-          elem.children('#autocomplete')[0],
-          {types: ['geocode']}
-        );
+        var autocomplete = MapService.initAutocomplete(elem.children('#autocomplete')[0]);
+        var brisbaneBounds = MapService.getLocationBounds();
+        autocomplete.setBounds(brisbaneBounds);
 
         autocomplete.addListener('place_changed', function(){
-          var place = autocomplete.getPlace().formatted_address;
+          scope.$apply(function(){
+            scope.place = autocomplete.getPlace();
+          })
         });
       }
     };
