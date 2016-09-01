@@ -6,6 +6,8 @@ angular
     'ui.router',
     'AblisData',
     'Questions',
+    'Results',
+    'ResultsService',
     'Business-types'
   ])
   .config(function ($stateProvider, $urlRouterProvider) {

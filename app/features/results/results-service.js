@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('AblisData', [])
+angular.module('ResultsService', [])
 .factory('ResultsService', function($http){
   return {
     get: function(){

@@ -2,6 +2,7 @@
 
 describe('Service results controller', function(){
   beforeEach(module('ossCafeApp'));
+  beforeEach(module('Results'));
   var resultsService, scope, state, deferred;
 
   beforeEach(function(){

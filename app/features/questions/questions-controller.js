@@ -13,6 +13,8 @@ angular.module('Questions', [])
     $scope.showNextPage = function () {
       if($scope.page < 1){
         $scope.page =  $scope.page + 1;
+      } else {
+        $state.go('results');
       }
     };
 
