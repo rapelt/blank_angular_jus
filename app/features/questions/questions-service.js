@@ -1,11 +1,10 @@
 'use strict';
 
-angular.module('AblisData', [])
-  .factory('QuestionsService', function($http){
+angular.module('QuestionsService', [])
+  .factory('QuestionsService', function($http, QuestionsRepository){
     return {
-      
       get: function(){
-        return $http.get('../resources/questions.json');
+        return QuestionsRepository.get();
       }
     };
   });

@@ -4,11 +4,12 @@ angular
   .module('ossCafeApp', [
     'ngResource',
     'ui.router',
-    'AblisData',
     'Questions',
     'Results',
     'ResultsService',
-    'Business-types'
+    'QuestionsService',
+    'Business-types',
+    'QuestionsRepository'
   ])
   .config(function ($stateProvider, $urlRouterProvider) {
     $urlRouterProvider.otherwise("/");
