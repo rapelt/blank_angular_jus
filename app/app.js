@@ -6,6 +6,7 @@ angular
     'ui.router',
     'AblisData',
     'Questions',
+    'Location',
     'Business-types'
   ])
   .config(function ($stateProvider, $urlRouterProvider) {
@@ -16,6 +17,11 @@ angular
         url: '/results',
 				template: '<div results></div>',
         controller: 'ResultsController'
+      })
+      .state('location', {
+        url: '/location',
+        templateUrl: 'features/location/location.html',
+        controller: 'LocationController'
       })
       .state('questions', {
         url: '/questions',
