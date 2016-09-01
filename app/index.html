@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Start a cafe in Brisbane and Logan</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
@@ -41,9 +41,16 @@
       <div footer></div>
     </div>
 
-
-    <script type="text/javascript" src="https://cdn.rawgit.com/qld-gov-au/glue-module-loader/master/htdocs/assets/js/loader.js"></script>
-
+    <script>
+      // temporary stub qg object. to be removed once swe works without using the swe module loader.
+      var qg = qg || {
+        glue: {
+          loader: {
+            init: function(){}
+          }
+        }
+      };
+    </script>
     <!-- build:js({.tmp,app}) scripts/vendor.js -->
     <!-- bower:js -->
     <script src="bower_components/jquery/dist/jquery.js"></script>
