@@ -5,7 +5,6 @@ var landingPage = require('../../pages/landing/landingPage.js');
 
 describe('landing screen', function () {
   beforeEach(function () {
-    browser.ignoreSynchronization = true;
 		browser.driver.get('http://localhost:9001');
   });
 
