@@ -6,7 +6,7 @@ var questionsPage = require('../../pages/questions/questionsPage.js');
 
 describe('questions screen', function () {
   beforeEach(function () {
-    browser.ignoreSynchronization = true;
+    browser.waitForAngular();
     browser.get('http://localhost:9000/#/questions');
   })
 
@@ -16,8 +16,9 @@ describe('questions screen', function () {
 
   it('should be able to select differect questions', function(){
     expect(questionsPage.questionCheckbox.get(0).waitReady()).toBeTruthy();
-    questionsPage.question()
-    questionsPage.question2()
+    questionsPage.question();
+    expect(questionsPage.questionCheckbox.get(2).waitReady()).toBeTruthy();
+    questionsPage.question2();
     questionsPage.next();
   });
 });
