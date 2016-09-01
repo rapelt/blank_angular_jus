@@ -2,6 +2,7 @@
 'use strict';
 
 var waitReady = require('../../utils/waitReady.js');
+var waitForPage = require('../../utils/utils.js');
 var questionsPage = require('../../pages/questions/questionsPage.js');
 
 describe('questions screen', function () {
@@ -11,14 +12,18 @@ describe('questions screen', function () {
   })
 
   it('should check the title', function () {
-     expect(browser.getCurrentUrl()).toContain("#/questions");
+    waitForPage(function(){
+      expect(browser.getCurrentUrl()).toContain("#/questions");
+    });
    });
 
   it('should be able to select differect questions', function(){
-    expect(questionsPage.questionCheckbox.get(0).waitReady()).toBeTruthy();
-    questionsPage.question();
-    expect(questionsPage.questionCheckbox.get(2).waitReady()).toBeTruthy();
-    questionsPage.question2();
-    questionsPage.next();
+    waitForPage(function(){
+      expect(questionsPage.questionCheckbox.get(0).waitReady()).toBeTruthy();
+      questionsPage.question();
+      expect(questionsPage.questionCheckbox.get(2).waitReady()).toBeTruthy();
+      questionsPage.question2();
+      questionsPage.next();
+    });
   });
 });
