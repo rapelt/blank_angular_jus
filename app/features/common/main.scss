@@ -30,7 +30,7 @@ input[type="checkbox"] {
   color: black;
   border-color: $oss-primarygreen;
 
-  &:hover {
+  &:hover, &:active, &:focus, &:focus:active {
     color: black;
     background-color: $oss-lightgreen;
     border-color: $oss-primarygreen;
