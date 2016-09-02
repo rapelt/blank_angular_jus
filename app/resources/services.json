@@ -1,16 +1,16 @@
 {
   "01": {
     "id": "01",
-    "ba": ["cafe", "food"],
+    "business_activities": ["cafe", "takeaway"],
     "location": ["brisbane"],
     "name": "service name 01",
-    "answer_ids": ["1a", "2a", "3a"]
+    "parent_answer_ids": ["2a", "3a", "4a"]
   },
   "02": {
     "id": "02",
-    "ba": ["cafe"],
+    "business_activities": ["cafe"],
     "location": ["brisbane"],
     "name": "service name 01",
-    "answer_ids": ["1a", "3a"]
+    "parent_answer_ids": ["1a", "3a"]
   }
 }

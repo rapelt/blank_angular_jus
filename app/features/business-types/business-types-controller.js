@@ -5,7 +5,7 @@ angular.module('Business-types', [])
     $rootScope.businessActivities = $rootScope.businessActivities ? $rootScope.businessActivities : {
       cafe: false,
       mobileFood: false,
-      takeaway: false
+      takeaway: true
     };
 
 

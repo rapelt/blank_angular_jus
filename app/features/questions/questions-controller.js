@@ -6,8 +6,8 @@ angular.module('Questions', [])
     $scope.page =  0;
     $rootScope.qanswers = $rootScope.qanswers || {};
 
-    QuestionsService.get().then(function(response){
-      $scope.ablisData = response.data;
+    QuestionsService.getQuestions().then(function(response){
+      $scope.ablisData = response;
     });
 
     $scope.showNextPage = function () {

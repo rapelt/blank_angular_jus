@@ -11,7 +11,8 @@ angular
     'Business-types',
     'QuestionsRepository',
     'Location',
-    'Business-types'
+    'Business-types',
+    'ServiceFilters'
   ])
   .config(function ($stateProvider, $urlRouterProvider) {
     $urlRouterProvider.otherwise("/");
