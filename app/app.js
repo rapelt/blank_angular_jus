@@ -15,12 +15,12 @@ angular
     'ServiceFilters'
   ])
   .config(function ($stateProvider, $urlRouterProvider) {
-    $urlRouterProvider.otherwise("/");
+    $urlRouterProvider.otherwise('/');
 
     $stateProvider
       .state('results', {
         url: '/results',
-				template: '<div results></div>',
+        template: '<div results></div>',
         controller: 'ResultsController'
       })
       .state('location', {
