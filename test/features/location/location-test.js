@@ -21,26 +21,4 @@ describe('Location', function () {
       expect(state.current.templateUrl).toBe('features/location/location.html')
     })
   })
-
-  describe('Location: Directive', function () {
-    beforeEach(module('Map'));
-    beforeEach(module('Location'));
-
-    var scope;
-    beforeEach(function () {
-      inject(function ($compile, $rootScope, MapService) {
-        scope = $rootScope.$new();
-        spyOn(MapService, 'initAutocomplete').and.returnValue({
-          setBounds: function(){},
-          addListener: function(name, callback){callback()},
-          getPlace: function(){return 'Brisbane'}
-        });
-        spyOn(MapService, 'getLocationBounds').and.returnValue({});
-        $compile('<location-directive></location-directive>')(scope)
-      })
-    })
-    it('Should set location on scope', function () {
-      expect(scope.place).toBe('Brisbane')
-    })
-  })
-})
+});
