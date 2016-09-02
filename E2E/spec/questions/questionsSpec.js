@@ -8,7 +8,7 @@ var questionsPage = require('../../pages/questions/questionsPage.js');
 describe('questions screen', function () {
   beforeEach(function () {
     browser.waitForAngular();
-    browser.get('http://localhost:9000/#/questions');
+    browser.get('http://localhost:9001/#/questions');
   })
 
   it('should check the title', function () {
