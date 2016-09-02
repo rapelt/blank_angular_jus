@@ -63,7 +63,7 @@ gulp.task('styles', function () {
     .pipe(styles());
 });
 
-gulp.task('lint:scripts', function () {
+gulp.task('lint', function () {
   return gulp.src(paths.scripts.concat(paths.test))
     .pipe(lintScripts());
 });
@@ -117,7 +117,7 @@ gulp.task('watch', function () {
 
 gulp.task('serve', function (cb) {
   runSequence('clean:tmp',
-    ['lint:scripts'],
+    ['lint'],
     ['start:client'],
     ['styles'],
     'watch', cb);
@@ -167,7 +167,7 @@ gulp.task('e2e-phantom', ['start:server:test'], function (cb) {
   });
 });
 
-gulp.task('e2e', ['start:server:test', 'lint:scripts'], function (cb) {
+gulp.task('e2e', ['start:server:test', 'lint'], function (cb) {
   runProtractor({
     'configFile': './E2E/conf.js',
     'autoStartStopServer': true,
