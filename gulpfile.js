@@ -19,7 +19,7 @@ var yeoman = {
 var paths = {
   scripts: [yeoman.app + '/app.js', yeoman.app + '/features/**/*.js'],
   styles: [yeoman.app + '/features/**/*.scss'],
-  test: ['test/features/**/*.js','E2E/**/*.js'],
+  test: ['test/features/**/*.js', 'E2E/**/*.js'],
   views: {
     main: yeoman.app + '/index.html',
     error: yeoman.app + '/404.html',
@@ -27,9 +27,9 @@ var paths = {
   }
 };
 
-////////////////////////
+// //////////////////////
 // Reusable pipelines //
-////////////////////////
+// //////////////////////
 
 var lintScripts = lazypipe()
   .pipe($.jshint, '.jshintrc')
@@ -43,20 +43,20 @@ var styles = lazypipe()
   .pipe($.autoprefixer, 'last 1 version')
   .pipe(gulp.dest, '.tmp/styles');
 
-function runProtractor(protractorConfig) {
-    return gulp.src(['./E2E/spec/**/*.js'])
-      .pipe(angularProtractor(protractorConfig))
-      .on('error', function(e) {
-        process.exit(1);
-      })
-      .on('end', function(e){
-        $.connect.serverClose();
-        process.exit(0);
-      });
+function runProtractor (protractorConfig) {
+  return gulp.src(['./E2E/spec/**/*.js'])
+    .pipe(angularProtractor(protractorConfig))
+    .on('error', function (e) {
+      process.exit(1);
+    })
+    .on('end', function (e) {
+      $.connect.serverClose();
+      process.exit(0);
+    });
 }
-///////////
+// /////////
 // Tasks //
-///////////
+// /////////
 
 gulp.task('styles', function () {
   return gulp.src(paths.styles)
@@ -76,7 +76,7 @@ gulp.task('start:client', ['start:server', 'styles'], function () {
   openURL('http://localhost:9000');
 });
 
-gulp.task('start:server', function() {
+gulp.task('start:server', function () {
   $.connect.server({
     root: [yeoman.app, '.tmp'],
     livereload: true,
@@ -85,7 +85,7 @@ gulp.task('start:server', function() {
   });
 });
 
-gulp.task('start:server:test', function() {
+gulp.task('start:server:test', function () {
   $.connect.server({
     root: ['test', yeoman.app, '.tmp'],
     livereload: true,
@@ -123,7 +123,7 @@ gulp.task('serve', function (cb) {
     'watch', cb);
 });
 
-gulp.task('serve:prod', function() {
+gulp.task('serve:prod', function () {
   $.connect.server({
     root: [yeoman.dist],
     livereload: true,
@@ -131,57 +131,55 @@ gulp.task('serve:prod', function() {
   });
 });
 
-gulp.task('test', function(done){
+gulp.task('test', function (done) {
   new Server({
     configFile: __dirname + '/test/karma.conf.js',
     singleRun: true
   }, done).start();
 });
 
-gulp.task('testcoverageci', function(done){
+gulp.task('testcoverageci', function (done) {
   new Server({
     configFile: __dirname + '/test/karma.conf.js',
     singleRun: true,
-    reporters: ['dots','progress', 'coverage']
+    reporters: ['dots', 'progress', 'coverage']
   }, done).start();
 });
 
-gulp.task('testcoverage', function(done){
+gulp.task('testcoverage', function (done) {
   new Server({
     configFile: __dirname + '/test/karma.conf.js',
     singleRun: true,
-    reporters: ['dots','progress', 'coverage'],
-    coverageReporter:{
-      type : 'html',
-      dir : 'coverage/',
+    reporters: ['dots', 'progress', 'coverage'],
+    coverageReporter: {
+      type: 'html',
+      dir: 'coverage/',
       subdir: '.'
-    },
+    }
   }, done).start();
 });
 
-gulp.task('e2e-phantom',['start:server:test'], function(cb){
+gulp.task('e2e-phantom', ['start:server:test'], function (cb) {
   runProtractor({
-      'configFile': './E2E/conf.js',
-      'autoStartStopServer': true,
-      'debug': false
+    'configFile': './E2E/conf.js',
+    'autoStartStopServer': true,
+    'debug': false
   });
-})
+});
 
-
-gulp.task('e2e',['start:server:test', 'lint:scripts'], function(cb){
+gulp.task('e2e', ['start:server:test', 'lint:scripts'], function (cb) {
   runProtractor({
-      'configFile': './E2E/conf.js',
-      'autoStartStopServer': true,
-      'debug': false,
-      'args': [
-        '--chromeOnly', true,
-        '--directConnect', true,
-        '--capabilities.browserName', 'chrome',
-        '--capabilities.chromeOptions.args', '--disable-extensions'
-      ]
+    'configFile': './E2E/conf.js',
+    'autoStartStopServer': true,
+    'debug': false,
+    'args': [
+      '--chromeOnly', true,
+      '--directConnect', true,
+      '--capabilities.browserName', 'chrome',
+      '--capabilities.chromeOptions.args', '--disable-extensions'
+    ]
   });
-})
-
+});
 
 // inject bower components
 gulp.task('bower', function () {
@@ -190,12 +188,12 @@ gulp.task('bower', function () {
       directory: yeoman.app + '/bower_components',
       ignorePath: '..'
     }))
-  .pipe(gulp.dest(yeoman.app + '/views'));
+    .pipe(gulp.dest(yeoman.app + '/views'));
 });
 
-///////////
+// /////////
 // Build //
-///////////
+// /////////
 
 gulp.task('clean:dist', function (cb) {
   rimraf('./dist', cb);
@@ -204,7 +202,7 @@ gulp.task('clean:dist', function (cb) {
 gulp.task('client:build', ['html', 'images'], function () {
   var jsFilter = $.filter('**/*.js');
   var cssFilter = $.filter(['.tmp/styles/main.css', 'app/bower']);
-  //css,js,images, and views, not index.html or 404.html
+  // css,js,images, and views, not index.html or 404.html
   var assetFilter = $.filter(['**/*.*', '!*.html']);
 
   return gulp.src([paths.views.main, paths.views.error])
@@ -229,8 +227,8 @@ gulp.task('html', function () {
 });
 
 gulp.task('images', function () {
-  return gulp.src(yeoman.app + '/images/**/*')
-    .pipe(gulp.dest(yeoman.dist + '/images'));
+  return gulp.src(yeoman.app + '/resources/images/**/*')
+    .pipe(gulp.dest(yeoman.dist + '/resources/images'));
 });
 
 gulp.task('copy:extras', function () {
@@ -263,8 +261,8 @@ gulp.task('copy:fontAwesome', function () {
     .pipe(gulp.dest(yeoman.dist + '/lib'));
 });
 
-gulp.task('build', ['clean:dist','styles'], function () {
-  runSequence(['images', 'copy:extras', 'copy:fonts', 'copy:json','copy:fontAwesome','copy:swe-templates', 'copy:ng-templates', 'client:build']);
+gulp.task('build', ['clean:dist', 'styles'], function () {
+  runSequence(['images', 'copy:extras', 'copy:fonts', 'copy:json', 'copy:fontAwesome', 'copy:swe-templates', 'copy:ng-templates', 'client:build']);
 });
 
 gulp.task('default', ['build']);
