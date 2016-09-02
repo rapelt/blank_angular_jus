@@ -26,6 +26,7 @@ describe('Location: Directive', function () {
       scope.$apply()
     })
   })
+
   it('Should set location on scope', function () {
     listeners[0]()
     scope.$apply()
