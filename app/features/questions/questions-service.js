@@ -1,19 +1,18 @@
 'use strict';
 
 angular.module('QuestionsService', [])
-  .factory('QuestionsService', function($rootScope, $http, QuestionsRepository, ServiceFilters){
+  .factory('QuestionsService', function($rootScope, $q, $http, QuestionsRepository, ServiceFilters){
     return {
       getQuestions: function(){
 
 
         var data = [QuestionsRepository.getQuestions(), QuestionsRepository.getAnswers(), QuestionsRepository.getServices()];
 
-        return Promise.all(data).then(function(values){
-
+        return $q.all(data).then(function(values){
           var questions = values[0].data;
           var answers = values[1].data;
           var services = values[2].data;
-
+          
           var serviceFilteredBusinessActivities = ServiceFilters.filterByBusinessActivities(services, $rootScope.businessActivities);
 
           var filteredServices = serviceFilteredBusinessActivities;

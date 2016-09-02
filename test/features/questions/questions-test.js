@@ -1,11 +1,11 @@
 'use strict';
 
-describe('Service questions controller', function(){
+describe('Questions controller', function(){
   beforeEach(module('ossCafeApp'));
   var questionsService, scope, state, deferred;
 
   beforeEach(function(){
-    questionsService = jasmine.createSpyObj('questionService', ['get']);
+    questionsService = jasmine.createSpyObj('questionService', ['getQuestions']);
     inject(function($rootScope, $controller, $q, $templateCache, $state){
       state = $state;
       scope = $rootScope.$new();
@@ -15,7 +15,7 @@ describe('Service questions controller', function(){
 
 
       deferred = $q.defer();
-      questionsService.get.and.returnValue(deferred.promise);
+      questionsService.getQuestions.and.returnValue(deferred.promise);
 
       $controller('QuestionsController', {$scope: scope, $state:state, QuestionsService: questionsService});
     });

@@ -49,7 +49,7 @@ describe('Business types controller', function(){
   });
 
   it('Should enable access to the next button ', function(){
-    rootScope.cafe = true;
+    rootScope.businessActivities.cafe = true;
     scope.isNextButtonEnabled();
     scope.$apply();
     expect(scope.isNextButtonEnabled()).toBeTruthy();

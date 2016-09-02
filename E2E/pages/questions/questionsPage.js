@@ -7,10 +7,10 @@ var QuestionsPage = function (){
 	this.nextbutton = element(by.css('.oss-next-button'));
 
 	this.question = function(){
-		this.questionCheckbox.get(0).click();
+		this.questionCheckbox.get(1).click();
 	};
 	this.question2 = function(){
-		this.questionSubcheckbox.get(1).click();
+		this.questionSubcheckbox.get(0).click();
 	}
 	this.next = function(){
 		this.nextbutton.click();

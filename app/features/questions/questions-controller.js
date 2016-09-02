@@ -2,6 +2,12 @@
 
 angular.module('Questions', [])
   .controller('QuestionsController', function ($scope, $state, $rootScope, QuestionsService) {
+    //Set business activities all to true if busniessActivities is undefined
+    $rootScope.businessActivities = $rootScope.businessActivities ? $rootScope.businessActivities : {
+      cafe: true,
+      mobileFood: true,
+      takeaway: true
+    };
 
     $scope.ablisQuestions = "";
     $scope.page =  0;

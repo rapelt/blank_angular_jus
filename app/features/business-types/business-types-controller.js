@@ -5,10 +5,8 @@ angular.module('Business-types', [])
     $rootScope.businessActivities = $rootScope.businessActivities ? $rootScope.businessActivities : {
       cafe: false,
       mobileFood: false,
-      takeaway: true
+      takeaway: false
     };
-
-
 
     $scope.showNextPage = function () {
       $state.go('questions');
