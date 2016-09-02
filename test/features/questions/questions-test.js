@@ -13,8 +13,8 @@ describe('Questions controller', function(){
       $templateCache.put('features/business-types/business-types.html', '');
       $templateCache.put('features/questions/questions.html', '');
 
-
       deferred = $q.defer();
+
       questionsService.getQuestions.and.returnValue(deferred.promise);
 
       $controller('QuestionsController', {$scope: scope, $state:state, QuestionsService: questionsService});
@@ -29,7 +29,7 @@ describe('Questions controller', function(){
   });
 
   it('Should get questions', function(){
-    deferred.resolve({"data": "fred"});
+    deferred.resolve("fred");
     scope.$apply();
     expect(scope.ablisData).toBe('fred');
   });

@@ -17,7 +17,7 @@ angular.module('Questions', [])
 
     QuestionsService.getQuestions().then(function(response){
       $scope.ablisData = response;
-      $scope.$apply();
+      $scope.$evalAsync();
       console.log("ablisdata", $scope.ablisData);
     });
 

@@ -74,11 +74,9 @@ describe('Questions services', function(){
         takeaway: true
       };
 
-
       deferredQuestions = $q.defer();
       deferredAnswers = $q.defer();
       deferredServices = $q.defer();
-
 
       spyOn(QuestionsRepository, 'getQuestions').and.returnValue(deferredQuestions.promise);
       spyOn(QuestionsRepository, 'getAnswers').and.returnValue(deferredAnswers.promise);
