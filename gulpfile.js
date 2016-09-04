@@ -134,28 +134,14 @@ gulp.task('serve:prod', function () {
 gulp.task('test', function (done) {
   new Server({
     configFile: __dirname + '/test/karma.conf.js',
-    singleRun: true
   }, done).start();
 });
 
-gulp.task('testcoverageci', function (done) {
+gulp.task('testci', function (done) {
   new Server({
     configFile: __dirname + '/test/karma.conf.js',
-    singleRun: true,
-    reporters: ['dots', 'progress', 'coverage']
-  }, done).start();
-});
-
-gulp.task('testcoverage', function (done) {
-  new Server({
-    configFile: __dirname + '/test/karma.conf.js',
-    singleRun: true,
-    reporters: ['dots', 'progress', 'coverage'],
-    coverageReporter: {
-      type: 'html',
-      dir: 'coverage/',
-      subdir: '.'
-    }
+    colors: false,
+    reporters: ['progress', 'coverage']
   }, done).start();
 });
 

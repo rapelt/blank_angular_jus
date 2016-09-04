@@ -12,7 +12,7 @@ angular.module('QuestionsService', [])
           var questions = values[0].data;
           var answers = values[1].data;
           var services = values[2].data;
-          
+
           var serviceFilteredBusinessActivities = ServiceFilters.filterByBusinessActivities(services, $rootScope.businessActivities);
 
           var filteredServices = serviceFilteredBusinessActivities;
@@ -81,7 +81,6 @@ angular.module('QuestionsService', [])
             }
             return question;
           });
-          console.log('questions5', questions5);
 
           return {groupid1:{group_name: "groupname", questions: questions5}};
         });
