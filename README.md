@@ -29,7 +29,7 @@ Unit tests with karma.js
 
 E2E tests with phantom.js
 ```
-    gulp teste2e
+    gulp e2e-phantom
 ```
 
 Generate deployable artefact
@@ -51,17 +51,18 @@ This project uses .editorconfig for code conventions, you may have to install a 
 
 ### Project structure and architecture
 
-This project uses an angular.js project structure taken from the [angular.js yeoman generator] (https://github.com/yeoman/generator-angular)
+This project uses an angular.js project structure taken from the [angular.js yeoman generator](https://github.com/yeoman/generator-angular)
 
 ### Setting up development environment
- Install Docker. See [here][1] for MAC and [here][2] for windows.
+
+Install Docker (Docker Engine 1.10.0+ & Compose 1.6.0+). See [here][1] for OS X and [here][2] for windows.
 
  [1]: https://www.docker.com/products/docker#/mac
  [2]: https://www.docker.com/products/docker#/windows
 
 Run the following command to check if docker is properly installed.
 ```
-  docker --version
+  docker version
 ```
 
 From your code directory, run the command below:
@@ -69,7 +70,7 @@ From your code directory, run the command below:
   docker-compose up --build -d
 ```
 This should setup your environment by installing the necessary dependencies your code need to run.
- When you run `docker ps`, you should have output like this:
+When you run `docker ps`, you should have output like this:
  ```
  CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                                              NAMES
 055d88ec79fd        osscafe_oss         "sh -c 'npm install &"   About an hour ago   Up 54 seconds       0.0.0.0:9000->9000/tcp, 0.0.0.0:35729->35729/tcp   osscafe_oss_1
