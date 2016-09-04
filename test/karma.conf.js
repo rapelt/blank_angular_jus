@@ -17,7 +17,7 @@ module.exports = function(config) {
       moduleName: 'templates'
     },
 
-    reporters: ['dots','progress','coverage', 'junit'],
+    reporters: ['progress','coverage'],
 
     coverageReporter:{
       reporters: [

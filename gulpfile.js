@@ -141,7 +141,7 @@ gulp.task('testci', function (done) {
   new Server({
     configFile: __dirname + '/test/karma.conf.js',
     colors: false,
-    reporters: ['progress', 'coverage']
+    reporters: ['coverage', 'junit']
   }, done).start();
 });
 
