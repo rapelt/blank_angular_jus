@@ -3,22 +3,22 @@ describe('Questions services', function(){
   beforeEach(module('QuestionsService'));
   beforeEach(module('ServiceFilters'));
 
-  var questionsService, scope, deferredQuestions, deferredAnswers, deferredServices;
+  var questionsService, scope, deferredQuestions, deferredAnswers, deferredServices, rootScope;
 
 
 
   var testQuestions = {
-    "1q": {
-      "id": "1q",
+    "q1": {
+      "id": "q1",
       "value": "Will you advertise or promote your business?"
     },
-    "2q": {
-      "id": "2q",
+    "q2": {
+      "id": "q2",
       "value": "How will you advertise or promote your business:",
-      "parent_question_id": "1q"
+      "parent_question_id": "q1"
     },
-    "3q": {
-      "id": "3q",
+    "q3": {
+      "id": "q3",
       "value": "Will you need to use public spaces for any of your activities?"
     }
   };
@@ -27,22 +27,22 @@ describe('Questions services', function(){
     "1a": {
       "id": "1a",
       "value": "yes",
-      "parent_question_id": "1q"
+      "parent_question_id": "q1"
     },
     "2a": {
       "id": "2a",
       "value": "Internet website",
-      "parent_question_id": "2q"
+      "parent_question_id": "q2"
     },
     "3a": {
       "id": "3a",
       "value": "yes",
-      "parent_question_id": "3q"
+      "parent_question_id": "q3"
     },
     "4a": {
       "id": "4a",
       "value": "Tv Marketing",
-      "parent_question_id": "2q"
+      "parent_question_id": "q2"
     }
   };
 
@@ -52,7 +52,7 @@ describe('Questions services', function(){
       "business_activities": ["cafe", "takeaway"],
       "location": ["brisbane"],
       "name": "service name 01",
-      "parent_answer_ids": ["2a", "3a", "4a"]
+      "parent_answer_ids": ["2a", "4a"]
     },
     "02": {
       "id": "02",
@@ -68,6 +68,7 @@ describe('Questions services', function(){
     inject(function(QuestionsService, $rootScope, $q, QuestionsRepository){
       questionsService = QuestionsService;
       scope = $rootScope.$new();
+      rootScope = $rootScope;
       $rootScope.businessActivities = $rootScope.businessActivities ? $rootScope.businessActivities : {
         cafe: true,
         mobileFood: true,
@@ -82,16 +83,60 @@ describe('Questions services', function(){
       spyOn(QuestionsRepository, 'getAnswers').and.returnValue(deferredAnswers.promise);
       spyOn(QuestionsRepository, 'getServices').and.returnValue(deferredServices.promise);
 
+      deferredQuestions.resolve({data: testQuestions});
+      deferredAnswers.resolve({data: testAnswers});
+      deferredServices.resolve({data: testServices});
     });
   });
 
 
   it('Should return all questions when all business activities are select', function(){
-    deferredQuestions.resolve({data: testQuestions});
-    deferredAnswers.resolve({data: testAnswers});
-    deferredServices.resolve({data: testServices});
     questionsService.getQuestions().then(function (response) {
       expect(_.size(response.groupid1.questions)).toBe(2);
+    });
+    scope.$apply();
+  });
+
+  it('Should return 1 question when only takeaway is select', function(){
+    rootScope.businessActivities = {
+      cafe: false,
+      mobileFood: false,
+      takeaway: true
+    };
+
+    questionsService.getQuestions().then(function (response) {
+      expect(_.size(response.groupid1.questions)).toBe(1);
+    });
+    scope.$apply();
+  });
+
+  it('Should return all questions when all business activities are select', function(){
+    questionsService.getQuestions().then(function (response) {
+      expect(_.size(response.groupid1.questions)).toBe(2);
+    });
+    scope.$apply();
+  });
+
+  it('Should return questions inside a group', function(){
+    questionsService.getQuestions().then(function (response) {
+      expect(response.groupid1).toBeDefined();
+      expect(_.size(response.groupid1.questions)).toBe(2);
+    });
+    scope.$apply();
+  });
+
+  it('Should return question q1 with subquestions', function(){
+    questionsService.getQuestions().then(function (response) {
+      var subquestion = response.groupid1.questions.q1.answer.subquestion;
+      expect(subquestion).toBeDefined();
+      expect(_.size(subquestion.answers)).toBe(2);
+    });
+    scope.$apply();
+  });
+
+  it('Should return question q3 without subquestions', function(){
+    questionsService.getQuestions().then(function (response) {
+      expect(response.groupid1.questions.q3.answer).toBeUndefined();
     });
     scope.$apply();
   });
