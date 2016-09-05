@@ -3,7 +3,7 @@ describe('Location: Directive', function () {
   beforeEach(module('Map'));
   beforeEach(module('Location'));
 
-  var scope, element;
+  var scope;
   var listeners = [];
 
   function addSpyListener (name, callback) {
@@ -19,10 +19,12 @@ describe('Location: Directive', function () {
       spyOn(MapService, 'initAutocomplete').and.returnValue({
         setBounds: function () {},
         addListener: addSpyListener,
-        getPlace: function () {return 'Brisbane';}
+        getPlace: function () {
+          return 'Brisbane';
+        }
       });
       spyOn(MapService, 'getLocationBounds').and.returnValue({});
-      element = $compile('<location-directive></location-directive>')(scope);
+      $compile('<location-directive></location-directive>')(scope);
       scope.$apply();
     });
   });

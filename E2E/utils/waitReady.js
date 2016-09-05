@@ -19,7 +19,7 @@ var specTimeoutMs = 10000; // 10 seconds
  */
 var ElementFinder = $('').constructor;
 
-ElementFinder.prototype.waitReady = function (opt_optStr) {
+ElementFinder.prototype.waitReady = function (optOptStr) {
   var self = this;
   var driverWaitIterations = 0;
   var lastWebdriverError;
@@ -37,7 +37,7 @@ ElementFinder.prototype.waitReady = function (opt_optStr) {
 
   return browser.driver.wait(function () {
     driverWaitIterations++;
-    if (opt_optStr === 'withRefresh') {
+    if (optOptStr === 'withRefresh') {
       // Refresh page after more than some retries
       if (driverWaitIterations > 7) {
         _refreshPage();
