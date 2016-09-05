@@ -16,24 +16,4 @@ describe('landing screen', function () {
       expect(browser.getCurrentUrl()).toContain('9001');
     });
   });
-<<<<<<< HEAD
-=======
-
-  it('Should Test the End to End User Flow', function () {
-    waitForPage(function () {
-      landingPage.clicksOnCafe();
-      landingPage.clicksOnMobileFood();
-      questionsPage.next();
-      // On Questions Page
-      expect(questionsPage.questionCheckbox.get(1).waitReady()).toBeTruthy();
-      questionsPage.question();
-      expect(questionsPage.questionSubcheckbox.get(0).waitReady()).toBeTruthy();
-      questionsPage.question2();
-      questionsPage.next();
-      questionsPage.next();
-      // On the Results Page
-      resultsPage.expandCategoryOne();
-    });
-  });
->>>>>>> a6ecb03ca8df32be12f8c4a31f7b93716ccda122
 });
