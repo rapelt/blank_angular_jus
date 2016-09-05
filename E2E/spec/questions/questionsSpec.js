@@ -20,8 +20,9 @@ describe('questions screen', function () {
     waitForPage(function () {
       expect(questionsPage.questionCheckbox.get(1).waitReady()).toBeTruthy();
       questionsPage.question();
-      expect(questionsPage.questionSubcheckbox.get(0).waitReady()).toBeTruthy();
-      questionsPage.question2();
+      // expect(questionsPage.questionSubcheckbox.get(0).waitReady()).toBeTruthy()
+
+      // questionsPage.question2()
       questionsPage.next();
     });
   });

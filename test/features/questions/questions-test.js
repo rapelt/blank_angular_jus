@@ -2,7 +2,7 @@
 
 describe('Questions controller', function () {
   beforeEach(module('jusCafeApp'));
-  var questionsService, scope, state, deferred, rootScope;
+  var questionsService, scope, state, deferred;
 
   var testAblisData = {
     'groupid1': {
@@ -33,7 +33,6 @@ describe('Questions controller', function () {
     inject(function ($rootScope, $controller, $q, $templateCache, $state) {
       state = $state;
       scope = $rootScope.$new();
-      rootScope = $rootScope;
       $templateCache.put('features/home/main.html', '');
       $templateCache.put('features/business-types/business-types.html', '');
       $templateCache.put('features/questions/questions.html', '');
