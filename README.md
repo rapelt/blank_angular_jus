@@ -102,4 +102,8 @@ Preview deployable artefact in the browser
 
 This project uses [semistandard](https://www.npmjs.com/package/semistandard) javascript format. Please install the relevant editor plugin and enable format on save.
 
-.jshintrc can be customised based on [this jshintrc example] (https://github.com/jshint/jshint/blob/master/examples/.jshintrc)
+`.eslintrc` is used internally by semistandard. Code can be checked by running
+
+```
+    gulp eslint
+```

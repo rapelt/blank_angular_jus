@@ -27,13 +27,13 @@ angular.module('QuestionsService', [])
 
     function addSubQuestionsToPrimaryQuestions (primaryQuestions, subquestions) {
       return _.mapObject(primaryQuestions, function (question) {
-        var my_subquestion = _.filter(subquestions, function (subquestion) {
-          return question.id == subquestion.parent_question_id;
+        var mySubquestion = _.filter(subquestions, function (subquestion) {
+          return question.id === subquestion.parent_question_id;
         });
 
-        if (my_subquestion.length > 0) {
+        if (mySubquestion.length > 0) {
           question.answer = {};
-          question.answer.subquestion = my_subquestion[0];
+          question.answer.subquestion = mySubquestion[0];
         }
 
         return question;

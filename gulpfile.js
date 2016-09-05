@@ -10,6 +10,7 @@ var wiredep = require('wiredep').stream;
 var runSequence = require('run-sequence');
 var angularProtractor = require('gulp-angular-protractor');
 var Server = require('karma').Server;
+const eslint = require('gulp-eslint');
 
 var yeoman = {
   app: 'app',
@@ -31,10 +32,6 @@ var paths = {
 // Reusable pipelines //
 // //////////////////////
 
-var lintScripts = lazypipe()
-  .pipe($.jshint, '.jshintrc')
-  .pipe($.jshint.reporter, 'jshint-stylish');
-
 var styles = lazypipe()
   .pipe($.sass, {
     outputStyle: 'expanded',
@@ -54,18 +51,24 @@ function runProtractor (protractorConfig) {
       process.exit(0);
     });
 }
+
 // /////////
 // Tasks //
 // /////////
 
+gulp.task('eslint', function () {
+  return gulp.src(paths.scripts.concat(paths.test))
+    // eslint() attaches the lint output to the "eslint" property
+    // of the file object so it can be used by other modules.
+    .pipe(eslint())
+    // eslint.format() outputs the lint results to the console.
+    // Alternatively use eslint.formatEach() (see Docs).
+    .pipe(eslint.format());
+});
+
 gulp.task('styles', function () {
   return gulp.src(paths.styles)
     .pipe(styles());
-});
-
-gulp.task('lint', function () {
-  return gulp.src(paths.scripts.concat(paths.test))
-    .pipe(lintScripts());
 });
 
 gulp.task('clean:tmp', function (cb) {
@@ -105,19 +108,19 @@ gulp.task('watch', function () {
 
   $.watch(paths.scripts)
     .pipe($.plumber())
-    .pipe(lintScripts())
+    .pipe(eslint())
     .pipe($.connect.reload());
 
   $.watch(paths.test)
     .pipe($.plumber())
-    .pipe(lintScripts());
+    .pipe(eslint());
 
   gulp.watch('bower.json', ['bower']);
 });
 
 gulp.task('serve', function (cb) {
   runSequence('clean:tmp',
-    ['lint'],
+    ['eslint'],
     ['start:client'],
     ['styles'],
     'watch', cb);
@@ -153,7 +156,7 @@ gulp.task('e2e-phantom', ['start:server:test'], function (cb) {
   });
 });
 
-gulp.task('e2e', ['start:server:test', 'lint'], function (cb) {
+gulp.task('e2e', ['start:server:test', 'eslint'], function (cb) {
   runProtractor({
     'configFile': './E2E/conf.js',
     'autoStartStopServer': true,
@@ -247,8 +250,10 @@ gulp.task('copy:fontAwesome', function () {
     .pipe(gulp.dest(yeoman.dist + '/lib'));
 });
 
+gulp.task('lint', ['eslint']);
+
 gulp.task('build', ['clean:dist', 'styles'], function () {
-  runSequence(['images', 'copy:extras', 'copy:fonts', 'copy:json', 'copy:fontAwesome', 'copy:swe-templates', 'copy:ng-templates', 'client:build']);
+  runSequence(['eslint', 'images', 'copy:extras', 'copy:fonts', 'copy:json', 'copy:fontAwesome', 'copy:swe-templates', 'copy:ng-templates', 'client:build']);
 });
 
 gulp.task('default', ['build']);

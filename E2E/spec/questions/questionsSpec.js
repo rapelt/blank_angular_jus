@@ -1,6 +1,6 @@
 'use strict';
 
-var waitReady = require('../../utils/waitReady.js');
+require('../../utils/waitReady.js');
 var waitForPage = require('../../utils/utils.js');
 var questionsPage = require('../../pages/questions/questionsPage.js');
 

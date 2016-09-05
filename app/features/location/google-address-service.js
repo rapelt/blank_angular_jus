@@ -26,7 +26,9 @@ angular.module('Map', [])
       },
 
       removeMarker: function (location) {
-        if (marker) {marker.setMap(null);}
+        if (marker) {
+          marker.setMap(null);
+        }
       },
 
       getLocationBounds: function () {
