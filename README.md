@@ -45,7 +45,7 @@ Preview deployable artefact in the browser
 
 ## Developing
 
-This project uses .editorconfig for code conventions, you may have to install a plugin for your editor to support .editorconfig files
+This project uses [semistandard](https://www.npmjs.com/package/semistandard) javascript format. Please install the relevant editor plugin and enable format on save.
 
 .jshintrc can be customised based on [this jshintrc example] (https://github.com/jshint/jshint/blob/master/examples/.jshintrc)
 
