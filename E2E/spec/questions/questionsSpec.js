@@ -1,4 +1,3 @@
-
 'use strict';
 
 var waitReady = require('../../utils/waitReady.js');
@@ -12,13 +11,13 @@ describe('questions screen', function () {
   });
 
   it('should check the title', function () {
-    waitForPage(function(){
-      expect(browser.getCurrentUrl()).toContain("#/questions");
+    waitForPage(function () {
+      expect(browser.getCurrentUrl()).toContain('#/questions');
     });
-   });
+  });
 
-  it('should be able to select differect questions', function(){
-    waitForPage(function(){
+  it('should be able to select differect questions', function () {
+    waitForPage(function () {
       expect(questionsPage.questionCheckbox.get(1).waitReady()).toBeTruthy();
       questionsPage.question();
       expect(questionsPage.questionSubcheckbox.get(0).waitReady()).toBeTruthy();

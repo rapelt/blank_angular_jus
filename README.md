@@ -1,59 +1,12 @@
-
 ## Installation
-
-Global dependencies
-
-```
-    npm install -g gulp bower yeoman
-```
 
 Clone project
 
 ```
-    git clone https://github.com/epenkman/oss-cafe.git
-    cd oss-cafe
-    npm install
+    git clone ssh://git@servicesmadesimpler.govnet.qld.gov.au:7999/sc/application.git
+    cd application
 ```
-
-## Build and Run
-
-Local developer preview   
-```
-    gulp serve
-```
-
-Unit tests with karma.js
-```
-    gulp test
-```
-
-E2E tests with phantom.js
-```
-    gulp e2e-phantom
-```
-
-Generate deployable artefact
-```
-    gulp build
-```
-
-Preview deployable artefact in the browser
-```
-    gulp serve:prod
-```
-
-
-## Developing
-
-This project uses .editorconfig for code conventions, you may have to install a plugin for your editor to support .editorconfig files
-
-.jshintrc can be customised based on [this jshintrc example] (https://github.com/jshint/jshint/blob/master/examples/.jshintrc)
-
-### Project structure and architecture
-
-This project uses an angular.js project structure taken from the [angular.js yeoman generator](https://github.com/yeoman/generator-angular)
-
-### Setting up development environment
+### Setting up development environment with Docker.
 
 Install Docker (Docker Engine 1.10.0+ & Compose 1.6.0+). See [here][1] for OS X and [here][2] for windows.
 
@@ -101,3 +54,52 @@ PhantomJS 2.1.1 (Linux 0.0.0): Executed 3 of 3 SUCCESS (0.042 secs / 0.033 secs)
 ```
 
 Once the container is running, you can access the app on `http://localhost:9000/#/`
+
+
+## Installation without docker
+
+Global dependencies
+
+```
+    npm install -g gulp bower yeoman
+```
+
+
+## Build and Run
+
+Install/Update dependencies
+```
+    npm install
+```
+
+Local developer preview   
+```
+    gulp serve
+```
+
+Unit tests with karma.js
+```
+    gulp test
+```
+
+E2E tests with phantom.js
+```
+    gulp e2e-phantom
+```
+
+Generate deployable artefact
+```
+    gulp build
+```
+
+Preview deployable artefact in the browser
+```
+    gulp serve:prod
+```
+
+
+## Developing
+
+This project uses [semistandard](https://www.npmjs.com/package/semistandard) javascript format. Please install the relevant editor plugin and enable format on save.
+
+.jshintrc can be customised based on [this jshintrc example] (https://github.com/jshint/jshint/blob/master/examples/.jshintrc)

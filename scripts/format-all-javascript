@@ -1,0 +1,1 @@
+find . -name '*.js' ! -path "**/bower_components/*" ! -path "**/node_modules/**" | xargs -I% semistandard-format -w %

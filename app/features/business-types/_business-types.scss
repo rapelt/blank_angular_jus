@@ -31,7 +31,7 @@
     height: 180px;
     margin: 10px;
     float: left;
-    color: $oss-blue;
+    color: $jus-blue;
     text-align: center;
 
     @media screen and (max-width: $boxes-width + 20px) {
@@ -48,7 +48,7 @@
     }
 
     &:hover {
-      background-color: $oss-blue;
+      background-color: $jus-blue;
       color: white;
 
       .icon-inactive {
@@ -61,7 +61,7 @@
   }
 
   .selected-box {
-    background-color: $oss-blue;
+    background-color: $jus-blue;
     color: white;
   }
 

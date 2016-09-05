@@ -1,5 +1,4 @@
-
-module.exports = function(config) {
+module.exports = function (config) {
   'use strict';
 
   config.set({
@@ -17,12 +16,12 @@ module.exports = function(config) {
       moduleName: 'templates'
     },
 
-    reporters: ['progress','coverage'],
+    reporters: ['progress', 'coverage'],
 
-    coverageReporter:{
+    coverageReporter: {
       reporters: [
-        { type : 'html', dir : 'reports/coverage/', subdir: '.' },
-        { type : 'text-summary' }
+        { type: 'html', dir: 'reports/coverage/', subdir: '.' },
+        { type: 'text-summary' }
       ],
 
       check: {
@@ -57,8 +56,7 @@ module.exports = function(config) {
       './test/features/**/*.js'
     ],
 
-    exclude: [
-    ],
+    exclude: [],
 
     port: 8080,
 

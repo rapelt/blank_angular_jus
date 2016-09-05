@@ -8,64 +8,64 @@
  * @example
  * expect($('.some-html-class').waitReady()).toBeTruthy()
  */
-'use strict'
+'use strict';
 
 // Config
-var specTimeoutMs = 10000 // 10 seconds
+var specTimeoutMs = 10000; // 10 seconds
 
 /**
  * Current workaround until https://github.com/angular/protractor/issues/1102
  * @type {Function}
  */
-var ElementFinder = $('').constructor
+var ElementFinder = $('').constructor;
 
 ElementFinder.prototype.waitReady = function (opt_optStr) {
-  var self = this
-  var driverWaitIterations = 0
-  var lastWebdriverError
+  var self = this;
+  var driverWaitIterations = 0;
+  var lastWebdriverError;
   function _throwError () {
     throw new Error("Expected '" + self.locator().toString() +
       "' to be present and visible. " +
       'After ' + driverWaitIterations + ' driverWaitIterations. ' +
-      'Last webdriver error: ' + lastWebdriverError)
+      'Last webdriver error: ' + lastWebdriverError);
   }
 
   function _isPresentError (err) {
-    lastWebdriverError = (err !== null) ? err.toString() : err
-    return false
+    lastWebdriverError = (err !== null) ? err.toString() : err;
+    return false;
   }
 
   return browser.driver.wait(function () {
-    driverWaitIterations++
+    driverWaitIterations++;
     if (opt_optStr === 'withRefresh') {
       // Refresh page after more than some retries
       if (driverWaitIterations > 7) {
-        _refreshPage()
+        _refreshPage();
       }
     }
     return self.isPresent().then(function (present) {
       if (present) {
         return self.isDisplayed().then(function (visible) {
-          lastWebdriverError = 'visible:' + visible
-          return visible
-        }, _isPresentError)
+          lastWebdriverError = 'visible:' + visible;
+          return visible;
+        }, _isPresentError);
       } else {
-        lastWebdriverError = 'present:' + present
-        return false
+        lastWebdriverError = 'present:' + present;
+        return false;
       }
-    }, _isPresentError)
+    }, _isPresentError);
   }, specTimeoutMs).then(function (waitResult) {
-    if (!waitResult) { _throwError() }
-    return waitResult
+    if (!waitResult) { _throwError(); }
+    return waitResult;
   }, function (err) {
-    _isPresentError(err)
-    _throwError()
-    return false
-  })
-}
+    _isPresentError(err);
+    _throwError();
+    return false;
+  });
+};
 
 // Helpers
 function _refreshPage () {
   // Swallow useless refresh page webdriver errors
-  browser.navigate().refresh().then(function () {}, function () {})
+  browser.navigate().refresh().then(function () {}, function () {});
 }

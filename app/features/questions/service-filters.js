@@ -1,11 +1,11 @@
 'use strict';
 
 angular.module('ServiceFilters', [])
-  .factory('ServiceFilters', function(){
+  .factory('ServiceFilters', function () {
     return {
-      filterByBusinessActivities: function(services, businessActivities){
+      filterByBusinessActivities: function (services, businessActivities) {
         // get all the keys that are true
-        var businessActivitiesKeys = _.keys(_.pick(businessActivities, function(value) {
+        var businessActivitiesKeys = _.keys(_.pick(businessActivities, function (value) {
           return value;
         }));
 
@@ -14,5 +14,5 @@ angular.module('ServiceFilters', [])
           return _.intersection(service.business_activities, businessActivitiesKeys).length > 0;
         });
       }
-    }
+    };
   });

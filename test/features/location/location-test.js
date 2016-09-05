@@ -1,6 +1,6 @@
 describe('Location', function () {
   describe('Location: route', function () {
-    beforeEach(module('ossCafeApp'));
+    beforeEach(module('jusCafeApp'));
     var state, scope;
 
     beforeEach(function () {

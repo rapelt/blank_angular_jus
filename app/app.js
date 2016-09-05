@@ -1,7 +1,7 @@
 'use strict';
 
 angular
-  .module('ossCafeApp', [
+  .module('jusCafeApp', [
     'ngResource',
     'ui.router',
     'Questions',

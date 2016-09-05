@@ -1,7 +1,7 @@
 'use strict';
 
 angular
-  .module('ossCafeApp')
+  .module('jusCafeApp')
   .directive('breadcrumbs', function () {
     return {
       templateUrl: 'features/breadcrumbs/breadcrumbs.html'
