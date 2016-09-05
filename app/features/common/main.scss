@@ -13,31 +13,31 @@ input[type="checkbox"] {
   border-radius: 3px;
 }
 
-.oss-back-button{
-  background-color: $oss-darkgrey;
+.jus-back-button{
+  background-color: $jus-darkgrey;
   color: black;
-  border-color: $oss-darkgrey;
+  border-color: $jus-darkgrey;
 
   &:hover {
     color: black;
-    background-color: $oss-grey;
-    border-color: $oss-darkgrey;
+    background-color: $jus-grey;
+    border-color: $jus-darkgrey;
   }
 }
 
-.oss-next-button{
-  background-color: $oss-primarygreen;
+.jus-next-button{
+  background-color: $jus-primarygreen;
   color: black;
-  border-color: $oss-primarygreen;
+  border-color: $jus-primarygreen;
 
   &:hover, &:active, &:focus, &:focus:active {
     color: black;
-    background-color: $oss-lightgreen;
-    border-color: $oss-primarygreen;
+    background-color: $jus-lightgreen;
+    border-color: $jus-primarygreen;
   }
 }
 
-.oss-button {
+.jus-button {
   padding: 10px 20px;
 }
 

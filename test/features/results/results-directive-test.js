@@ -2,7 +2,7 @@ describe('Directive: results', function () {
   var scope, element;
   beforeEach(function () {
     module('templates');
-    module('ossCafeApp');
+    module('jusCafeApp');
     inject(function ($compile, $rootScope, $templateCache) {
       scope = $rootScope.$new();
       $templateCache.put('features/home/main.html', '');
@@ -45,10 +45,10 @@ describe('Directive: results', function () {
   });
 
   it('should have 2 groups', function () {
-    expect(element[0].querySelectorAll('.oss-results-sg').length).toBe(2);
+    expect(element[0].querySelectorAll('.jus-results-sg').length).toBe(2);
   });
   it('should have 3 services', function () {
-    expect(element[0].querySelectorAll('.oss-results-service').length).toBe(3);
+    expect(element[0].querySelectorAll('.jus-results-service').length).toBe(3);
   });
   it("should include group 2's title", function () {
     expect(element.text()).toContain('group 2 title');

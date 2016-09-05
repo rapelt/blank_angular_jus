@@ -1,7 +1,7 @@
 'use strict';
 
 angular
-  .module('ossCafeApp')
+  .module('jusCafeApp')
   .directive('header', function () {
     return {
       templateUrl: 'features/common/header.html'

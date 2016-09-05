@@ -1,7 +1,7 @@
 'use strict';
 
 describe('Questions controller', function () {
-  beforeEach(module('ossCafeApp'));
+  beforeEach(module('jusCafeApp'));
   var questionsService, scope, state, deferred;
 
   beforeEach(function () {

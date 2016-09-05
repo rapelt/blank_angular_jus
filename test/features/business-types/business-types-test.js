@@ -1,7 +1,7 @@
 'use strict';
 
 describe('Business types controller', function () {
-  beforeEach(module('ossCafeApp'));
+  beforeEach(module('jusCafeApp'));
   beforeEach(module('Business-types'));
   var scope, state, rootScope;
 

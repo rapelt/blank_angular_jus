@@ -1,5 +1,5 @@
 describe('Directive: header', function () {
-  beforeEach(module('ossCafeApp'));
+  beforeEach(module('jusCafeApp'));
   var scope, element, elem;
 
   beforeEach(function () {
