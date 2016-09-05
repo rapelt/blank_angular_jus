@@ -1,12 +1,12 @@
 'use strict';
 
-describe('Business types controller', function(){
+describe('Business types controller', function () {
   beforeEach(module('ossCafeApp'));
   beforeEach(module('Business-types'));
   var scope, state, rootScope;
 
-  beforeEach(function(){
-    inject(function($rootScope, $controller, $q, $templateCache, $state){
+  beforeEach(function () {
+    inject(function ($rootScope, $controller, $q, $templateCache, $state) {
       state = $state;
       scope = $rootScope.$new();
       rootScope = $rootScope;
@@ -19,7 +19,7 @@ describe('Business types controller', function(){
     });
   });
 
-  it('Should increase page number when next button is called', function(){
+  it('Should increase page number when next button is called', function () {
     state.go('business-types');
     scope.showNextPage();
     scope.$apply();
@@ -34,7 +34,7 @@ describe('Business types controller', function(){
     expect(state.current.url).toBe('/');
   });
 
-  it('Should increase page number when next button is called', function(){
+  it('Should increase page number when next button is called', function () {
     state.go('business-types');
     scope.showNextPage();
     scope.$apply();
@@ -42,13 +42,13 @@ describe('Business types controller', function(){
     expect(state.current.url).toBe('/questions');
   });
 
-  it('Should restrict access to the next button ', function(){
+  it('Should restrict access to the next button ', function () {
     scope.isNextButtonEnabled();
     scope.$apply();
     expect(scope.isNextButtonEnabled()).toBeFalsy();
   });
 
-  it('Should enable access to the next button ', function(){
+  it('Should enable access to the next button ', function () {
     rootScope.businessActivities.cafe = true;
     scope.isNextButtonEnabled();
     scope.$apply();
