@@ -1,8 +1,8 @@
 'use strict';
 
 angular.module('ossCafeApp')
- .directive('results', function(){
-   return {
-	  templateUrl: '/features/results/results.html',
-	 };
- });
+  .directive('results', function () {
+    return {
+      templateUrl: '/features/results/results.html'
+    };
+  });

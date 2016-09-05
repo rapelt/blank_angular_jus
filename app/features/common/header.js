@@ -7,5 +7,3 @@ angular
       templateUrl: 'features/common/header.html'
     };
   });
-
-
