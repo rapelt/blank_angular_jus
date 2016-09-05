@@ -1,7 +1,7 @@
 'use strict';
 
-angular.module('QuestionsRepository', [])
-  .factory('QuestionsRepository', function ($http) {
+angular.module('data', [])
+  .factory('DataRepository', function ($http) {
     return {
       getQuestions: function () {
         return $http.get('../resources/questions.json');

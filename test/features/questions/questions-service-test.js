@@ -1,5 +1,5 @@
 describe('Questions services', function () {
-  beforeEach(module('QuestionsRepository'));
+  beforeEach(module('data'));
   beforeEach(module('QuestionsService'));
   beforeEach(module('ServiceFilters'));
 
@@ -75,7 +75,7 @@ describe('Questions services', function () {
   };
 
   beforeEach(function () {
-    inject(function (QuestionsService, $rootScope, $q, QuestionsRepository) {
+    inject(function (QuestionsService, $rootScope, $q, DataRepository) {
       questionsService = QuestionsService;
       scope = $rootScope.$new();
       rootScope = $rootScope;
@@ -89,9 +89,9 @@ describe('Questions services', function () {
       deferredAnswers = $q.defer();
       deferredServices = $q.defer();
 
-      spyOn(QuestionsRepository, 'getQuestions').and.returnValue(deferredQuestions.promise);
-      spyOn(QuestionsRepository, 'getAnswers').and.returnValue(deferredAnswers.promise);
-      spyOn(QuestionsRepository, 'getServices').and.returnValue(deferredServices.promise);
+      spyOn(DataRepository, 'getQuestions').and.returnValue(deferredQuestions.promise);
+      spyOn(DataRepository, 'getAnswers').and.returnValue(deferredAnswers.promise);
+      spyOn(DataRepository, 'getServices').and.returnValue(deferredServices.promise);
 
       deferredQuestions.resolve({data: testQuestions});
       deferredAnswers.resolve({data: testAnswers});

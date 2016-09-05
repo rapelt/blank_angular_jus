@@ -1,7 +1,7 @@
 'use strict';
 
-angular.module('QuestionsService', [])
-  .factory('QuestionsService', function ($rootScope, $q, $http, QuestionsRepository, ServiceFilters) {
+angular.module('QuestionsService', ['data'])
+  .factory('QuestionsService', function ($rootScope, $q, $http, DataRepository, ServiceFilters) {
     function getAllAnswersRelatedToServices (serviceFilteredBusinessActivities, answers) {
       var answerKeys = _.uniq(_.flatten(_.pluck(serviceFilteredBusinessActivities, 'parent_answer_ids')));
       return _.pick(answers, answerKeys);
@@ -64,7 +64,7 @@ angular.module('QuestionsService', [])
 
     return {
       getQuestions: function () {
-        var data = [QuestionsRepository.getQuestions(), QuestionsRepository.getAnswers(), QuestionsRepository.getServices()];
+        var data = [DataRepository.getQuestions(), DataRepository.getAnswers(), DataRepository.getServices()];
 
         return $q.all(data).then(function (values) {
           var questions = values[0].data;
