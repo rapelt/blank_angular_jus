@@ -98,9 +98,9 @@ describe('Questions controller', function () {
     scope.ablisData = testAblisData;
     state.go('questions');
     scope.page = 0;
-    rootScope.qanswers = {'1q': false, '2a': true, '4a': false};
+    scope.qanswers = {'1q': false, '2a': true, '4a': false};
     scope.updateQanswers('1q');
     scope.$apply();
-    expect(rootScope.qanswers['2a']).toBe(false);
+    expect(scope.qanswers['2a']).toBe(false);
   });
 });

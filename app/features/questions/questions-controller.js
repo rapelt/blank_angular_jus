@@ -1,7 +1,7 @@
 'use strict';
 
-angular.module('Questions', [])
-  .controller('QuestionsController', function ($scope, $state, $rootScope, QuestionsService) {
+angular.module('Questions', ['answers'])
+  .controller('QuestionsController', function ($scope, $state, $rootScope, QuestionsService, Answers) {
     // Set business activities all to true if busniessActivities is undefined
     $rootScope.businessActivities = $rootScope.businessActivities ? $rootScope.businessActivities : {
       cafe: true,
@@ -12,7 +12,7 @@ angular.module('Questions', [])
     $scope.ablisQuestions = '';
     $scope.page = 0;
     $scope.groups = [];
-    $rootScope.qanswers = $rootScope.qanswers || {};
+    $scope.qanswers = Answers.getAnswers();
     $scope.group_id = 'groupid1';
     $scope.ablisData = {};
 
@@ -28,7 +28,7 @@ angular.module('Questions', [])
 
       if (primequestion.answer) {
         _.each(primequestion.answer.subquestion.answers, function (answer) {
-          $rootScope.qanswers[ answer.id ] = false;
+          $scope.qanswers[ answer.id ] = false;
         });
       }
     };

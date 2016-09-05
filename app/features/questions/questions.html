@@ -8,15 +8,14 @@
         <div>
             <label for='checkbox-{{question.id}}'>{{$index + 1}}. {{question.value}}</label>
             <input ng-click="updateQanswers(question.id)" id='checkbox-{{question.id}}'
-                   ng-model="$root.qanswers[question.id]" class='checkbox'
-                   type='checkbox'
-            >
+                   ng-model="qanswers[question.id]" class='checkbox'
+                   type='checkbox'/>
         </div>
 
         <div id='collapsible-{{question.id}}' class='subquestions' ng-hide='!question.answer.subquestion' uib-collapse="!$root.qanswers[question.id]">
             <div class="subquestion-value">{{question.answer.subquestion.value}}</div>
             <div class='subquestion' ng-repeat='answer in question.answer.subquestion.answers'>
-                <input ng-model="$root.qanswers[answer.id]" class='subcheckbox' type='checkbox'
+                <input ng-model="qanswers[answer.id]" class='subcheckbox' type='checkbox'
                        id='checkbox-{{answer.id}}'/>
                 <label for='checkbox-{{answer.id}}'>{{answer.value}}</label>
             </div>
