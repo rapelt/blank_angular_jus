@@ -15,4 +15,12 @@ describe('results screen', function () {
       expect(browser.getCurrentUrl()).toContain("results");
     });
   });
+  it('should click throught the groups', function () {
+    waitForPage(function(){
+      resultsPage.expandCategoryOne();
+      resultsPage.expandCategoryTwo();
+    });
+  });
+
+
 });

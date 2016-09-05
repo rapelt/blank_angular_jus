@@ -9,20 +9,36 @@ module.exports = function(config) {
 
     preprocessors: {
       'app/features/**/*.js': 'coverage',
-			'app/features/**/*.html': ['ng-html2js']
+      'app/features/**/*.html': ['ng-html2js']
     },
 
-		ngHtml2JsPreprocessor: {
-			stripPrefix: 'app',
-			moduleName: 'templates'
-		},
+    ngHtml2JsPreprocessor: {
+      stripPrefix: 'app',
+      moduleName: 'templates'
+    },
 
-    reporters: ['dots','progress','coverage'],
+    reporters: ['progress','coverage'],
 
     coverageReporter:{
-      type : 'html',
-      dir : 'coverage/',
-      subdir: '.'
+      reporters: [
+        { type : 'html', dir : 'reports/coverage/', subdir: '.' },
+        { type : 'text-summary' }
+      ],
+
+      check: {
+        global: {
+          statements: 79,
+          branches: 60,
+          functions: 69,
+          lines: 80
+        }
+      }
+    },
+
+    junitReporter: {
+      outputDir: 'reports/karma',
+      suite: '',
+      useBrowserName: false
     },
 
     frameworks: [
@@ -54,7 +70,8 @@ module.exports = function(config) {
       'karma-phantomjs-launcher',
       'karma-ng-html2js-preprocessor',
       'karma-jasmine',
-      'karma-coverage'
+      'karma-coverage',
+      'karma-junit-reporter'
     ],
 
     singleRun: true,
