@@ -2,9 +2,9 @@
 
   $base-padding: 12px;
 
-  .oss-indicator {
+  .jus-indicator {
     float: right;
-    color: $oss-darkgrey;
+    color: $jus-darkgrey;
     font-size: 22px;
   }
   input {
@@ -20,26 +20,26 @@
     padding-left: $base-padding;
     font-weight: normal;
   }
-  .oss-results {
-    border-bottom: solid $oss-darkgrey 1px;
-    border-left: solid $oss-darkgrey 1px;
-    border-right: solid $oss-darkgrey 1px;
+  .jus-results {
+    border-bottom: solid $jus-darkgrey 1px;
+    border-left: solid $jus-darkgrey 1px;
+    border-right: solid $jus-darkgrey 1px;
     margin-bottom: 16px;
   }
-  .oss-results-sg-header {
-    border-top: solid $oss-blue 2px;
-    color: $oss-blue;
+  .jus-results-sg-header {
+    border-top: solid $jus-blue 2px;
+    color: $jus-blue;
     font-weight: bold;
     padding: $base-padding;
   }
-  .oss-results-sg-header.collapsed {
-    border-top: solid $oss-darkgrey 1px;
-    background-color: $oss-grey;
-    color: $oss-bodytext;
+  .jus-results-sg-header.collapsed {
+    border-top: solid $jus-darkgrey 1px;
+    background-color: $jus-grey;
+    color: $jus-bodytext;
     font-weight: bold;
     padding: $base-padding;
   }
-  .oss-results-sg-description {
+  .jus-results-sg-description {
     padding-bottom: $base-padding;
     padding-left: $base-padding;
     padding-top: 6px;

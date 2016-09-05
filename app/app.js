@@ -1,9 +1,12 @@
 'use strict';
 
 angular
-  .module('ossCafeApp', [
+  .module('jusCafeApp', [
     'ngResource',
+    'ui.bootstrap',
     'ui.router',
+    'ngAnimate',
+    'ngTouch',
     'Questions',
     'Results',
     'ResultsService',

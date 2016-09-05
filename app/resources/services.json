@@ -11,6 +11,6 @@
     "business_activities": ["cafe"],
     "location": ["brisbane"],
     "name": "service name 01",
-    "parent_answer_ids": ["1a", "3a"]
+    "parent_answer_ids": ["1a", "3a", "5a"]
   }
 }

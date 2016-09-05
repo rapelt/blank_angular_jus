@@ -17,7 +17,7 @@ exports.config = {
   capabilities: {
     'browserName': 'phantomjs',
     'phantomjs.binary.path': require('phantomjs-prebuilt').path,
-    'phantomjs.ghostdriver.cli.args': ['--loglevel=DEBUG'],
+    'phantomjs.ghostdriver.cli.args': ['--loglevel=DEBUG']
   },
 
   jasmineNodeOpts: {

@@ -1,30 +1,34 @@
 <!--[SWE-CSS] The class is Questions-page because the SWE Css already has a class called questions-->
 <div class='questions-page'>
 
-  <h1>Please tell us some of the {{ablisData[group_id].group_name}}</h1>
-  <h5>This helps us to narrow down the information to only that which is relevant to you.</h5>
+    <h1>Please tell us some of the {{ablisData[group_id].group_name}}</h1>
+    <h5>This helps us to narrow down the information to only that which is relevant to you.</h5>
 
     <div class='question' ng-repeat='(key, question) in ablisData[group_id].questions'>
-      <div>
-        <label for='checkbox-{{question.id}}'>{{$index + 1}}. {{question.value}}</label>
-        <input ng-click="updateQanswers($event, question.id)" id='checkbox-{{question.id}}' ng-model="$root.qanswers[question.id]" class='checkbox'
-               type='checkbox' data-toggle='collapse' data-target='#collapsible-{{question.id}}'
-        >
-      </div>
+        <div>
+            <label for='checkbox-{{question.id}}'>{{$index + 1}}. {{question.value}}</label>
+            <input ng-click="updateQanswers(question.id)" id='checkbox-{{question.id}}'
+                   ng-model="$root.qanswers[question.id]" class='checkbox'
+                   type='checkbox'
+            >
+        </div>
 
-      <div id='collapsible-{{question.id}}' class='subquestions {{$root.qanswers[question.id] ? "" : "collapse"}}' ng-hide='!question.answer.subquestion'>
-          <div class="subquestion-value">{{question.answer.subquestion.value}}</div>
-          <div class='subquestion' ng-repeat='answer in question.answer.subquestion.answers'>
-            <input ng-model="$root.qanswers[answer.id]" class='subcheckbox' type='checkbox' id='checkbox-{{answer.id}}'/>
-            <label for='checkbox-{{answer.id}}'>{{answer.value}}</label>
-          </div>
-      </div>
+        <div id='collapsible-{{question.id}}' class='subquestions' ng-hide='!question.answer.subquestion' uib-collapse="!$root.qanswers[question.id]">
+            <div class="subquestion-value">{{question.answer.subquestion.value}}</div>
+            <div class='subquestion' ng-repeat='answer in question.answer.subquestion.answers'>
+                <input ng-model="$root.qanswers[answer.id]" class='subcheckbox' type='checkbox'
+                       id='checkbox-{{answer.id}}'/>
+                <label for='checkbox-{{answer.id}}'>{{answer.value}}</label>
+            </div>
+        </div>
     </div>
 
-  <div class='navigation-buttons'>
-    <button class='oss-back-button oss-button btn' ng-click="showPreviousPage()">Back</button>
-    <button class='oss-next-button oss-button btn btn-primary' ng-click='showNextPage()'>Next</button>
-  </div>
+    <div class='navigation-buttons'>
+        <button class='jus-back-button jus-button btn' ng-click="showPreviousPage()">Back</button>
+        <button class='jus-next-button jus-button btn btn-primary' ng-click='showNextPage()'>Next</button>
+    </div>
+
+
 
 
 </div>
