@@ -15,7 +15,8 @@ angular
     'QuestionsRepository',
     'Location',
     'Business-types',
-    'ServiceFilters'
+    'ServiceFilters',
+    'appConfig'
   ])
   .config(function ($stateProvider, $urlRouterProvider) {
     $urlRouterProvider.otherwise('/');
@@ -41,4 +42,7 @@ angular
         templateUrl: 'features/business-types/business-types.html',
         controller: 'BusinessTypesController'
       });
+  })
+  .run(function ($rootScope, buildNumber) {
+    $rootScope.buildNumber = buildNumber;
   });

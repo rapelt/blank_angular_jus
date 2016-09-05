@@ -11,6 +11,7 @@ var runSequence = require('run-sequence');
 var angularProtractor = require('gulp-angular-protractor');
 var Server = require('karma').Server;
 const eslint = require('gulp-eslint');
+var ngConstant = require('gulp-ng-constant');
 
 var yeoman = {
   app: 'app',
@@ -180,6 +181,18 @@ gulp.task('bower', function () {
     .pipe(gulp.dest(yeoman.app + '/views'));
 });
 
+gulp.task('config', function () {
+  gulp.src(yeoman.app + '/config.json')
+    .pipe(ngConstant({
+      name: 'appConfig',
+      constants: {
+        buildNumber: process.env.bamboo_buildKey || 'local'
+      },
+      wrap: false
+    }))
+    .pipe(gulp.dest(yeoman.app + '/features/config/'));
+});
+
 // /////////
 // Build //
 // /////////
@@ -253,7 +266,7 @@ gulp.task('copy:fontAwesome', function () {
 gulp.task('lint', ['eslint']);
 
 gulp.task('build', ['clean:dist', 'styles'], function () {
-  runSequence(['eslint', 'images', 'copy:extras', 'copy:fonts', 'copy:json', 'copy:fontAwesome', 'copy:swe-templates', 'copy:ng-templates', 'client:build']);
+  runSequence(['eslint', 'images', 'config', 'copy:extras', 'copy:fonts', 'copy:json', 'copy:fontAwesome', 'copy:swe-templates', 'copy:ng-templates', 'client:build']);
 });
 
 gulp.task('default', ['build']);
