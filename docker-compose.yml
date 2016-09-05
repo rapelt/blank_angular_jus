@@ -1,6 +1,6 @@
 version: '2.0'
 services:
-  oss:
+  SaC:
     build: .
     ports:
     - "9000:9000"
