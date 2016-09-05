@@ -2,8 +2,6 @@
 
 var waitForPage = require('../../utils/utils.js');
 var landingPage = require('../../pages/landing/landingPage.js');
-var questionsPage = require('../../pages/questions/questionsPage.js');
-var resultsPage = require('../../pages/results/resultsPage.js');
 
 describe('landing screen', function () {
   beforeEach(function () {
