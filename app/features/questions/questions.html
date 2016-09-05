@@ -7,7 +7,7 @@
     <div class='question' ng-repeat='(key, question) in ablisData[group_id].questions'>
       <div>
         <label for='checkbox-{{question.id}}'>{{$index + 1}}. {{question.value}}</label>
-        <input ng-click="updateQanswers($event, question.id)" id='checkbox-{{question.id}}' ng-model="$root.qanswers[question.id]" class='checkbox'
+        <input ng-click="updateQanswers(question.id)" id='checkbox-{{question.id}}' ng-model="$root.qanswers[question.id]" class='checkbox'
                type='checkbox' data-toggle='collapse' data-target='#collapsible-{{question.id}}'
         >
       </div>

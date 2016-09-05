@@ -49,7 +49,17 @@ angular.module('QuestionsService', [])
 
       var subquestions = _.omit(allQuestions, _.keys(primaryQuestions));
       var subquestionsWithAnswers = addAnswersToSubquestions(subquestions, answers);
-      return addSubQuestionsToPrimaryQuestions(primaryQuestions, subquestionsWithAnswers);
+      var primaryQuestionWithSubquestions = addSubQuestionsToPrimaryQuestions(primaryQuestions, subquestionsWithAnswers);
+
+      var questionsWithGroups = _.groupBy(primaryQuestionWithSubquestions, function(question){
+        return question.group_name;
+      });
+
+      var map =_.mapObject(questionsWithGroups, function(group, iteratee){
+        return {"group_name": iteratee, "questions": _.indexBy(group, "id")};
+      });
+
+      return map;
     }
 
     return {
@@ -68,7 +78,7 @@ angular.module('QuestionsService', [])
 
           var constructedQuestionsObject = constructQuestionsObject(serviceFilteredBusinessActivities, questions, answers);
 
-          return {groupid1:{group_name: "groupname", questions: constructedQuestionsObject}};
+          return constructedQuestionsObject;
         });
       }
     }

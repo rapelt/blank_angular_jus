@@ -10,14 +10,14 @@ angular.module('Questions', [])
     };
 
     $scope.ablisQuestions = "";
-    $scope.page =  0;
+    $scope.page = 0;
+    $scope.groups = [];
     $rootScope.qanswers = $rootScope.qanswers || {};
     $scope.group_id = "groupid1";
     $scope.ablisData = {};
-    $scope.updateQanswers = function(evt, questionid) {
+    $scope.updateQanswers = function(questionid) {
       var primequestion = $scope.ablisData[$scope.group_id].questions[questionid];
 
-      //clear subquestions when the prime question's qanswer changes
       if (primequestion.answer) {
         _.each(primequestion.answer.subquestion.answers, function (answer) {
           $rootScope.qanswers[answer.id] = false;
@@ -27,6 +27,8 @@ angular.module('Questions', [])
 
     QuestionsService.getQuestions().then(function(response){
       $scope.ablisData = response;
+      $scope.groups = _.keys(response);
+      $scope.group_id = $scope.groups[0];
       $scope.$evalAsync();
     });
 

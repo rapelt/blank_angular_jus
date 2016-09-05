@@ -8,18 +8,25 @@ describe('Questions services', function(){
 
 
   var testQuestions = {
-    "q1": {
-      "id": "q1",
-      "value": "Will you advertise or promote your business?"
+    "1q": {
+      "id": "1q",
+      "value": "Will you advertise or promote your business?",
+      "group_name": "Services related to administrative duties you may need to conduct"
     },
-    "q2": {
-      "id": "q2",
+    "2q": {
+      "id": "2q",
       "value": "How will you advertise or promote your business:",
-      "parent_question_id": "q1"
+      "parent_question_id": "1q"
     },
-    "q3": {
-      "id": "q3",
-      "value": "Will you need to use public spaces for any of your activities?"
+    "3q": {
+      "id": "3q",
+      "value": "Will you need to use public spaces for any of your activities?",
+      "group_name": "Services related to administrative duties you may need to conduct"
+    },
+    "4q": {
+      "id": "4q",
+      "value": "Will you employ staff or contractors?",
+      "group_name": "Employing staff or contractors in your business"
     }
   };
 
@@ -27,23 +34,29 @@ describe('Questions services', function(){
     "1a": {
       "id": "1a",
       "value": "yes",
-      "parent_question_id": "q1"
+      "parent_question_id": "1q"
     },
     "2a": {
       "id": "2a",
       "value": "Internet website",
-      "parent_question_id": "q2"
+      "parent_question_id": "2q"
     },
     "3a": {
       "id": "3a",
       "value": "yes",
-      "parent_question_id": "q3"
+      "parent_question_id": "3q"
     },
     "4a": {
       "id": "4a",
       "value": "Tv Marketing",
-      "parent_question_id": "q2"
+      "parent_question_id": "2q"
+    },
+    "5a": {
+      "id": "5a",
+      "value": "yes",
+      "parent_question_id": "4q"
     }
+
   };
 
   var testServices = {
@@ -92,7 +105,7 @@ describe('Questions services', function(){
 
   it('Should return all questions when all business activities are select', function(){
     questionsService.getQuestions().then(function (response) {
-      expect(_.size(response.groupid1.questions)).toBe(2);
+      expect(_.size(response["Services related to administrative duties you may need to conduct"].questions)).toBe(2);
     });
     scope.$apply();
   });
@@ -105,29 +118,29 @@ describe('Questions services', function(){
     };
 
     questionsService.getQuestions().then(function (response) {
-      expect(_.size(response.groupid1.questions)).toBe(1);
+      expect(_.size(response["Services related to administrative duties you may need to conduct"].questions)).toBe(1);
     });
     scope.$apply();
   });
 
   it('Should return all questions when all business activities are select', function(){
     questionsService.getQuestions().then(function (response) {
-      expect(_.size(response.groupid1.questions)).toBe(2);
+      expect(_.size(response["Services related to administrative duties you may need to conduct"].questions)).toBe(2);
     });
     scope.$apply();
   });
 
   it('Should return questions inside a group', function(){
     questionsService.getQuestions().then(function (response) {
-      expect(response.groupid1).toBeDefined();
-      expect(_.size(response.groupid1.questions)).toBe(2);
+      expect(response["Services related to administrative duties you may need to conduct"]).toBeDefined();
+      expect(_.size(response["Services related to administrative duties you may need to conduct"].questions)).toBe(2);
     });
     scope.$apply();
   });
 
   it('Should return question q1 with subquestions', function(){
     questionsService.getQuestions().then(function (response) {
-      var subquestion = response.groupid1.questions.q1.answer.subquestion;
+      var subquestion = response["Services related to administrative duties you may need to conduct"].questions["1q"].answer.subquestion;
       expect(subquestion).toBeDefined();
       expect(_.size(subquestion.answers)).toBe(2);
     });
@@ -136,7 +149,7 @@ describe('Questions services', function(){
 
   it('Should return question q3 without subquestions', function(){
     questionsService.getQuestions().then(function (response) {
-      expect(response.groupid1.questions.q3.answer).toBeUndefined();
+      expect(response["Services related to administrative duties you may need to conduct"].questions["3q"].answer).toBeUndefined();
     });
     scope.$apply();
   });
