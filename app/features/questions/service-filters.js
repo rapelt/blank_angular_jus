@@ -4,7 +4,6 @@ angular.module('ServiceFilters', [])
   .factory('ServiceFilters', function(){
     return {
       filterByBusinessActivities: function(services, businessActivities){
-        console.log(businessActivities);
         // get all the keys that are true
         var businessActivitiesKeys = _.keys(_.pick(businessActivities, function(value) {
           return value;

@@ -28,7 +28,6 @@ angular.module('Questions', [])
     QuestionsService.getQuestions().then(function(response){
       $scope.ablisData = response;
       $scope.$evalAsync();
-      console.log("ablisdata", $scope.ablisData);
     });
 
     $scope.showNextPage = function () {
