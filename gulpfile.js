@@ -187,7 +187,7 @@ gulp.task('config', function () {
     .pipe(ngConstant({
       name: 'appConfig',
       constants: {
-        buildNumber: process.env.bamboo_buildKey || 'local'
+        buildNumber: process.env.bamboo_buildNumber || 'local'
       },
       wrap: false
     }))
