@@ -133,7 +133,7 @@ gulp.task('serve:prod', function () {
 
 gulp.task('test', function (done) {
   new Server({
-    configFile: __dirname + '/test/karma.conf.js',
+    configFile: __dirname + '/test/karma.conf.js'
   }, done).start();
 });
 

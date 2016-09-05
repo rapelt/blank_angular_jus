@@ -39,6 +39,8 @@
     "run-sequence": "^1.1.1",
     "selenium-server-standalone-jar": "^2.53.1",
     "selenium-standalone": "^5.5.0",
+    "semistandard": "^9.0.0",
+    "semistandard-format": "^3.0.0",
     "wiredep": "^2.2.2"
   },
   "engines": {

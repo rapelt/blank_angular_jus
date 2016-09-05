@@ -15,11 +15,9 @@ describe('results screen', function () {
     });
   });
   it('should click throught the groups', function () {
-    waitForPage(function(){
+    waitForPage(function () {
       resultsPage.expandCategoryOne();
       resultsPage.expandCategoryTwo();
     });
   });
-
-
 });
