@@ -3,7 +3,10 @@
 angular
   .module('jusCafeApp', [
     'ngResource',
+    'ui.bootstrap',
     'ui.router',
+    'ngAnimate',
+    'ngTouch',
     'Questions',
     'Results',
     'ResultsService',
