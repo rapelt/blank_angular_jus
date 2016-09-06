@@ -1,7 +1,10 @@
 'use strict';
 
 angular.module('Location', ['Map', 'FeatureToggle'])
-  .controller('LocationController', function () {})
+  .controller('LocationController', function ($scope, brisbane, logan) {
+    $scope.brisbane = brisbane;
+    $scope.logan = logan;
+  })
   .directive('locationDirective', function (MapService, FeatureToggleService) {
     return {
       restrict: 'E',
@@ -11,10 +14,10 @@ angular.module('Location', ['Map', 'FeatureToggle'])
         var brisbaneBounds = MapService.getLocationBounds();
         autocomplete.setBounds(brisbaneBounds);
         scope.debugMap = FeatureToggleService.debugMap;
+        scope.isInRegion = true;
 
         if (FeatureToggleService.debugMap) {
           MapService.initMap();
-          MapService.getLocationPolygon();
         }
 
         autocomplete.addListener('place_changed', function () {
@@ -23,8 +26,13 @@ angular.module('Location', ['Map', 'FeatureToggle'])
 
             if (FeatureToggleService.debugMap) {
               MapService.removeMarker();
-              MapService.createMarker(scope.place.geometry.location);
+              MapService.addMarker(scope.place.geometry.location);
             }
+
+            var brisbanePoly = MapService.getLocationPolygon(scope.brisbane);
+
+            var isValidLocation = MapService.isValidLocation(scope.place.geometry.location, brisbanePoly, scope.logan);
+            console.log(isValidLocation);
           });
         });
       }

@@ -13,10 +13,12 @@ angular
     'QuestionsService',
     'Business-types',
     'QuestionsRepository',
+    'LocationRepository',
     'Location',
     'Business-types',
     'ServiceFilters',
-    'appConfig'
+    'appConfig',
+    'smoothScroll'
   ])
   .config(function ($stateProvider, $urlRouterProvider) {
     $urlRouterProvider.otherwise('/');
@@ -30,7 +32,15 @@ angular
       .state('location', {
         url: '/location',
         templateUrl: 'features/location/location.html',
-        controller: 'LocationController'
+        controller: 'LocationController',
+        resolve: {
+          brisbane: function (LocationRepository){
+            return LocationRepository.getBrisbaneLocation();
+          },
+          logan: function(LocationRepository){
+            return LocationRepository.getLoganLocation();
+          }
+        }
       })
       .state('questions', {
         url: '/questions',

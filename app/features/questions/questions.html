@@ -1,5 +1,5 @@
 <!--[SWE-CSS] The class is Questions-page because the SWE Css already has a class called questions-->
-<div class='questions-page'>
+<div id="questions-page" class='questions-page'>
 
     <h1>{{ablisData[group_id].group_name}}</h1>
     <h5>This helps us to narrow down the information to only that which is relevant to you.</h5>
@@ -27,8 +27,8 @@
     </form>
 
     <div class='navigation-buttons'>
-        <button class='jus-back-button jus-button btn' ng-click="showPreviousPage()">Back</button>
-        <button class='jus-next-button jus-button btn btn-primary' ng-click='showNextPage()'>Next</button>
+        <button class='jus-back-button jus-button btn' scroll-to="qg-primary-content" ng-click="showPreviousPage()">Back</button>
+        <button class='jus-next-button jus-button btn btn-primary' scroll-to="qg-primary-content" ng-click='showNextPage()'>Next</button>
     </div>
 
 
