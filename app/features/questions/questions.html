@@ -13,8 +13,6 @@
                        ng-model="qanswers[question.id]" class='checkbox'
                        type='checkbox'/>
             </div>
-
-
             <div id='collapsible-{{question.id}}' class='subquestions' ng-hide='!question.answer.subquestion' uib-collapse="!qanswers[question.id]">
                 <div class="subquestion-value">{{question.answer.subquestion.value}}</div>
                 <div class='subquestion' ng-repeat='answer in question.answer.subquestion.answers'>
@@ -30,8 +28,4 @@
         <button class='jus-back-button jus-button btn' ng-click="showPreviousPage()">Back</button>
         <button class='jus-next-button jus-button btn btn-primary' ng-click='showNextPage()'>Next</button>
     </div>
-
-
-
-
 </div>
