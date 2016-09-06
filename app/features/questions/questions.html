@@ -4,24 +4,27 @@
     <h1>Please tell us some of the {{ablisData[group_id].group_name}}</h1>
     <h5>This helps us to narrow down the information to only that which is relevant to you.</h5>
 
-    <div class='question' ng-repeat='(key, question) in ablisData[group_id].questions'>
-        <div>
-            <label for='checkbox-{{question.id}}'>{{$index + 1}}. {{question.value}}</label>
-            <input ng-click="updateQanswers(question.id)" id='checkbox-{{question.id}}'
-                   ng-model="qanswers[question.id]" class='checkbox'
-                   type='checkbox'/>
-        </div>
+    <form id="ga-jus-cafe-questions">
+
+        <div class='question' ng-repeat='(key, question) in ablisData[group_id].questions'>
+            <div>
+                <label for='checkbox-{{question.id}}'>{{$index + 1}}. {{question.value}}</label>
+                <input name="question-{{question.id}}" ng-click="updateQanswers(question.id)" id='checkbox-{{question.id}}'
+                       ng-model="qanswers[question.id]" class='checkbox'
+                       type='checkbox'/>
+            </div>
 
 
-        <div id='collapsible-{{question.id}}' class='subquestions' ng-hide='!question.answer.subquestion' uib-collapse="!qanswers[question.id]">
-            <div class="subquestion-value">{{question.answer.subquestion.value}}</div>
-            <div class='subquestion' ng-repeat='answer in question.answer.subquestion.answers'>
-                <input ng-model="qanswers[answer.id]" class='subcheckbox' type='checkbox'
-                       id='checkbox-{{answer.id}}'/>
-                <label for='checkbox-{{answer.id}}'>{{answer.value}}</label>
+            <div id='collapsible-{{question.id}}' class='subquestions' ng-hide='!question.answer.subquestion' uib-collapse="!qanswers[question.id]">
+                <div class="subquestion-value">{{question.answer.subquestion.value}}</div>
+                <div class='subquestion' ng-repeat='answer in question.answer.subquestion.answers'>
+                    <input name="subquestion-{{answer.id}}" ng-model="qanswers[answer.id]" class='subcheckbox' type='checkbox'
+                           id='checkbox-{{answer.id}}'/>
+                    <label for='checkbox-{{answer.id}}'>{{answer.value}}</label>
+                </div>
             </div>
         </div>
-    </div>
+    </form>
 
     <div class='navigation-buttons'>
         <button class='jus-back-button jus-button btn' ng-click="showPreviousPage()">Back</button>
