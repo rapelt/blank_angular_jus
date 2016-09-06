@@ -16,6 +16,10 @@ angular.module('ServiceFilters', ['answers'])
       },
       filterByQuestions: function (services) {
         var qkeys = Answers.getTrueAnswerKeys();
+        if (qkeys.length == 0) {
+          return services;
+        }
+
         var ret = _.pick(services, function (service) {
           var intersection = _.intersection(service.parent_answer_ids, qkeys);
           return intersection.length > 0;
