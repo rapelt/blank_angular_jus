@@ -4,7 +4,7 @@ angular.module('Business-types', [])
   .controller('BusinessTypesController', function ($rootScope, $scope, $state) {
     $rootScope.businessActivities = $rootScope.businessActivities ? $rootScope.businessActivities : {
       cafe: false,
-      mobileFood: false,
+      mobile: false,
       takeaway: false
     };
 
@@ -13,6 +13,6 @@ angular.module('Business-types', [])
     };
 
     $scope.isNextButtonEnabled = function () {
-      return $rootScope.businessActivities.cafe || $rootScope.businessActivities.mobileFood || $rootScope.businessActivities.takeaway;
+      return $rootScope.businessActivities.cafe || $rootScope.businessActivities.mobile || $rootScope.businessActivities.takeaway;
     };
   });
