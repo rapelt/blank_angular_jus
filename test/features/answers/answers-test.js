@@ -21,4 +21,11 @@ describe('Answers: Service', function () {
     anss['q1'] = true;
     expect(answers.getAnswers()).toEqual({'q1': true});
   });
+
+  it('should give an array of keys for true answers', function () {
+    answers.setAnswer({id: '1a', answer: true});
+    answers.setAnswer({id: '2a', answer: false});
+    var anss = answers.getTrueAnswerKeys();
+    expect(anss).toEqual(['1a']);
+  });
 });

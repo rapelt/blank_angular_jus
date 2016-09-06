@@ -7,6 +7,11 @@ angular.module('answers', [])
       },
       setAnswer: function (answer) {
         answers[answer.id] = answer.answer;
+      },
+      getTrueAnswerKeys: function () {
+        return _.keys(_.pick(answers, function (ans) {
+          return ans;
+        }));
       }
     };
   });
