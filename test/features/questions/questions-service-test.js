@@ -95,7 +95,7 @@ describe('Questions services', function () {
 
       deferredQuestions.resolve({data: testQuestions});
       deferredAnswers.resolve({data: testAnswers});
-      deferredServices.resolve({data: testServices});
+      deferredServices.resolve(testServices);
     });
   });
 

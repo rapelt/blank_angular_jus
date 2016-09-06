@@ -4,12 +4,12 @@ angular.module('Results', ['ServiceFilters', 'data'])
   .controller('ResultsController', function ($scope, DataRepository, ServiceFilters) {
     var servicespromise = DataRepository.getServices();
     servicespromise.then(function (services) {
+      services = ServiceFilters.filterByQuestions(services);
       var servicesArray = Object.keys(services).map(function (key) {
         return services[key];
       });
       var serviceGroups = _.groupBy(servicesArray, 'service_type');
       $scope.serviceGroups = _.map(serviceGroups, function (serviceGroupArray) {
-        console.log('serviceGroup');
         var serviceGroup = [];
         var serviceType = serviceGroupArray[0].service_type;
         serviceGroup.description = serviceType;
