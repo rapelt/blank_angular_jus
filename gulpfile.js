@@ -12,6 +12,7 @@ var angularProtractor = require('gulp-angular-protractor');
 var Server = require('karma').Server;
 const eslint = require('gulp-eslint');
 var ngConstant = require('gulp-ng-constant');
+var path = require('path');
 
 var yeoman = {
   app: 'app',
@@ -58,7 +59,7 @@ function runProtractor (protractorConfig) {
 // /////////
 
 gulp.task('eslint', function () {
-  return gulp.src(paths.scripts.concat(paths.test))
+  return gulp.src(paths.scripts.concat(paths.test).concat(['gulpfile.js']))
     // eslint() attaches the lint output to the "eslint" property
     // of the file object so it can be used by other modules.
     .pipe(eslint())
@@ -137,13 +138,13 @@ gulp.task('serve:prod', function () {
 
 gulp.task('test', function (done) {
   new Server({
-    configFile: __dirname + '/test/karma.conf.js'
+    configFile: path.join(__dirname, '/test/karma.conf.js')
   }, done).start();
 });
 
 gulp.task('testci', function (done) {
   new Server({
-    configFile: __dirname + '/test/karma.conf.js',
+    configFile: path.join(__dirname, '/test/karma.conf.js'),
     colors: false,
     reporters: ['coverage', 'junit']
   }, done).start();
