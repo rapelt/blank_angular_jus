@@ -1,0 +1,32 @@
+{
+    "AdvisoryMaterial" : {
+        "id": "AdvisoryMaterial",
+        "title": "Advisory Material",
+        "description" : "Advisory material provides advice and guidance in undertaking a business."
+    },
+    "CodeofPractice": {
+        "id": "CodeofPractice",
+        "title": "Code of Practice",
+        "description": "A code of practice can be either a legal requirement or non-legal requirement. Legal codes of practice are defined as a result of legislation. Non-legal codes of practice are defined by industry regulators and bodies."
+    },
+    "Licence": {
+        "id": "Licence",
+        "title": "License",
+        "description": "A licence defines the need to obtain recognition / certification and registration to undertake a certain business activity."
+    },
+    "RegulatoryObligation": {
+        "id": "RegulatoryObligation",
+        "title": "Regulatory Obligation",
+        "description": "An obligation defined in law. A business must comply with relevant services."
+    },
+    "SupportService": {
+        "id": "SupportService",
+        "title": "Support Service",
+        "description": "A service offered by government to aid in running a business."
+    },
+    "Unpackageable": {
+        "id": "Unpackageable",
+        "title": "Other",
+        "description": "Other services"
+    }
+}

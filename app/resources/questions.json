@@ -26,7 +26,7 @@
     }, 
     "f9914dcd-5e04-463a-939e-45dcb83984d7": {
         "id": "f9914dcd-5e04-463a-939e-45dcb83984d7", 
-        "value": "Will you act as a self insurer for Workers Compensation?", 
+        "value": "Will you insure your own workers against workplace injuries (some large employers act as a self-insurer)?", 
         "group_name": "Employing Staff or Contractors"
     }, 
     "dd9da894-9907-47bf-b43e-6d8c74963807": {
@@ -76,7 +76,7 @@
     }, 
     "78c62280-03ae-4680-b1e0-b26c74b1104f": {
         "id": "78c62280-03ae-4680-b1e0-b26c74b1104f", 
-        "value": "Do you need information, assistance or advice on managing disasters?", 
+        "value": "Do you need information, assistance or advice on managing disasters or emergency situations?", 
         "group_name": "Emergency Planning and Disaster Assistance"
     }, 
     "6fff72ff-40b7-4581-9bf3-9b6599fbc5e8": {
@@ -131,12 +131,12 @@
     }, 
     "056b3ca1-fa7e-45ce-bc92-90b171e8af9f": {
         "id": "056b3ca1-fa7e-45ce-bc92-90b171e8af9f", 
-        "value": "Will you design, manufacture, install or use plant and equipment in the workplace (e.g. boilers, pressure vessels, lifts or amusement equipment)?", 
+        "value": "Will you design, manufacture, install or use plant and equipment in the workplace (plant may be machinery, equipment, a container, an implement or tool e.g. boilers, pressure vessels, lifts or amusement equipment)?", 
         "group_name": "Plant, Products and Equipment"
     }, 
     "485ebafa-5906-4f68-9e42-4777065da08b": {
         "id": "485ebafa-5906-4f68-9e42-4777065da08b", 
-        "value": "Will you be discharging waste into the drainage system (anything other than household waste is considered trade waste)?", 
+        "value": "Will you deal with or manage trade waste (Before a business discharges trade waste into sewers, the owner of the property must obtain a Trade Waste Approval.)?", 
         "group_name": "Waste"
     }, 
     "74f4099a-7891-448c-9dc5-0c02ba430990": {
@@ -211,7 +211,7 @@
     }, 
     "140e1bb6-d8c3-4f1a-87e5-d349dfe88253": {
         "id": "140e1bb6-d8c3-4f1a-87e5-d349dfe88253", 
-        "value": "Do you intend to change the existing land or buildings (development permit)?", 
+        "value": "Do you intend to change the use of existing land or buildings (e.g. zoning changes or development permits)?", 
         "group_name": "Planning and Development"
     }, 
     "b355fa43-a2fb-4431-ac53-de2902e10127": {
