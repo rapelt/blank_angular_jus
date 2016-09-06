@@ -81,7 +81,7 @@ describe('Questions services', function () {
       rootScope = $rootScope;
       $rootScope.businessActivities = $rootScope.businessActivities ? $rootScope.businessActivities : {
         cafe: true,
-        mobileFood: true,
+        mobile: true,
         takeaway: true
       };
 
@@ -109,7 +109,7 @@ describe('Questions services', function () {
   it('Should return 1 question when only takeaway is select', function () {
     rootScope.businessActivities = {
       cafe: false,
-      mobileFood: false,
+      mobile: false,
       takeaway: true
     };
 

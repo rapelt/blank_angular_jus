@@ -5,7 +5,7 @@ angular.module('Questions', ['answers'])
     // Set business activities all to true if busniessActivities is undefined
     $rootScope.businessActivities = $rootScope.businessActivities ? $rootScope.businessActivities : {
       cafe: true,
-      mobileFood: true,
+      mobile: true,
       takeaway: true
     };
 
