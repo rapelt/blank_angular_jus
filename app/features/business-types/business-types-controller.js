@@ -1,12 +1,8 @@
 'use strict';
 
-angular.module('Business-types', [])
-  .controller('BusinessTypesController', function ($rootScope, $scope, $state) {
-    $rootScope.businessActivities = $rootScope.businessActivities ? $rootScope.businessActivities : {
-      cafe: false,
-      mobile: false,
-      takeaway: false
-    };
+angular.module('Business-types', ['businessActivities'])
+  .controller('BusinessTypesController', function ($rootScope, $scope, $state, BusinessActivities) {
+    $rootScope.businessActivities = BusinessActivities.getAnswers();
 
     $scope.showNextPage = function () {
       $state.go('questions');
