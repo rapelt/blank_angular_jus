@@ -28,4 +28,11 @@ describe('Answers: Service', function () {
     var anss = answers.getTrueAnswerKeys();
     expect(anss).toEqual(['1a']);
   });
+
+  it('should note when questions are answered', function () {
+    answers.setAnswer({id: '2a', answer: false});
+    expect(answers.isAnyQuestionAnswered()).toBe(false);
+    answers.setAnswer({id: '1a', answer: true});
+    expect(answers.isAnyQuestionAnswered()).toBe(true);
+  });
 });

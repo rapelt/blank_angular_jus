@@ -16,7 +16,7 @@ angular.module('ServiceFilters', ['answers'])
       },
       filterByQuestions: function (services) {
         var qkeys = Answers.getTrueAnswerKeys();
-        if (qkeys.length == 0) {
+        if (!Answers.isAnyQuestionAnswered()) {
           return services;
         }
 

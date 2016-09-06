@@ -12,6 +12,9 @@ angular.module('answers', [])
         return _.keys(_.pick(answers, function (ans) {
           return ans;
         }));
+      },
+      isAnyQuestionAnswered: function () {
+        return this.getTrueAnswerKeys().length > 0;
       }
     };
   });

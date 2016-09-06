@@ -1,10 +1,11 @@
 'use strict';
 
 angular.module('Results', ['ServiceFilters', 'data'])
-  .controller('ResultsController', function ($scope, DataRepository, ServiceFilters) {
+  .controller('ResultsController', function ($scope, DataRepository, ServiceFilters, $rootScope) {
     var servicespromise = DataRepository.getServices();
     servicespromise.then(function (services) {
       services = ServiceFilters.filterByQuestions(services);
+      services = ServiceFilters.filterByBusinessActivities(services, $rootScope.businessActivities);
 
       var servicesArray = Object.keys(services).map(function (key) {
         return services[key];

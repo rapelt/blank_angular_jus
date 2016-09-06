@@ -22,7 +22,7 @@ describe('Service results controller', function () {
 
   beforeEach(function () {
     dataRepository = jasmine.createSpyObj('DataRepository', ['getServices', 'getServiceDetails']);
-    serviceFilters = jasmine.createSpyObj('ServiceFilters', ['filterByQuestions']);
+    serviceFilters = jasmine.createSpyObj('ServiceFilters', ['filterByQuestions', 'filterByBusinessActivities']);
     inject(function ($rootScope, $controller, $q, $templateCache, $state) {
       state = $state;
       scope = $rootScope.$new();
@@ -36,6 +36,7 @@ describe('Service results controller', function () {
       dataRepository.getServiceDetails.and.returnValue(deferredServiceDetails.promise);
 
       serviceFilters.filterByQuestions.and.returnValue(services);
+      serviceFilters.filterByBusinessActivities.and.returnValue(services);
       deferredServices.resolve({});
       deferredServiceDetails.resolve(serviceDetails);
 
