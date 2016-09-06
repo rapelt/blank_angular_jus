@@ -69,7 +69,7 @@ angular.module('QuestionsService', ['data'])
         return $q.all(data).then(function (values) {
           var questions = values[0].data;
           var answers = values[1].data;
-          var services = values[2].data;
+          var services = values[2];
 
           var serviceFilteredBusinessActivities = ServiceFilters.filterByBusinessActivities(services, $rootScope.businessActivities);
 

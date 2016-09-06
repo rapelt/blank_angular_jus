@@ -12,7 +12,9 @@ angular.module('data', [])
       },
 
       getServices: function () {
-        return $http.get('../resources/services.json');
+        return $http.get('../resources/services.json').then(function (response) {
+          return response.data;
+        });
       }
     };
   });

@@ -1,13 +1,24 @@
 'use strict';
 
-angular.module('Results', [])
-  .controller('ResultsController', function ($scope, ResultsService) {
-    ResultsService.get().then(function (response) {
-      $scope.serviceGroups = response.data.map(function (serviceGroup) {
+angular.module('Results', ['ServiceFilters', 'data'])
+  .controller('ResultsController', function ($scope, DataRepository, ServiceFilters) {
+    var servicespromise = DataRepository.getServices();
+    servicespromise.then(function (services) {
+      var servicesArray = Object.keys(services).map(function (key) {
+        return services[key];
+      });
+      var serviceGroups = _.groupBy(servicesArray, 'service_type');
+      $scope.serviceGroups = _.map(serviceGroups, function (serviceGroupArray) {
+        console.log('serviceGroup');
+        var serviceGroup = [];
+        var serviceType = serviceGroupArray[0].service_type;
+        serviceGroup.description = serviceType;
+        serviceGroup.title = serviceType;
         serviceGroup.expanded = false;
         serviceGroup.toggleExpanded = function () {
           serviceGroup.expanded = !serviceGroup.expanded;
         };
+        serviceGroup.services = serviceGroupArray;
         return serviceGroup;
       });
     });
