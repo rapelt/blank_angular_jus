@@ -3,7 +3,7 @@
 var waitForPage = require('../../utils/utils.js');
 var resultsPage = require('../../pages/results/resultsPage.js');
 
-describe('results screen', function () {
+xdescribe('results screen', function () {
   beforeEach(function () {
     browser.waitForAngular();
     browser.driver.get('http://localhost:9001/#/results');

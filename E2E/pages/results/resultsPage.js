@@ -1,8 +1,8 @@
 'use strict';
 
 var ResultsPage = function () {
-  this.categoryOne = element(by.id('heading-sg1'));
-  this.categoryTwo = element(by.id('heading-sg2'));
+  this.categoryOne = element(by.id('heading-CodeofPractice'));
+  this.categoryTwo = element(by.id('heading-Licence'));
 
   this.expandCategoryOne = function () {
     this.categoryOne.click();
