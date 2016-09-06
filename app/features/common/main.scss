@@ -37,6 +37,12 @@ input[type="checkbox"] {
   }
 }
 
+.btn-primary[disabled]:hover {
+  background-color: $jus-darkgrey;
+  color: black;
+  border-color: $jus-darkgrey;
+}
+
 .jus-button {
   padding: 10px 20px;
 }

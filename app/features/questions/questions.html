@@ -12,7 +12,8 @@
                    type='checkbox'/>
         </div>
 
-        <div id='collapsible-{{question.id}}' class='subquestions' ng-hide='!question.answer.subquestion' uib-collapse="!$root.qanswers[question.id]">
+
+        <div id='collapsible-{{question.id}}' class='subquestions' ng-hide='!question.answer.subquestion' uib-collapse="!qanswers[question.id]">
             <div class="subquestion-value">{{question.answer.subquestion.value}}</div>
             <div class='subquestion' ng-repeat='answer in question.answer.subquestion.answers'>
                 <input ng-model="qanswers[answer.id]" class='subcheckbox' type='checkbox'
