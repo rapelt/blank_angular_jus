@@ -139,19 +139,17 @@
         "location": "any", 
         "id": "db99b48a-4b53-4f2e-a499-253f0dc62d50"
     }, 
-    "e8fd26ae-ad16-4bec-bf9b-22949cb4cda8": {
+    "c97934a9-8d04-4863-af27-aeb44d6bb94b": {
         "business_activities": [
             "mobile", 
             "cafe", 
             "takeaway"
         ], 
-        "name": "Food Standards Code", 
-        "parent_answer_ids": [
-            "262fc1b6-3009-4073-8f34-770b22eb4309"
-        ], 
-        "service_type_id": "CodeofPractice", 
+        "name": "Registration as a PAYG Withholder", 
+        "parent_answer_ids": [], 
+        "service_type_id": "Licence", 
         "location": "any", 
-        "id": "e8fd26ae-ad16-4bec-bf9b-22949cb4cda8"
+        "id": "c97934a9-8d04-4863-af27-aeb44d6bb94b"
     }, 
     "aba5e90f-7bfc-42a9-b25d-33eeeb5b66e3": {
         "business_activities": [
@@ -251,19 +249,17 @@
         "location": "any", 
         "id": "98fda72a-6054-48a8-a24b-4943fd9fb3ae"
     }, 
-    "6b2ac964-4ece-4b97-9694-2e5a90f3be5b": {
+    "c7d24e59-b36e-45db-92f5-f8e336d3f487": {
         "business_activities": [
             "mobile", 
             "cafe", 
             "takeaway"
         ], 
-        "name": "Legal Aid Queensland - legal information, advice and representation", 
-        "parent_answer_ids": [
-            "f5d1d590-46a7-4a20-a209-dded3e07515b"
-        ], 
-        "service_type_id": "SupportService", 
+        "name": "Liquor Act 1992", 
+        "parent_answer_ids": [], 
+        "service_type_id": "RegulatoryObligation", 
         "location": "any", 
-        "id": "6b2ac964-4ece-4b97-9694-2e5a90f3be5b"
+        "id": "c7d24e59-b36e-45db-92f5-f8e336d3f487"
     }, 
     "70571fac-d100-485d-af39-d9ce8de98992": {
         "business_activities": [
@@ -320,19 +316,19 @@
         "location": "brisbane", 
         "id": "8d4322fc-631a-4fc6-9f2b-e1d68944663c"
     }, 
-    "ae54e24c-3ac3-4060-aaea-567f37b7828d": {
+    "d79d4c3f-865a-4dbb-97d3-f453b8256af3": {
         "business_activities": [
             "mobile", 
             "cafe", 
             "takeaway"
         ], 
-        "name": "Industry Ombudsmen", 
+        "name": "Workplace Fire Safety Training Delivered by Queensland Fire and Emergency Service", 
         "parent_answer_ids": [
-            "6085a4b9-e6d0-4a8b-a7c9-489156662f78"
+            "f51221f9-3844-41cb-86e3-bf7d58f50f17"
         ], 
-        "service_type_id": "AdvisoryMaterial", 
+        "service_type_id": "SupportService", 
         "location": "any", 
-        "id": "ae54e24c-3ac3-4060-aaea-567f37b7828d"
+        "id": "d79d4c3f-865a-4dbb-97d3-f453b8256af3"
     }, 
     "c92cd89b-1c11-4991-be0f-6fd586284310": {
         "business_activities": [
@@ -390,17 +386,19 @@
         "location": "any", 
         "id": "5569c665-c9b9-4cae-b875-f5aeff699280"
     }, 
-    "e8c291c0-37c0-4097-a552-0cbf1d3ef89d": {
+    "a5a714db-3259-45ae-9e4b-279787c9f034": {
         "business_activities": [
-            "cafe"
+            "mobile", 
+            "cafe", 
+            "takeaway"
         ], 
-        "name": "Extended trading hours (one-off)", 
+        "name": "Footpath usage/obstruction permit (Brisbane)", 
         "parent_answer_ids": [
-            "eac6c055-bb61-48e1-abd5-9595052a7bee"
+            "70c52c2f-5f9c-4e4a-a26e-7bd116684e30"
         ], 
         "service_type_id": "Licence", 
-        "location": "any", 
-        "id": "e8c291c0-37c0-4097-a552-0cbf1d3ef89d"
+        "location": "brisbane", 
+        "id": "a5a714db-3259-45ae-9e4b-279787c9f034"
     }, 
     "74a49d2a-e4e8-4d9d-a795-d01ed9aaa940": {
         "business_activities": [
@@ -416,17 +414,19 @@
         "location": "any", 
         "id": "74a49d2a-e4e8-4d9d-a795-d01ed9aaa940"
     }, 
-    "c97934a9-8d04-4863-af27-aeb44d6bb94b": {
+    "e8fd26ae-ad16-4bec-bf9b-22949cb4cda8": {
         "business_activities": [
             "mobile", 
             "cafe", 
             "takeaway"
         ], 
-        "name": "Registration as a PAYG Withholder", 
-        "parent_answer_ids": [], 
-        "service_type_id": "Licence", 
+        "name": "Food Standards Code", 
+        "parent_answer_ids": [
+            "262fc1b6-3009-4073-8f34-770b22eb4309"
+        ], 
+        "service_type_id": "CodeofPractice", 
         "location": "any", 
-        "id": "c97934a9-8d04-4863-af27-aeb44d6bb94b"
+        "id": "e8fd26ae-ad16-4bec-bf9b-22949cb4cda8"
     }, 
     "50e8da67-31c6-43ed-b42c-42db69f8e23c": {
         "business_activities": [
@@ -442,17 +442,19 @@
         "location": "any", 
         "id": "50e8da67-31c6-43ed-b42c-42db69f8e23c"
     }, 
-    "c7d24e59-b36e-45db-92f5-f8e336d3f487": {
+    "6b2ac964-4ece-4b97-9694-2e5a90f3be5b": {
         "business_activities": [
             "mobile", 
             "cafe", 
             "takeaway"
         ], 
-        "name": "Liquor Act 1992", 
-        "parent_answer_ids": [], 
-        "service_type_id": "RegulatoryObligation", 
+        "name": "Legal Aid Queensland - legal information, advice and representation", 
+        "parent_answer_ids": [
+            "f5d1d590-46a7-4a20-a209-dded3e07515b"
+        ], 
+        "service_type_id": "SupportService", 
         "location": "any", 
-        "id": "c7d24e59-b36e-45db-92f5-f8e336d3f487"
+        "id": "6b2ac964-4ece-4b97-9694-2e5a90f3be5b"
     }, 
     "53f4e068-6bda-4563-ac0f-ce5d5198945f": {
         "business_activities": [
@@ -648,19 +650,19 @@
         "location": "any", 
         "id": "def012ac-6224-47bc-8087-68da518632d7"
     }, 
-    "0c2f67b8-2f4f-48ac-9a8d-b2921a191e2a": {
+    "0aade861-8ce7-4b8f-8f98-9c9c1bc86886": {
         "business_activities": [
             "mobile", 
             "cafe", 
             "takeaway"
         ], 
-        "name": "Cultural Support Unit", 
+        "name": "ICN Industry Capability and Product Search Services", 
         "parent_answer_ids": [
-            "85e58eb2-f345-4237-b0b6-6e055a2a6757"
+            "84f28dfe-6a16-43bf-a449-2e5f1ab357cb"
         ], 
         "service_type_id": "SupportService", 
         "location": "any", 
-        "id": "0c2f67b8-2f4f-48ac-9a8d-b2921a191e2a"
+        "id": "0aade861-8ce7-4b8f-8f98-9c9c1bc86886"
     }, 
     "84ea7b29-7ecc-4fb3-949b-2609aa71547a": {
         "business_activities": [
@@ -732,17 +734,19 @@
         "location": "any", 
         "id": "850a1e01-27fa-4954-9154-503ade0d72de"
     }, 
-    "0a0e8ff3-72c7-446a-b9c0-2a25525f642c": {
+    "61cf36ec-02c1-48cd-a53d-5f13d12bf8fc": {
         "business_activities": [
-            "mobile"
+            "mobile", 
+            "cafe", 
+            "takeaway"
         ], 
-        "name": "Recreation Areas Management Act 1988", 
+        "name": "Business Discount Card schemes for Seniors and Carers", 
         "parent_answer_ids": [
-            "6a8408c9-294e-49d4-afb2-f7e1adf69bcf"
+            "84f28dfe-6a16-43bf-a449-2e5f1ab357cb"
         ], 
-        "service_type_id": "RegulatoryObligation", 
+        "service_type_id": "SupportService", 
         "location": "any", 
-        "id": "0a0e8ff3-72c7-446a-b9c0-2a25525f642c"
+        "id": "61cf36ec-02c1-48cd-a53d-5f13d12bf8fc"
     }, 
     "c12e8ada-6090-4966-b19f-4cbfae9a6eaf": {
         "business_activities": [
@@ -1044,6 +1048,20 @@
         "service_type_id": "SupportService", 
         "location": "any", 
         "id": "11e3a144-fcbd-4b06-93a8-c803c6f8946a"
+    }, 
+    "ae54e24c-3ac3-4060-aaea-567f37b7828d": {
+        "business_activities": [
+            "mobile", 
+            "cafe", 
+            "takeaway"
+        ], 
+        "name": "Industry Ombudsmen", 
+        "parent_answer_ids": [
+            "6085a4b9-e6d0-4a8b-a7c9-489156662f78"
+        ], 
+        "service_type_id": "AdvisoryMaterial", 
+        "location": "any", 
+        "id": "ae54e24c-3ac3-4060-aaea-567f37b7828d"
     }, 
     "5bb42ecc-71ad-4532-8710-43baf4880a54": {
         "business_activities": [
@@ -1449,20 +1467,6 @@
         "location": "any", 
         "id": "8844ab2d-a599-4b31-9721-12f1a3577e6f"
     }, 
-    "d79d4c3f-865a-4dbb-97d3-f453b8256af3": {
-        "business_activities": [
-            "mobile", 
-            "cafe", 
-            "takeaway"
-        ], 
-        "name": "Workplace Fire Safety Training Delivered by Queensland Fire and Emergency Service", 
-        "parent_answer_ids": [
-            "f51221f9-3844-41cb-86e3-bf7d58f50f17"
-        ], 
-        "service_type_id": "SupportService", 
-        "location": "any", 
-        "id": "d79d4c3f-865a-4dbb-97d3-f453b8256af3"
-    }, 
     "f9682bbf-195f-414c-b539-74b62bb438be": {
         "business_activities": [
             "cafe"
@@ -1571,19 +1575,19 @@
         "location": "logan", 
         "id": "b578e05d-2554-4c56-90de-5ebeab1d5cda"
     }, 
-    "e15a721e-32c7-480e-b7d6-1ef888c369d8": {
+    "99a6e54c-c1da-47d6-89d1-8f41935fa019": {
         "business_activities": [
             "mobile", 
             "cafe", 
             "takeaway"
         ], 
-        "name": "Licence to Play Protected Sound Recordings or Music Videos", 
+        "name": "Food Standards Code", 
         "parent_answer_ids": [
-            "49ee8338-fe52-4b09-8571-419fa661d950"
+            "262fc1b6-3009-4073-8f34-770b22eb4309"
         ], 
-        "service_type_id": "Licence", 
+        "service_type_id": "CodeofPractice", 
         "location": "any", 
-        "id": "e15a721e-32c7-480e-b7d6-1ef888c369d8"
+        "id": "99a6e54c-c1da-47d6-89d1-8f41935fa019"
     }, 
     "8b0dfd6a-8829-4ede-8537-3c81f3309ab0": {
         "business_activities": [
@@ -1665,33 +1669,33 @@
         "location": "any", 
         "id": "059ff046-1259-49cc-8bb1-e7b0141cd5b8"
     }, 
-    "99a6e54c-c1da-47d6-89d1-8f41935fa019": {
+    "e15a721e-32c7-480e-b7d6-1ef888c369d8": {
         "business_activities": [
             "mobile", 
             "cafe", 
             "takeaway"
         ], 
-        "name": "Food Standards Code", 
+        "name": "Licence to Play Protected Sound Recordings or Music Videos", 
         "parent_answer_ids": [
-            "262fc1b6-3009-4073-8f34-770b22eb4309"
+            "49ee8338-fe52-4b09-8571-419fa661d950"
         ], 
-        "service_type_id": "CodeofPractice", 
+        "service_type_id": "Licence", 
         "location": "any", 
-        "id": "99a6e54c-c1da-47d6-89d1-8f41935fa019"
+        "id": "e15a721e-32c7-480e-b7d6-1ef888c369d8"
     }, 
-    "0aade861-8ce7-4b8f-8f98-9c9c1bc86886": {
+    "0c2f67b8-2f4f-48ac-9a8d-b2921a191e2a": {
         "business_activities": [
             "mobile", 
             "cafe", 
             "takeaway"
         ], 
-        "name": "ICN Industry Capability and Product Search Services", 
+        "name": "Cultural Support Unit", 
         "parent_answer_ids": [
-            "84f28dfe-6a16-43bf-a449-2e5f1ab357cb"
+            "85e58eb2-f345-4237-b0b6-6e055a2a6757"
         ], 
         "service_type_id": "SupportService", 
         "location": "any", 
-        "id": "0aade861-8ce7-4b8f-8f98-9c9c1bc86886"
+        "id": "0c2f67b8-2f4f-48ac-9a8d-b2921a191e2a"
     }, 
     "269d3b69-d8ea-48b5-a353-b38b3826a778": {
         "business_activities": [
@@ -1845,19 +1849,17 @@
         "location": "any", 
         "id": "e342519c-73e0-48f0-a54b-726df75dde0b"
     }, 
-    "61cf36ec-02c1-48cd-a53d-5f13d12bf8fc": {
+    "0a0e8ff3-72c7-446a-b9c0-2a25525f642c": {
         "business_activities": [
-            "mobile", 
-            "cafe", 
-            "takeaway"
+            "mobile"
         ], 
-        "name": "Business Discount Card schemes for Seniors and Carers", 
+        "name": "Recreation Areas Management Act 1988", 
         "parent_answer_ids": [
-            "84f28dfe-6a16-43bf-a449-2e5f1ab357cb"
+            "6a8408c9-294e-49d4-afb2-f7e1adf69bcf"
         ], 
-        "service_type_id": "SupportService", 
+        "service_type_id": "RegulatoryObligation", 
         "location": "any", 
-        "id": "61cf36ec-02c1-48cd-a53d-5f13d12bf8fc"
+        "id": "0a0e8ff3-72c7-446a-b9c0-2a25525f642c"
     }, 
     "70be8ae2-e5d7-4959-826d-4f895482d05c": {
         "business_activities": [
@@ -1969,19 +1971,17 @@
         "location": "any", 
         "id": "fc0ef907-57d5-4af0-b304-d84937ca8aac"
     }, 
-    "a5a714db-3259-45ae-9e4b-279787c9f034": {
+    "e8c291c0-37c0-4097-a552-0cbf1d3ef89d": {
         "business_activities": [
-            "mobile", 
-            "cafe", 
-            "takeaway"
+            "cafe"
         ], 
-        "name": "Footpath usage/obstruction permit (Brisbane)", 
+        "name": "Extended trading hours (one-off)", 
         "parent_answer_ids": [
-            "70c52c2f-5f9c-4e4a-a26e-7bd116684e30"
+            "eac6c055-bb61-48e1-abd5-9595052a7bee"
         ], 
         "service_type_id": "Licence", 
-        "location": "brisbane", 
-        "id": "a5a714db-3259-45ae-9e4b-279787c9f034"
+        "location": "any", 
+        "id": "e8c291c0-37c0-4097-a552-0cbf1d3ef89d"
     }, 
     "bce33da5-7300-4c54-a495-e06810518a8f": {
         "business_activities": [

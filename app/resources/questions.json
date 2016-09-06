@@ -12,72 +12,67 @@
     "9656a7f0-a523-49c9-a5e9-513d0d64faef": {
         "id": "9656a7f0-a523-49c9-a5e9-513d0d64faef", 
         "value": "Will your business be conducted in a managed coastal area, national park, conservation area, lake or waterway?", 
-        "group_name": "Environmental Location"
+        "group_name": "Please tell us some of the business activities you are likely to undertake in your Cafe?"
     }, 
     "2177bb33-8a02-4062-8a41-86cca2c78c55": {
         "id": "2177bb33-8a02-4062-8a41-86cca2c78c55", 
         "value": "Will your business conduct activities in indoor or outdoor public spaces (e.g. shopping malls, footpath, parks, streets)?", 
-        "group_name": "Public Spaces and Roads"
-    }, 
-    "8302bd55-6ca0-46d6-a23e-11a043477273": {
-        "id": "8302bd55-6ca0-46d6-a23e-11a043477273", 
-        "value": "Will your business impact the environment or utilise natural resources?", 
-        "group_name": "Environmental Controls"
+        "group_name": "Please tell us some of the business activities you are likely to undertake in your Cafe?"
     }, 
     "f9914dcd-5e04-463a-939e-45dcb83984d7": {
         "id": "f9914dcd-5e04-463a-939e-45dcb83984d7", 
         "value": "Will you insure your own workers against workplace injuries (some large employers act as a self-insurer)?", 
-        "group_name": "Employing Staff or Contractors"
+        "group_name": "Will you be employing staff or contractors in your business?"
     }, 
     "dd9da894-9907-47bf-b43e-6d8c74963807": {
         "id": "dd9da894-9907-47bf-b43e-6d8c74963807", 
         "value": "Will you construct, alter or demolish a permanent or temporary structure (e.g. building, tree, plumbing, electrical)?", 
-        "group_name": "Building and Construction"
+        "group_name": "Tell us a little about your potential business premises?"
     }, 
-    "b38a16b6-0d21-48b3-8408-b37448308ece": {
-        "id": "b38a16b6-0d21-48b3-8408-b37448308ece", 
-        "value": "Will you use printed or electronic media (e.g. music, tv, radio or other copyright material)?", 
-        "group_name": "Music in your Business"
+    "55a6dce4-46d7-4824-b313-057554496aab": {
+        "parent_question_id": "b38a16b6-0d21-48b3-8408-b37448308ece", 
+        "id": "55a6dce4-46d7-4824-b313-057554496aab", 
+        "value": "What type of material will you be dealing with:"
     }, 
-    "71608ae2-2b42-4004-a59d-a55b7b959a44": {
-        "parent_question_id": "bb4f44da-03e9-476e-81b1-66af413d9ceb", 
-        "id": "71608ae2-2b42-4004-a59d-a55b7b959a44", 
-        "value": "What business assistance areas relate to your business activities:"
+    "add6d598-83ac-47ba-8f9e-9ef273431c60": {
+        "id": "add6d598-83ac-47ba-8f9e-9ef273431c60", 
+        "value": "Will you import or export goods or services?", 
+        "group_name": "Please tell us some of the business activities you are likely to undertake in your Cafe?"
+    }, 
+    "49c6a730-5153-4ac1-9ede-019525113d17": {
+        "id": "49c6a730-5153-4ac1-9ede-019525113d17", 
+        "value": "Would you like information on registering as a vendor supplying products or services to government?", 
+        "group_name": "Please tell us some of the business activities you are likely to undertake in your Cafe?"
     }, 
     "dddeeb49-cfff-446a-b30c-2de0376d7977": {
         "parent_question_id": "8302bd55-6ca0-46d6-a23e-11a043477273", 
         "id": "dddeeb49-cfff-446a-b30c-2de0376d7977", 
         "value": "How will your business impact or use the environment:"
     }, 
-    "49c6a730-5153-4ac1-9ede-019525113d17": {
-        "id": "49c6a730-5153-4ac1-9ede-019525113d17", 
-        "value": "Would you like information on registering as a vendor supplying products or services to government?", 
-        "group_name": "Training"
-    }, 
     "afd2ea30-2b82-4d0c-ab17-9850e43b5253": {
         "id": "afd2ea30-2b82-4d0c-ab17-9850e43b5253", 
         "value": "Will you handle or transport food?", 
-        "group_name": "Handle or Transport Food"
+        "group_name": "Please tell us some of the business activities you are likely to undertake in your Cafe?"
     }, 
     "b9291d43-e9cc-455b-ae7e-b9ec02dc6a98": {
         "parent_question_id": "70cfc563-2f4f-4197-be73-bcc35c181b25", 
         "id": "b9291d43-e9cc-455b-ae7e-b9ec02dc6a98", 
         "value": "Select the type of business asset you want to protect:"
     }, 
-    "cbbeac88-25e3-4778-b70f-e93b42345a9a": {
-        "id": "cbbeac88-25e3-4778-b70f-e93b42345a9a", 
-        "value": "Will you advertise or promote your business including signage?", 
-        "group_name": "Advertising / Websites"
+    "8e0dc859-1cac-44d1-b4c2-1e08c4b87a1f": {
+        "id": "8e0dc859-1cac-44d1-b4c2-1e08c4b87a1f", 
+        "value": "Do you want information on workplace health and safety?", 
+        "group_name": "Would you like some information on workplace health and safety?"
     }, 
     "7de37fcb-9d4b-409b-8baa-2b116e5f124e": {
         "id": "7de37fcb-9d4b-409b-8baa-2b116e5f124e", 
         "value": "Will you supply, sell, serve or offer alcohol?", 
-        "group_name": "Liquor and Alcohol Products and Services"
+        "group_name": "Please tell us some of the business activities you are likely to undertake in your Cafe?"
     }, 
     "78c62280-03ae-4680-b1e0-b26c74b1104f": {
         "id": "78c62280-03ae-4680-b1e0-b26c74b1104f", 
         "value": "Do you need information, assistance or advice on managing disasters or emergency situations?", 
-        "group_name": "Emergency Planning and Disaster Assistance"
+        "group_name": "Would you like some information on workplace health and safety?"
     }, 
     "6fff72ff-40b7-4581-9bf3-9b6599fbc5e8": {
         "parent_question_id": "206bb05e-b0fc-4f22-b5f7-ce27ba94c49d", 
@@ -92,37 +87,42 @@
     "5fd1b40b-89ea-43a5-897f-d62d68c16925": {
         "id": "5fd1b40b-89ea-43a5-897f-d62d68c16925", 
         "value": "Do you require information about general taxation requirements or registering for tax?", 
-        "group_name": "General Taxation Requirements and Registrations"
+        "group_name": "What sort of administrative duties do you need to take care of?"
     }, 
     "fbba3a40-5da0-4786-86bb-3e99ba201324": {
         "parent_question_id": "78c62280-03ae-4680-b1e0-b26c74b1104f", 
         "id": "fbba3a40-5da0-4786-86bb-3e99ba201324", 
         "value": "What emergency or disaster assistance measures are required for your business:"
     }, 
-    "8e0dc859-1cac-44d1-b4c2-1e08c4b87a1f": {
-        "id": "8e0dc859-1cac-44d1-b4c2-1e08c4b87a1f", 
-        "value": "Do you want information on workplace health and safety?", 
-        "group_name": "Workplace Health and Safety"
+    "5fed3664-1198-4e35-b460-c9de1464dad8": {
+        "id": "5fed3664-1198-4e35-b460-c9de1464dad8", 
+        "value": "Is your primary business location your home address (e.g. home-based business)?", 
+        "group_name": "What sort of administrative duties do you need to take care of?"
     }, 
     "b1cb7917-b174-4711-b42a-4a899db7dc87": {
         "id": "b1cb7917-b174-4711-b42a-4a899db7dc87", 
         "value": "Will you employ staff or contractors?", 
-        "group_name": "Employing Staff or Contractors"
+        "group_name": "Will you be employing staff or contractors in your business?"
     }, 
     "206bb05e-b0fc-4f22-b5f7-ce27ba94c49d": {
         "id": "206bb05e-b0fc-4f22-b5f7-ce27ba94c49d", 
         "value": "Will you require information about registering a partnership or company?", 
-        "group_name": "Business Registration and Structure"
+        "group_name": "Please tell us some of the business activities you are likely to undertake in your Cafe?"
     }, 
     "ef088f65-9994-4a14-a408-80a374e24979": {
         "id": "ef088f65-9994-4a14-a408-80a374e24979", 
         "value": "Will you require land related services or advice including valuation, ownership, lease, soil testing or surveying?", 
-        "group_name": "Land Services"
+        "group_name": "Tell us a little about your potential business premises?"
     }, 
     "64785746-1bc7-4a61-84a4-e79649dbb683": {
         "parent_question_id": "5fd1b40b-89ea-43a5-897f-d62d68c16925", 
         "id": "64785746-1bc7-4a61-84a4-e79649dbb683", 
         "value": "For taxation purposes, will your business:"
+    }, 
+    "71608ae2-2b42-4004-a59d-a55b7b959a44": {
+        "parent_question_id": "bb4f44da-03e9-476e-81b1-66af413d9ceb", 
+        "id": "71608ae2-2b42-4004-a59d-a55b7b959a44", 
+        "value": "What business assistance areas relate to your business activities:"
     }, 
     "801998e3-f1e7-4471-a81a-ddd4fce7284e": {
         "parent_question_id": "b1cb7917-b174-4711-b42a-4a899db7dc87", 
@@ -132,12 +132,12 @@
     "056b3ca1-fa7e-45ce-bc92-90b171e8af9f": {
         "id": "056b3ca1-fa7e-45ce-bc92-90b171e8af9f", 
         "value": "Will you design, manufacture, install or use plant and equipment in the workplace (plant may be machinery, equipment, a container, an implement or tool e.g. boilers, pressure vessels, lifts or amusement equipment)?", 
-        "group_name": "Plant, Products and Equipment"
+        "group_name": "Tell us a little about your potential business premises?"
     }, 
     "485ebafa-5906-4f68-9e42-4777065da08b": {
         "id": "485ebafa-5906-4f68-9e42-4777065da08b", 
         "value": "Will you deal with or manage trade waste (Before a business discharges trade waste into sewers, the owner of the property must obtain a Trade Waste Approval.)?", 
-        "group_name": "Waste"
+        "group_name": "Please tell us some of the business activities you are likely to undertake in your Cafe?"
     }, 
     "74f4099a-7891-448c-9dc5-0c02ba430990": {
         "parent_question_id": "5fd1b40b-89ea-43a5-897f-d62d68c16925", 
@@ -147,52 +147,47 @@
     "6ffa1a31-78e0-46fc-be0a-a38d7eda7b3f": {
         "id": "6ffa1a31-78e0-46fc-be0a-a38d7eda7b3f", 
         "value": "Do you need information on contracts or sales agreements?", 
-        "group_name": "Contracts and Sales Agreements"
+        "group_name": "What sort of administrative duties do you need to take care of?"
     }, 
     "c3d35806-d7dc-488c-bbdc-3135428cb1ef": {
         "parent_question_id": "9656a7f0-a523-49c9-a5e9-513d0d64faef", 
         "id": "c3d35806-d7dc-488c-bbdc-3135428cb1ef", 
         "value": "What environmental location will your business use:"
     }, 
-    "add6d598-83ac-47ba-8f9e-9ef273431c60": {
-        "id": "add6d598-83ac-47ba-8f9e-9ef273431c60", 
-        "value": "Will you import or export goods or services?", 
-        "group_name": "Importing and Exporting"
-    }, 
     "70cfc563-2f4f-4197-be73-bcc35c181b25": {
         "id": "70cfc563-2f4f-4197-be73-bcc35c181b25", 
         "value": "Will your business need to 'protect' its intellectual property, such as its designs or logos?", 
-        "group_name": "Protecting your Ideas"
+        "group_name": "What sort of administrative duties do you need to take care of?"
     }, 
     "f707e1ec-2f0a-4895-9451-d43c78c0e4a1": {
         "id": "f707e1ec-2f0a-4895-9451-d43c78c0e4a1", 
         "value": "Do you want information on services to help you to plan and develop your business?", 
-        "group_name": "Business Assistance and Information"
-    }, 
-    "5fed3664-1198-4e35-b460-c9de1464dad8": {
-        "id": "5fed3664-1198-4e35-b460-c9de1464dad8", 
-        "value": "Is your primary business location your home address (e.g. home-based business)?", 
-        "group_name": "Home-based Business"
+        "group_name": "Will you need some business support information and assistance?"
     }, 
     "bb4f44da-03e9-476e-81b1-66af413d9ceb": {
         "id": "bb4f44da-03e9-476e-81b1-66af413d9ceb", 
         "value": "Do you want information on assistance available to your business?", 
-        "group_name": "Business Assistance and Information"
+        "group_name": "Will you need some business support information and assistance?"
     }, 
     "7b293f18-70d7-4ed2-9b24-e492b6046006": {
         "parent_question_id": "ef088f65-9994-4a14-a408-80a374e24979", 
         "id": "7b293f18-70d7-4ed2-9b24-e492b6046006", 
         "value": "What type of land related services are applicable to your situation:"
     }, 
-    "55a6dce4-46d7-4824-b313-057554496aab": {
-        "parent_question_id": "b38a16b6-0d21-48b3-8408-b37448308ece", 
-        "id": "55a6dce4-46d7-4824-b313-057554496aab", 
-        "value": "What type of material will you be dealing with:"
+    "b38a16b6-0d21-48b3-8408-b37448308ece": {
+        "id": "b38a16b6-0d21-48b3-8408-b37448308ece", 
+        "value": "Will you use printed or electronic media (e.g. music, tv, radio or other copyright material)?", 
+        "group_name": "Please tell us some of the business activities you are likely to undertake in your Cafe?"
+    }, 
+    "8302bd55-6ca0-46d6-a23e-11a043477273": {
+        "id": "8302bd55-6ca0-46d6-a23e-11a043477273", 
+        "value": "Will your business impact the environment or utilise natural resources?", 
+        "group_name": "Please tell us some of the business activities you are likely to undertake in your Cafe?"
     }, 
     "216439da-1cdf-4f31-b652-3d59a67d7f8f": {
         "id": "216439da-1cdf-4f31-b652-3d59a67d7f8f", 
         "value": "Do you want information on business opportunities relating to the Gold Coast 2018 Commonwealth Games?", 
-        "group_name": "Queensland - Enquiries"
+        "group_name": "Please tell us some of the business activities you are likely to undertake in your Cafe?"
     }, 
     "7483961b-8fdb-412d-8c20-c6c32aedb138": {
         "parent_question_id": "5fd1b40b-89ea-43a5-897f-d62d68c16925", 
@@ -202,7 +197,7 @@
     "c7bca103-f7b2-4bbb-bfed-3f3464cfdbc1": {
         "id": "c7bca103-f7b2-4bbb-bfed-3f3464cfdbc1", 
         "value": "Will you use a commercial vehicle in your business?", 
-        "group_name": "Motor Vehicle"
+        "group_name": "What sort of administrative duties do you need to take care of?"
     }, 
     "da31a561-9883-4b7c-8854-1c865e3f6793": {
         "parent_question_id": "7de37fcb-9d4b-409b-8baa-2b116e5f124e", 
@@ -212,11 +207,16 @@
     "140e1bb6-d8c3-4f1a-87e5-d349dfe88253": {
         "id": "140e1bb6-d8c3-4f1a-87e5-d349dfe88253", 
         "value": "Do you intend to change the use of existing land or buildings (e.g. zoning changes or development permits)?", 
-        "group_name": "Planning and Development"
+        "group_name": "Tell us a little about your potential business premises?"
     }, 
     "b355fa43-a2fb-4431-ac53-de2902e10127": {
         "id": "b355fa43-a2fb-4431-ac53-de2902e10127", 
         "value": "Will you use a business name other than your own name or a registered company name?", 
-        "group_name": "Business Names"
+        "group_name": "What sort of administrative duties do you need to take care of?"
+    }, 
+    "cbbeac88-25e3-4778-b70f-e93b42345a9a": {
+        "id": "cbbeac88-25e3-4778-b70f-e93b42345a9a", 
+        "value": "Will you advertise or promote your business including signage?", 
+        "group_name": "Please tell us some of the business activities you are likely to undertake in your Cafe?"
     }
 }

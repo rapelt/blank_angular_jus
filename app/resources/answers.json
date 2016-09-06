@@ -19,11 +19,6 @@
         "id": "eac6c055-bb61-48e1-abd5-9595052a7bee", 
         "value": "Yes"
     }, 
-    "dded21e9-4700-4c9a-a37f-4ed24106531c": {
-        "parent_question_id": "7b293f18-70d7-4ed2-9b24-e492b6046006", 
-        "id": "dded21e9-4700-4c9a-a37f-4ed24106531c", 
-        "value": "Land valuation"
-    }, 
     "1042bb90-0648-406d-86b1-308a6ea550e2": {
         "parent_question_id": "b355fa43-a2fb-4431-ac53-de2902e10127", 
         "id": "1042bb90-0648-406d-86b1-308a6ea550e2", 
@@ -34,30 +29,25 @@
         "id": "4ff3143e-d2e9-4719-b5fa-18b5b2d11c03", 
         "value": "Statistical information"
     }, 
-    "6f132247-d611-4e4f-8974-b925967c7a88": {
-        "parent_question_id": "70cfc563-2f4f-4197-be73-bcc35c181b25", 
-        "id": "6f132247-d611-4e4f-8974-b925967c7a88", 
-        "value": "Yes"
-    }, 
     "85e58eb2-f345-4237-b0b6-6e055a2a6757": {
         "parent_question_id": "71608ae2-2b42-4004-a59d-a55b7b959a44", 
         "id": "85e58eb2-f345-4237-b0b6-6e055a2a6757", 
         "value": "Police advisory services"
     }, 
-    "fa3fe0fe-a24b-4524-aa4c-e3aa4127279d": {
-        "parent_question_id": "801998e3-f1e7-4471-a81a-ddd4fce7284e", 
-        "id": "fa3fe0fe-a24b-4524-aa4c-e3aa4127279d", 
-        "value": "Apprentices or trainees"
+    "dded21e9-4700-4c9a-a37f-4ed24106531c": {
+        "parent_question_id": "7b293f18-70d7-4ed2-9b24-e492b6046006", 
+        "id": "dded21e9-4700-4c9a-a37f-4ed24106531c", 
+        "value": "Land valuation"
     }, 
     "1778e0e0-c580-41b8-b8b1-afa01b386643": {
         "parent_question_id": "71608ae2-2b42-4004-a59d-a55b7b959a44", 
         "id": "1778e0e0-c580-41b8-b8b1-afa01b386643", 
         "value": "University services and resources"
     }, 
-    "44cceb1c-60cf-499e-9664-e22b2f26fb32": {
-        "parent_question_id": "71608ae2-2b42-4004-a59d-a55b7b959a44", 
-        "id": "44cceb1c-60cf-499e-9664-e22b2f26fb32", 
-        "value": "Trade practices advice and information"
+    "fa3fe0fe-a24b-4524-aa4c-e3aa4127279d": {
+        "parent_question_id": "801998e3-f1e7-4471-a81a-ddd4fce7284e", 
+        "id": "fa3fe0fe-a24b-4524-aa4c-e3aa4127279d", 
+        "value": "Apprentices or trainees"
     }, 
     "f5d1d590-46a7-4a20-a209-dded3e07515b": {
         "parent_question_id": "71608ae2-2b42-4004-a59d-a55b7b959a44", 
@@ -69,20 +59,15 @@
         "id": "5282b1e5-90c7-4169-be8f-025c592224a8", 
         "value": "Yes"
     }, 
-    "c4d6fbbc-c54a-422f-90b1-70c817392fd2": {
-        "parent_question_id": "0033065e-3168-4c43-baaf-fe2f182ca69f", 
-        "id": "c4d6fbbc-c54a-422f-90b1-70c817392fd2", 
-        "value": "Provide outdoor dining with tables or seating"
+    "3df983a2-336e-42c0-9247-47e6a9fc3ada": {
+        "parent_question_id": "74f4099a-7891-448c-9dc5-0c02ba430990", 
+        "id": "3df983a2-336e-42c0-9247-47e6a9fc3ada", 
+        "value": "Expect to have an annual turnover exceeding $75,000"
     }, 
-    "f0224be6-ca15-4406-95c3-dcfdbf2f8c63": {
-        "parent_question_id": "b38a16b6-0d21-48b3-8408-b37448308ece", 
-        "id": "f0224be6-ca15-4406-95c3-dcfdbf2f8c63", 
-        "value": "Yes"
-    }, 
-    "2a364b67-0404-45c4-8455-a7ecb5480571": {
-        "parent_question_id": "9656a7f0-a523-49c9-a5e9-513d0d64faef", 
-        "id": "2a364b67-0404-45c4-8455-a7ecb5480571", 
-        "value": "Yes"
+    "975091fc-85ba-4d1a-af3f-8c7061bf6789": {
+        "parent_question_id": "fbba3a40-5da0-4786-86bb-3e99ba201324", 
+        "id": "975091fc-85ba-4d1a-af3f-8c7061bf6789", 
+        "value": "Computer emergency"
     }, 
     "d2b08fac-1907-4415-81c7-3887c9efe213": {
         "parent_question_id": "49d45170-34fd-4792-bb0a-3d5a48d669c7", 
@@ -169,20 +154,25 @@
         "id": "27f425e6-2ec1-4405-be2a-08c8c47a5093", 
         "value": "Yes"
     }, 
-    "49e32c70-79b7-43c9-acfe-ca8f857f7e35": {
-        "parent_question_id": "64785746-1bc7-4a61-84a4-e79649dbb683", 
-        "id": "49e32c70-79b7-43c9-acfe-ca8f857f7e35", 
-        "value": "Own land for commercial purposes"
-    }, 
     "c2567cec-d1a5-4f10-804e-ccf65f3fa12c": {
         "parent_question_id": "dd9da894-9907-47bf-b43e-6d8c74963807", 
         "id": "c2567cec-d1a5-4f10-804e-ccf65f3fa12c", 
         "value": "Yes"
     }, 
-    "44b6b6d3-b2d7-4eed-a99b-c681ae420b94": {
-        "parent_question_id": "add6d598-83ac-47ba-8f9e-9ef273431c60", 
-        "id": "44b6b6d3-b2d7-4eed-a99b-c681ae420b94", 
-        "value": "Yes"
+    "49e32c70-79b7-43c9-acfe-ca8f857f7e35": {
+        "parent_question_id": "64785746-1bc7-4a61-84a4-e79649dbb683", 
+        "id": "49e32c70-79b7-43c9-acfe-ca8f857f7e35", 
+        "value": "Own land for commercial purposes"
+    }, 
+    "44cceb1c-60cf-499e-9664-e22b2f26fb32": {
+        "parent_question_id": "71608ae2-2b42-4004-a59d-a55b7b959a44", 
+        "id": "44cceb1c-60cf-499e-9664-e22b2f26fb32", 
+        "value": "Trade practices advice and information"
+    }, 
+    "c4d6fbbc-c54a-422f-90b1-70c817392fd2": {
+        "parent_question_id": "0033065e-3168-4c43-baaf-fe2f182ca69f", 
+        "id": "c4d6fbbc-c54a-422f-90b1-70c817392fd2", 
+        "value": "Provide outdoor dining with tables or seating"
     }, 
     "2053d4f9-5c67-43e6-bb88-8ae9150d3682": {
         "parent_question_id": "71608ae2-2b42-4004-a59d-a55b7b959a44", 
@@ -194,10 +184,10 @@
         "id": "37a4da4c-2bca-450d-a8a0-a5834bbd27d8", 
         "value": "Yes"
     }, 
-    "3df983a2-336e-42c0-9247-47e6a9fc3ada": {
-        "parent_question_id": "74f4099a-7891-448c-9dc5-0c02ba430990", 
-        "id": "3df983a2-336e-42c0-9247-47e6a9fc3ada", 
-        "value": "Expect to have an annual turnover exceeding $75,000"
+    "f0224be6-ca15-4406-95c3-dcfdbf2f8c63": {
+        "parent_question_id": "b38a16b6-0d21-48b3-8408-b37448308ece", 
+        "id": "f0224be6-ca15-4406-95c3-dcfdbf2f8c63", 
+        "value": "Yes"
     }, 
     "e28a312c-c271-459f-a8b3-1c0198c08bcb": {
         "parent_question_id": "b9291d43-e9cc-455b-ae7e-b9ec02dc6a98", 
@@ -214,10 +204,10 @@
         "id": "f51221f9-3844-41cb-86e3-bf7d58f50f17", 
         "value": "Yes"
     }, 
-    "49ee8338-fe52-4b09-8571-419fa661d950": {
-        "parent_question_id": "55a6dce4-46d7-4824-b313-057554496aab", 
-        "id": "49ee8338-fe52-4b09-8571-419fa661d950", 
-        "value": "Film, sound or video recordings"
+    "589364dc-d783-4746-b9b4-3f428d2698d1": {
+        "parent_question_id": "5fed3664-1198-4e35-b460-c9de1464dad8", 
+        "id": "589364dc-d783-4746-b9b4-3f428d2698d1", 
+        "value": "Yes"
     }, 
     "262fc1b6-3009-4073-8f34-770b22eb4309": {
         "parent_question_id": "afd2ea30-2b82-4d0c-ab17-9850e43b5253", 
@@ -254,14 +244,19 @@
         "id": "1a91b2f0-bfb0-45ed-a161-1492dcc2e7f9", 
         "value": "Require a new Australian Business Number (ABN)"
     }, 
-    "975091fc-85ba-4d1a-af3f-8c7061bf6789": {
-        "parent_question_id": "fbba3a40-5da0-4786-86bb-3e99ba201324", 
-        "id": "975091fc-85ba-4d1a-af3f-8c7061bf6789", 
-        "value": "Computer emergency"
+    "6f132247-d611-4e4f-8974-b925967c7a88": {
+        "parent_question_id": "70cfc563-2f4f-4197-be73-bcc35c181b25", 
+        "id": "6f132247-d611-4e4f-8974-b925967c7a88", 
+        "value": "Yes"
     }, 
     "25033f48-40b8-491e-8e14-cb451a8d350d": {
         "parent_question_id": "6ffa1a31-78e0-46fc-be0a-a38d7eda7b3f", 
         "id": "25033f48-40b8-491e-8e14-cb451a8d350d", 
+        "value": "Yes"
+    }, 
+    "84f28dfe-6a16-43bf-a449-2e5f1ab357cb": {
+        "parent_question_id": "bb4f44da-03e9-476e-81b1-66af413d9ceb", 
+        "id": "84f28dfe-6a16-43bf-a449-2e5f1ab357cb", 
         "value": "Yes"
     }, 
     "7b197516-c611-4265-a534-729645876e6d": {
@@ -284,6 +279,11 @@
         "id": "b9dedf04-9b48-41bc-8c75-392ee8835577", 
         "value": "Pay wages to yourself, employees or contractors"
     }, 
+    "2a364b67-0404-45c4-8455-a7ecb5480571": {
+        "parent_question_id": "9656a7f0-a523-49c9-a5e9-513d0d64faef", 
+        "id": "2a364b67-0404-45c4-8455-a7ecb5480571", 
+        "value": "Yes"
+    }, 
     "9bf011f0-3c5d-4728-8399-c266e835f9bb": {
         "parent_question_id": "71608ae2-2b42-4004-a59d-a55b7b959a44", 
         "id": "9bf011f0-3c5d-4728-8399-c266e835f9bb", 
@@ -294,14 +294,14 @@
         "id": "dcaf26d4-2002-4746-8e9f-29c87052998c", 
         "value": "Surveying, mapping or aerial photography"
     }, 
-    "589364dc-d783-4746-b9b4-3f428d2698d1": {
-        "parent_question_id": "5fed3664-1198-4e35-b460-c9de1464dad8", 
-        "id": "589364dc-d783-4746-b9b4-3f428d2698d1", 
-        "value": "Yes"
+    "49ee8338-fe52-4b09-8571-419fa661d950": {
+        "parent_question_id": "55a6dce4-46d7-4824-b313-057554496aab", 
+        "id": "49ee8338-fe52-4b09-8571-419fa661d950", 
+        "value": "Film, sound or video recordings"
     }, 
-    "84f28dfe-6a16-43bf-a449-2e5f1ab357cb": {
-        "parent_question_id": "bb4f44da-03e9-476e-81b1-66af413d9ceb", 
-        "id": "84f28dfe-6a16-43bf-a449-2e5f1ab357cb", 
+    "44b6b6d3-b2d7-4eed-a99b-c681ae420b94": {
+        "parent_question_id": "add6d598-83ac-47ba-8f9e-9ef273431c60", 
+        "id": "44b6b6d3-b2d7-4eed-a99b-c681ae420b94", 
         "value": "Yes"
     }, 
     "e6ac42dd-75f1-4652-93ea-aa286c3ab009": {
