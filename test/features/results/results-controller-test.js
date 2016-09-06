@@ -3,10 +3,10 @@
 describe('Service results controller', function () {
   beforeEach(module('jusCafeApp'));
   beforeEach(module('data'));
-  var dataRepository, scope, state, deferred, serviceFilters;
+  var dataRepository, scope, state, deferredServices, deferredServiceDetails,serviceFilters;
   var services = {'02': {
       'id': '02',
-      'service_type': 'Code of conduct',
+      'service_type': 'Codeofconduct',
       'business_activities': ['cafe'],
       'location': ['brisbane'],
       'name': 'service name 02',
@@ -14,8 +14,14 @@ describe('Service results controller', function () {
       'parent_answer_ids': ['1a', '3a', '5a']
   }};
 
+  var serviceDetails = {
+    'id': 'CodeofPractice',
+    'title': 'Code of Practice',
+    'description': 'A code of practice can be either a legal requirement or non-legal requirement. Legal codes of practice are defined as a result of legislation. Non-legal codes of practice are defined by industry regulators and bodies.'
+  };
+
   beforeEach(function () {
-    dataRepository = jasmine.createSpyObj('DataRepository', ['getServices']);
+    dataRepository = jasmine.createSpyObj('DataRepository', ['getServices', 'getServiceDetails']);
     serviceFilters = jasmine.createSpyObj('ServiceFilters', ['filterByQuestions']);
     inject(function ($rootScope, $controller, $q, $templateCache, $state) {
       state = $state;
@@ -24,10 +30,14 @@ describe('Service results controller', function () {
       $templateCache.put('features/results/_results.html', '');
       $templateCache.put('features/business-types/business-types.html', '');
 
-      deferred = $q.defer();
-      dataRepository.getServices.and.returnValue(deferred.promise);
+      deferredServices = $q.defer();
+      deferredServiceDetails = $q.defer();
+      dataRepository.getServices.and.returnValue(deferredServices.promise);
+      dataRepository.getServiceDetails.and.returnValue(deferredServiceDetails.promise);
+
       serviceFilters.filterByQuestions.and.returnValue(services);
-      deferred.resolve({});
+      deferredServices.resolve({});
+      deferredServiceDetails.resolve(serviceDetails);
 
       $controller('ResultsController', {$scope: scope, DataRepository: dataRepository, ServiceFilters: serviceFilters});
     });
@@ -43,7 +53,7 @@ describe('Service results controller', function () {
   it('Should get results', function () {
     scope.$apply();
     expect(serviceFilters.filterByQuestions).toHaveBeenCalledWith({});
-    expect(scope.serviceGroups[0].description).toBe('Code of conduct');
+    expect(scope.serviceGroups[0].title).toBe('Code of Practice');
   });
   it('Should collapse service groups', function () {
     scope.$apply();

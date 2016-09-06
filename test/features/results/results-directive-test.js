@@ -13,30 +13,27 @@ describe('Directive: results', function () {
         {
           'title': 'group 1 title',
           'id': 'sg1',
+          'expanded': true,
           'description': 'group 1 desc',
-          'services': [
-            {
-              'service_id': 'ffff-0001',
-              'summary': 'service 1 summary',
-              'title': 'service 1 title'
-            },
-            {
-              'service_id': 'ffff-0002',
-              'summary': 'service 2 summary',
-              'title': 'service 2 title'
-            }
-          ]
+          'services': [{
+            'service_id': 'ffff-0001',
+            'summary': 'service 1 summary',
+            'name': 'service 1 title'
+          }, {
+            'service_id': 'ffff-0002',
+            'summary': 'service 2 summary',
+            'name': 'service 2 title'
+          }]
         },
         {
           'title': 'group 2 title',
           'id': 'sg2',
           'description': 'group 2 desc',
-          'services': [
-            {
-              'service_id': 'ffff-0003',
-              'summary': 'service 3 summary',
-              'title': 'service 3 title'
-            }
+          'services': [ {
+            'service_id': 'ffff-0003',
+            'summary': 'service 3 summary',
+            'name': 'service 3 title'
+          }
           ]
         }
       ];
