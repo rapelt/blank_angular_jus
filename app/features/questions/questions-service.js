@@ -48,7 +48,7 @@ angular.module('QuestionsService', [])
       });
 
       var subquestions = _.omit(allQuestions, _.keys(primaryQuestions));
-      var subquestionsWithAnswers = addAnswersToSubquestions(subquestions, answers);
+      var subquestionsWithAnswers = addAnswersToSubquestions(subquestions, filteredAnswers);
       var primaryQuestionWithSubquestions = addSubQuestionsToPrimaryQuestions(primaryQuestions, subquestionsWithAnswers);
 
       var questionsWithGroups = _.groupBy(primaryQuestionWithSubquestions, function (question) {
@@ -72,6 +72,7 @@ angular.module('QuestionsService', [])
           var services = values[2].data;
 
           var serviceFilteredBusinessActivities = ServiceFilters.filterByBusinessActivities(services, $rootScope.businessActivities);
+
 
           // TODO filterServicesByLocation
 
