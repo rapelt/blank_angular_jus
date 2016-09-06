@@ -10,10 +10,10 @@
         <div class='jus-results-sg-description'> {{serviceGroup.description}} </div>
         <ul>
           <li ng-repeat='service in serviceGroup.services' class='jus-results-service'>
-          
+
           <label>
             <input type='checkbox' id='checkbox-{{service.service_id}}'/>
-            {{service.title}}
+            {{service.name}}
           </label></li>
         </ul>
       </div>

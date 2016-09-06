@@ -2,6 +2,7 @@
 
 describe('Questions controller', function () {
   beforeEach(module('jusCafeApp'));
+
   var questionsService, scope, state, deferred;
 
   var testAblisData = {
