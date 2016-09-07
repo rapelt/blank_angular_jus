@@ -52,3 +52,11 @@ input[type="checkbox"] {
   padding-top: 30px;
   padding-bottom: 70px;
 }
+
+.build {
+  text-align: center;
+  color: white;
+  &:hover {
+    color: black;
+  }
+}

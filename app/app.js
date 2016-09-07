@@ -12,7 +12,6 @@ angular
     'ResultsService',
     'QuestionsService',
     'Business-types',
-    'QuestionsRepository',
     'LocationRepository',
     'Location',
     'Business-types',

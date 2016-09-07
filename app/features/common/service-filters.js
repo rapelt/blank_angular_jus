@@ -1,7 +1,7 @@
 'use strict';
 
-angular.module('ServiceFilters', [])
-  .factory('ServiceFilters', function () {
+angular.module('ServiceFilters', ['answers'])
+  .factory('ServiceFilters', function (Answers) {
     return {
       filterByBusinessActivities: function (services, businessActivities) {
         // get all the keys that are true
@@ -13,6 +13,18 @@ angular.module('ServiceFilters', [])
           // return true iff there is at least one key common to both arrays
           return _.intersection(service.business_activities, businessActivitiesKeys).length > 0;
         });
+      },
+      filterByQuestions: function (services) {
+        var qkeys = Answers.getTrueAnswerKeys();
+        if (!Answers.isAnyQuestionAnswered()) {
+          return services;
+        }
+
+        var ret = _.pick(services, function (service) {
+          var intersection = _.intersection(service.parent_answer_ids, qkeys);
+          return intersection.length > 0;
+        });
+        return ret;
       }
     };
   });

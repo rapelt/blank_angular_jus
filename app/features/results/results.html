@@ -10,10 +10,10 @@
         <div class='jus-results-sg-description'> {{serviceGroup.description}} </div>
         <ul>
           <li ng-repeat='service in serviceGroup.services' class='jus-results-service'>
-          
+
           <label>
             <input type='checkbox' id='checkbox-{{service.service_id}}'/>
-            {{service.title}}
+            {{service.name}}
           </label></li>
         </ul>
       </div>
@@ -21,6 +21,6 @@
   </div>
 
   <div class='navigation-buttons'>
-    <button class='jus-back-button jus-button btn' scroll-to="qg-primary-content" ui-sref="questions">Back</button>
+    <button class='jus-back-button jus-button btn' ui-sref="questions">Back</button>
   </div>
 </div>
