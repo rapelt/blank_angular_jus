@@ -47,15 +47,17 @@
       display: block;
     }
 
-    &:hover {
-      background-color: $jus-blue;
-      color: white;
+    @media screen and (min-width: 820px) {
+      &:hover {
+        background-color: $jus-blue;
+        color: white;
 
-      .icon-inactive {
-        display: none;
-      }
-      .icon-active {
-        display: block;
+        .icon-inactive {
+          display: none;
+        }
+        .icon-active {
+          display: block;
+        }
       }
     }
   }
