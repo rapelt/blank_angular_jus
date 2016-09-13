@@ -1,5 +1,5 @@
 'use strict';
 angular.module('home', [])
-  .controller('HomeController', function ($scope) {
+  .controller('HomeController', function () {
 
   });
