@@ -1,0 +1,64 @@
+@import "variables";
+
+input[type="checkbox"] {
+  transform: scale(1.2, 1.2);
+}
+
+@import "../questions/questions";
+@import "../location/location";
+@import "../results/results";
+@import "../business-activities/business-activities";
+@import "../home/home";
+
+
+.btn {
+  border-radius: 3px;
+}
+
+.jus-back-button{
+  background-color: $jus-darkgrey;
+  color: black;
+  border-color: $jus-darkgrey;
+
+  &:hover {
+    color: black;
+    background-color: $jus-grey;
+    border-color: $jus-darkgrey;
+  }
+}
+
+.jus-next-button{
+  background-color: $jus-primarygreen;
+  color: black;
+  border-color: $jus-primarygreen;
+
+  &:hover, &:active, &:focus, &:focus:active {
+    color: black;
+    background-color: $jus-lightgreen;
+    border-color: $jus-primarygreen;
+  }
+}
+
+.btn-primary[disabled]:hover {
+  background-color: $jus-darkgrey;
+  color: black;
+  border-color: $jus-darkgrey;
+}
+
+.jus-button {
+  padding: 10px 20px;
+}
+
+.navigation-buttons {
+  float: right;
+  padding-top: 30px;
+  padding-bottom: 70px;
+}
+
+.build {
+  text-align: center;
+  color: white;
+  &:hover {
+    color: black;
+  }
+}

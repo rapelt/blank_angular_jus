@@ -1,0 +1,23 @@
+{
+  "extends": ["semistandard"],
+  "env": {
+    "jasmine": true,
+    "mocha": true,
+    "node": true,
+    "browser": true,
+  },
+  "globals": {
+    "angular": false,
+    "browser": false,
+    "inject": false,
+    "_": false,
+    "driver": false,
+    "protractor": false,
+    "$": false,
+    "$$": false,
+    "element": false,
+    "by": false,
+    "list": false,
+    "google": false
+  }
+}

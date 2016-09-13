@@ -1,0 +1,51 @@
+.questions-page {
+  padding-left: 150px;
+  padding-right: 150px;
+  padding-bottom: 70px;
+  padding-top: 30px;
+
+  @media screen and (max-width: 580px) {
+    padding: 20px;
+  }
+
+  .checkbox {
+    float: right;
+  }
+
+  .question{
+    padding-bottom: 10px;
+    border-bottom: 1px $jus-grey solid;
+    padding-top: 12px;
+  }
+
+  label {
+    margin: 0px;
+    font-weight: normal;
+    max-width: 90%;
+  }
+
+  .subquestion {
+    padding-top: 10px;
+    margin-top: 10px;
+  }
+
+  .subquestion-value{
+    padding-top: 12px;
+  }
+
+  .subquestions {
+    border-top: 1px $jus-grey solid;
+    padding-left: 18px;
+    background-color: $jus-grey;
+    padding-bottom: 10px;
+    margin-top: 10px;
+
+    label {
+      padding-left: 10px;
+    }
+
+    .collapse .in {
+      padding-bottom: 0px;
+    }
+  }
+}

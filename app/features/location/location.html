@@ -1,0 +1,16 @@
+<div class="location-page">
+
+  <div class="alert alert-warning" role="alert" ng-show="!isGoogleAvaliable">
+    Sorry, we can't capture your location at the moment. Click Next to continue.
+  </div>
+
+  <h1>Where would you like to have your café located?</h1>
+  <h5>Please enter an address in either Brisbane or Logan</h5>
+
+  <location-directive></location-directive>
+
+  <div class='navigation-buttons'>
+    <button class='jus-back-button jus-button btn' ng-click="showPreviousPage()">Back</button>
+    <button class='jus-next-button jus-button btn btn-primary' ng-click='showNextPage()' ng-disabled='validRegion !== isGoogleAvaliable'>Next</button>
+  </div>
+</div>

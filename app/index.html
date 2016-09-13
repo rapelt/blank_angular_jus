@@ -1,0 +1,104 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Start a cafe in Brisbane and Logan</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css({.tmp,app}) styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/glue-swe-template/assets/v3/css/main.css"/>
+
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css(.tmp) styles/common/main.css -->
+    <link rel="stylesheet" href="styles/common/main.css">
+    <!-- endbuild -->
+
+  </head>
+  <body ng-app="jusCafeApp">
+  <!-- Google Tag Manager -->
+  <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-NBSWN3"
+                    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-NBSWN3');</script>
+  <!-- End Google Tag Manager -->
+
+    <div class="container-fluid qg-site-width">
+      <div header></div>
+      <div id="qg-content">
+        <div id="qg-full-width" class="clearfix row">
+          <div breadcrumbs></div>
+          <div id="qg-primary-content" role="main">
+            <div ui-view></div>
+          </div>
+        </div>
+      </div>
+      <div footer></div>
+    </div>
+
+    <script>
+      // temporary stub qg object. to be removed once swe works without using the swe module loader.
+      var qg = qg || {
+        glue: {
+          loader: {
+            init: function(){}
+          }
+        }
+      };
+    </script>
+
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAUnoYmIRgn4TUMzgvIjHqP5fmlESRi6Es&v=3.24&libraries=geometry,places"></script>
+
+    <!-- build:js({.tmp,app}) scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/underscore/underscore.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="bower_components/ngSmoothScroll/lib/angular-smooth-scroll.js"></script>
+    <script src="bower_components/angular-touch/angular-touch.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="bower_components/glue-swe-template/assets/v3/js/main.js"></script>
+
+
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:js({.tmp,app}) scripts/scripts.js -->
+    <!-- inject:js -->
+    <script src="app.js"></script>
+    <script src="features/breadcrumbs/breadcrumbs.js"></script>
+    <script src="features/common/footer.js"></script>
+    <script src="features/common/header.js"></script>
+    <script src="features/common/service-filters.js"></script>
+    <script src="features/business-activities/business-activities-controller.js"></script>
+    <script src="features/business-activities/business-activities-storage-service.js"></script>
+    <script src="features/config/config.js"></script>
+    <script src="features/data/data-repository.js"></script>
+    <script src="features/home/home-controller.js"></script>
+    <script src="features/location/location-controller.js"></script>
+    <script src="features/location/location-repository.js"></script>
+    <script src="features/location/location-service.js"></script>
+    <script src="features/location/location-storage-service.js"></script>
+    <script src="features/questions/questions-controller.js"></script>
+    <script src="features/questions/questions-service.js"></script>
+    <script src="features/questions/questions-storage-service.js"></script>
+    <script src="features/service-details/service-details-controller.js"></script>
+    <script src="features/service-details/service-details-storage-service.js"></script>
+    <script src="features/results/results-controller.js"></script>
+    <script src="features/results/results-directive.js"></script>
+    <script src="features/results/results-service.js"></script>
+    <!-- endinject -->
+    <!-- endbuild -->
+    <div class="build">{{ buildNumber }} </div>
+</body>
+</html>

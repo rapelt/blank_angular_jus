@@ -1,0 +1,49 @@
+.home-page {
+  margin-top: -16px;
+  margin-left: -38px;
+  margin-right: -38px;
+
+  .crop {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    float: left;
+
+    img {
+      width: 1400px;
+      height: initial;
+
+      @media (max-width: 850px) {
+        margin-left: -200px;
+      }
+
+      @media (max-width: 550px) {
+        margin-left: -320px;
+      }
+
+    }
+  }
+
+  .title-image {
+
+    padding: 30% 0 0 18%;
+    position: absolute;
+    text-align: center;
+    color: white;
+    max-width: 90%;
+
+    @media (max-width: 550px) {
+      padding: 60% 0 0 10%;
+    }
+
+    h1 {
+      font-size: 2em;
+    }
+
+    .big-button {
+      font-size: 20px;
+      padding: 10px 70px;
+      margin-top: 38px;
+    }
+  }
+}

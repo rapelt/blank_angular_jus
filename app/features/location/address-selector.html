@@ -1,0 +1,16 @@
+<label for="autocomplete" hidden>Location text field</label>
+<input class="location-search-input" id="autocomplete" type="text" ng-model="locationSearch" placeholder="Your cafe's location" ng-disabled="!isGoogleAvaliable"/>
+
+
+<div class="alert alert-danger" role="alert" ng-show="invalidRegion">
+    <strong>Oh snap!</strong> The address is outside of Brisbane/Logan area. Please try the Australian Business Licence and Information Service -
+    <a href="https://ablis.business.gov.au/pages/home.aspx"><strong>ABLIS</strong></a>
+</div>
+
+<div class="alert alert-success" role="alert" ng-show="validRegion">
+    <strong>All good!</strong> Looks like you've selected a valid location. Click next to continue.
+</div>
+
+<div class="alert alert-warning" role="alert" ng-show="invalidLocation">
+    <strong>Oops!</strong> The address you have typed doesn't appear to be correct. Please try again.
+</div>

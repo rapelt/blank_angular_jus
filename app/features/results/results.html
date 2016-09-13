@@ -1,0 +1,37 @@
+<div class="results-page">
+  <div class="jus-results" ng-show="isFiltered">
+    <div class="jus-results-sg" ng-repeat="serviceGroup in serviceGroups| orderBy: 'weight'">
+      <div data-toggle='collapse' ng-click='serviceGroup.toggleExpanded()' id='heading-{{serviceGroup.id}}' data-target='#collapsible-{{serviceGroup.id}}' class='jus-results-sg-header collapsed'>
+        {{serviceGroup.title}}
+        <i ng-show='serviceGroup.expanded' class="jus-indicator fa fa-caret-down fa-2" aria-hidden="true"></i>
+        <i ng-hide='serviceGroup.expanded' class="jus-indicator fa fa-caret-left fa-2" aria-hidden="true"></i>
+      </div>
+      <div id='collapsible-{{serviceGroup.id}}' class='collapse jus-results-sg-body' >
+        <div class='jus-results-sg-description'> {{serviceGroup.description}} </div>
+        <ul>
+          <li ng-repeat='service in serviceGroup.services' class='jus-results-service'>
+            <i class="fa fa-square" aria-hidden="true"></i>
+          <label>
+            <a ng-click=displayDetails(service.id)>{{service.name}}</a>
+          </label></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="no-filters" ng-show="!isFiltered">
+    <img class="error-icon" src="../../resources/images/error_icon.png" aria-hidden="true">
+    <h1>There's nothing to show</h1>
+    <p>Sorry but you haven't given us enough information to show you any results. Please retry or go to the Australian Business Licence and Information Service (ABLIS)</p>
+    <button class='jus-next-button jus-button btn' ui-sref="business-activities">Yes, take me to the start <i class="fa fa-repeat fa-flip-horizontal" aria-hidden="true"></i></button>
+    <a href="https://ablis.business.gov.au/pages/home.aspx">
+    <button class='jus-back-button jus-button btn'>No, take me to ABLIS <i class="fa fa-reply fa-flip-horizontal" aria-hidden="true"></i></button>
+    </a>
+  </div>
+
+  <div class='navigation-buttons' ng-show="isFiltered">
+    <button class='jus-back-button jus-button btn' ui-sref="questions">Back</button>
+  </div>
+
+
+</div>

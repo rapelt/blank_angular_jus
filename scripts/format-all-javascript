@@ -1,0 +1,2 @@
+# requires `npm install -g semistandard-format`
+find . -name '*.js' ! -path "**/bower_components/*" ! -path "**/node_modules/**" ! -path "**/dist/**"  ! -path "**/coverage/**"| xargs -I% ./node_modules/.bin/semistandard-format -w %

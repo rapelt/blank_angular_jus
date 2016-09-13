@@ -1,0 +1,322 @@
+{
+    "99ee85f7-64cc-4a0a-98bc-d89dbcdee443": {
+        "parent_question_id": "0033065e-3168-4c43-baaf-fe2f182ca69f", 
+        "id": "99ee85f7-64cc-4a0a-98bc-d89dbcdee443", 
+        "value": "Use street furniture, such as sandwich 'A' boards, planter boxes or barriers"
+    }, 
+    "7cbb2f65-9427-416a-aa64-235803af18a4": {
+        "parent_question_id": "7b293f18-70d7-4ed2-9b24-e492b6046006", 
+        "id": "7cbb2f65-9427-416a-aa64-235803af18a4", 
+        "value": "Land titles"
+    }, 
+    "6a8408c9-294e-49d4-afb2-f7e1adf69bcf": {
+        "parent_question_id": "c3d35806-d7dc-488c-bbdc-3135428cb1ef", 
+        "id": "6a8408c9-294e-49d4-afb2-f7e1adf69bcf", 
+        "value": "Forests, Reserves, National Parks, State or Crown Lands"
+    }, 
+    "eac6c055-bb61-48e1-abd5-9595052a7bee": {
+        "parent_question_id": "7de37fcb-9d4b-409b-8baa-2b116e5f124e", 
+        "id": "eac6c055-bb61-48e1-abd5-9595052a7bee", 
+        "value": "Yes"
+    }, 
+    "1042bb90-0648-406d-86b1-308a6ea550e2": {
+        "parent_question_id": "b355fa43-a2fb-4431-ac53-de2902e10127", 
+        "id": "1042bb90-0648-406d-86b1-308a6ea550e2", 
+        "value": "Yes"
+    }, 
+    "4ff3143e-d2e9-4719-b5fa-18b5b2d11c03": {
+        "parent_question_id": "71608ae2-2b42-4004-a59d-a55b7b959a44", 
+        "id": "4ff3143e-d2e9-4719-b5fa-18b5b2d11c03", 
+        "value": "Statistical information"
+    }, 
+    "85e58eb2-f345-4237-b0b6-6e055a2a6757": {
+        "parent_question_id": "71608ae2-2b42-4004-a59d-a55b7b959a44", 
+        "id": "85e58eb2-f345-4237-b0b6-6e055a2a6757", 
+        "value": "Police advisory services"
+    }, 
+    "dded21e9-4700-4c9a-a37f-4ed24106531c": {
+        "parent_question_id": "7b293f18-70d7-4ed2-9b24-e492b6046006", 
+        "id": "dded21e9-4700-4c9a-a37f-4ed24106531c", 
+        "value": "Land valuation"
+    }, 
+    "1778e0e0-c580-41b8-b8b1-afa01b386643": {
+        "parent_question_id": "71608ae2-2b42-4004-a59d-a55b7b959a44", 
+        "id": "1778e0e0-c580-41b8-b8b1-afa01b386643", 
+        "value": "University services and resources"
+    }, 
+    "fa3fe0fe-a24b-4524-aa4c-e3aa4127279d": {
+        "parent_question_id": "801998e3-f1e7-4471-a81a-ddd4fce7284e", 
+        "id": "fa3fe0fe-a24b-4524-aa4c-e3aa4127279d", 
+        "value": "Apprentices or trainees"
+    }, 
+    "f5d1d590-46a7-4a20-a209-dded3e07515b": {
+        "parent_question_id": "71608ae2-2b42-4004-a59d-a55b7b959a44", 
+        "id": "f5d1d590-46a7-4a20-a209-dded3e07515b", 
+        "value": "Legal advice and information"
+    }, 
+    "5282b1e5-90c7-4169-be8f-025c592224a8": {
+        "parent_question_id": "5fd1b40b-89ea-43a5-897f-d62d68c16925", 
+        "id": "5282b1e5-90c7-4169-be8f-025c592224a8", 
+        "value": "Yes"
+    }, 
+    "3df983a2-336e-42c0-9247-47e6a9fc3ada": {
+        "parent_question_id": "74f4099a-7891-448c-9dc5-0c02ba430990", 
+        "id": "3df983a2-336e-42c0-9247-47e6a9fc3ada", 
+        "value": "Expect to have an annual turnover exceeding $75,000"
+    }, 
+    "975091fc-85ba-4d1a-af3f-8c7061bf6789": {
+        "parent_question_id": "fbba3a40-5da0-4786-86bb-3e99ba201324", 
+        "id": "975091fc-85ba-4d1a-af3f-8c7061bf6789", 
+        "value": "Computer emergency"
+    }, 
+    "d2b08fac-1907-4415-81c7-3887c9efe213": {
+        "parent_question_id": "49d45170-34fd-4792-bb0a-3d5a48d669c7", 
+        "id": "d2b08fac-1907-4415-81c7-3887c9efe213", 
+        "value": "State or Territory Government"
+    }, 
+    "f8c2a228-aa3d-4675-9a16-3f02e2dda815": {
+        "parent_question_id": "fbba3a40-5da0-4786-86bb-3e99ba201324", 
+        "id": "f8c2a228-aa3d-4675-9a16-3f02e2dda815", 
+        "value": "Fire safety installations and evacuation planning"
+    }, 
+    "aff32a57-6893-4a32-8358-fa268cc98c46": {
+        "parent_question_id": "74f4099a-7891-448c-9dc5-0c02ba430990", 
+        "id": "aff32a57-6893-4a32-8358-fa268cc98c46", 
+        "value": "Require a new tax file number"
+    }, 
+    "c54fbbc4-17b8-4243-85e1-44fa2b0b97d7": {
+        "parent_question_id": "f707e1ec-2f0a-4895-9451-d43c78c0e4a1", 
+        "id": "c54fbbc4-17b8-4243-85e1-44fa2b0b97d7", 
+        "value": "Yes"
+    }, 
+    "a8770338-d0c0-494d-b821-2432ae9b2850": {
+        "parent_question_id": "056b3ca1-fa7e-45ce-bc92-90b171e8af9f", 
+        "id": "a8770338-d0c0-494d-b821-2432ae9b2850", 
+        "value": "Yes"
+    }, 
+    "d2b7214c-78ea-4495-922a-4db5e6b0035d": {
+        "parent_question_id": "414ca0d1-3a51-4a53-8a0b-13035bf9f157", 
+        "id": "d2b7214c-78ea-4495-922a-4db5e6b0035d", 
+        "value": "Distribute brochures, flyers or promotional materials"
+    }, 
+    "50579e70-a6cf-4095-8e41-4de04659dd62": {
+        "parent_question_id": "0033065e-3168-4c43-baaf-fe2f182ca69f", 
+        "id": "50579e70-a6cf-4095-8e41-4de04659dd62", 
+        "value": "Set up a market stall, booth or table, or sell by the roadside or by door-to-door trading"
+    }, 
+    "70c52c2f-5f9c-4e4a-a26e-7bd116684e30": {
+        "parent_question_id": "2177bb33-8a02-4062-8a41-86cca2c78c55", 
+        "id": "70c52c2f-5f9c-4e4a-a26e-7bd116684e30", 
+        "value": "Yes"
+    }, 
+    "9d19fa7b-bc3c-47f1-bc41-17685ffd5427": {
+        "parent_question_id": "7483961b-8fdb-412d-8c20-c6c32aedb138", 
+        "id": "9d19fa7b-bc3c-47f1-bc41-17685ffd5427", 
+        "value": "Offer benefits to employees beyond their normal wages"
+    }, 
+    "c3e78742-5b9d-490a-be48-7f99d40976b8": {
+        "parent_question_id": "c7bca103-f7b2-4bbb-bfed-3f3464cfdbc1", 
+        "id": "c3e78742-5b9d-490a-be48-7f99d40976b8", 
+        "value": "Yes"
+    }, 
+    "eec864db-913b-4c7e-9a68-6fdc2ef2cc47": {
+        "parent_question_id": "78c62280-03ae-4680-b1e0-b26c74b1104f", 
+        "id": "eec864db-913b-4c7e-9a68-6fdc2ef2cc47", 
+        "value": "Yes"
+    }, 
+    "3f266153-aa78-49ea-b94e-d628b2e396da": {
+        "parent_question_id": "49c6a730-5153-4ac1-9ede-019525113d17", 
+        "id": "3f266153-aa78-49ea-b94e-d628b2e396da", 
+        "value": "Yes"
+    }, 
+    "6fdf8a45-07fd-43aa-8971-0286917a5928": {
+        "parent_question_id": "140e1bb6-d8c3-4f1a-87e5-d349dfe88253", 
+        "id": "6fdf8a45-07fd-43aa-8971-0286917a5928", 
+        "value": "Yes"
+    }, 
+    "3e6aa505-404c-453c-8414-5bb18470ec68": {
+        "parent_question_id": "49d45170-34fd-4792-bb0a-3d5a48d669c7", 
+        "id": "3e6aa505-404c-453c-8414-5bb18470ec68", 
+        "value": "Local Government"
+    }, 
+    "a8f3491d-363e-4fc2-8472-4a322035eb27": {
+        "parent_question_id": "71608ae2-2b42-4004-a59d-a55b7b959a44", 
+        "id": "a8f3491d-363e-4fc2-8472-4a322035eb27", 
+        "value": "Standards information"
+    }, 
+    "b2c79019-5d3b-47f8-bfc7-b81372cce7dd": {
+        "parent_question_id": "801998e3-f1e7-4471-a81a-ddd4fce7284e", 
+        "id": "b2c79019-5d3b-47f8-bfc7-b81372cce7dd", 
+        "value": "Children under 15 years of age"
+    }, 
+    "27f425e6-2ec1-4405-be2a-08c8c47a5093": {
+        "parent_question_id": "f9914dcd-5e04-463a-939e-45dcb83984d7", 
+        "id": "27f425e6-2ec1-4405-be2a-08c8c47a5093", 
+        "value": "Yes"
+    }, 
+    "c2567cec-d1a5-4f10-804e-ccf65f3fa12c": {
+        "parent_question_id": "dd9da894-9907-47bf-b43e-6d8c74963807", 
+        "id": "c2567cec-d1a5-4f10-804e-ccf65f3fa12c", 
+        "value": "Yes"
+    }, 
+    "49e32c70-79b7-43c9-acfe-ca8f857f7e35": {
+        "parent_question_id": "64785746-1bc7-4a61-84a4-e79649dbb683", 
+        "id": "49e32c70-79b7-43c9-acfe-ca8f857f7e35", 
+        "value": "Own land for commercial purposes"
+    }, 
+    "44cceb1c-60cf-499e-9664-e22b2f26fb32": {
+        "parent_question_id": "71608ae2-2b42-4004-a59d-a55b7b959a44", 
+        "id": "44cceb1c-60cf-499e-9664-e22b2f26fb32", 
+        "value": "Trade practices advice and information"
+    }, 
+    "c4d6fbbc-c54a-422f-90b1-70c817392fd2": {
+        "parent_question_id": "0033065e-3168-4c43-baaf-fe2f182ca69f", 
+        "id": "c4d6fbbc-c54a-422f-90b1-70c817392fd2", 
+        "value": "Provide outdoor dining with tables or seating"
+    }, 
+    "2053d4f9-5c67-43e6-bb88-8ae9150d3682": {
+        "parent_question_id": "71608ae2-2b42-4004-a59d-a55b7b959a44", 
+        "id": "2053d4f9-5c67-43e6-bb88-8ae9150d3682", 
+        "value": "Government information services"
+    }, 
+    "37a4da4c-2bca-450d-a8a0-a5834bbd27d8": {
+        "parent_question_id": "8302bd55-6ca0-46d6-a23e-11a043477273", 
+        "id": "37a4da4c-2bca-450d-a8a0-a5834bbd27d8", 
+        "value": "Yes"
+    }, 
+    "f0224be6-ca15-4406-95c3-dcfdbf2f8c63": {
+        "parent_question_id": "b38a16b6-0d21-48b3-8408-b37448308ece", 
+        "id": "f0224be6-ca15-4406-95c3-dcfdbf2f8c63", 
+        "value": "Yes"
+    }, 
+    "e28a312c-c271-459f-a8b3-1c0198c08bcb": {
+        "parent_question_id": "b9291d43-e9cc-455b-ae7e-b9ec02dc6a98", 
+        "id": "e28a312c-c271-459f-a8b3-1c0198c08bcb", 
+        "value": "Logos, packaging, words or branding of your products or business"
+    }, 
+    "43f2deb6-720a-48be-911f-f29176acd965": {
+        "parent_question_id": "cbbeac88-25e3-4778-b70f-e93b42345a9a", 
+        "id": "43f2deb6-720a-48be-911f-f29176acd965", 
+        "value": "Yes"
+    }, 
+    "f51221f9-3844-41cb-86e3-bf7d58f50f17": {
+        "parent_question_id": "8e0dc859-1cac-44d1-b4c2-1e08c4b87a1f", 
+        "id": "f51221f9-3844-41cb-86e3-bf7d58f50f17", 
+        "value": "Yes"
+    }, 
+    "589364dc-d783-4746-b9b4-3f428d2698d1": {
+        "parent_question_id": "5fed3664-1198-4e35-b460-c9de1464dad8", 
+        "id": "589364dc-d783-4746-b9b4-3f428d2698d1", 
+        "value": "Yes"
+    }, 
+    "262fc1b6-3009-4073-8f34-770b22eb4309": {
+        "parent_question_id": "afd2ea30-2b82-4d0c-ab17-9850e43b5253", 
+        "id": "262fc1b6-3009-4073-8f34-770b22eb4309", 
+        "value": "Yes"
+    }, 
+    "e58fbdef-4e40-473d-9970-20f643164cbb": {
+        "parent_question_id": "b1cb7917-b174-4711-b42a-4a899db7dc87", 
+        "id": "e58fbdef-4e40-473d-9970-20f643164cbb", 
+        "value": "Yes"
+    }, 
+    "6085a4b9-e6d0-4a8b-a7c9-489156662f78": {
+        "parent_question_id": "71608ae2-2b42-4004-a59d-a55b7b959a44", 
+        "id": "6085a4b9-e6d0-4a8b-a7c9-489156662f78", 
+        "value": "Dispute resolution and Appeal"
+    }, 
+    "2d712689-e3df-4246-b91e-ec5998dcfaa9": {
+        "parent_question_id": "7b293f18-70d7-4ed2-9b24-e492b6046006", 
+        "id": "2d712689-e3df-4246-b91e-ec5998dcfaa9", 
+        "value": "Foreign land ownership"
+    }, 
+    "5bfeb919-e3ab-4083-8477-69e9760d82dc": {
+        "parent_question_id": "ef088f65-9994-4a14-a408-80a374e24979", 
+        "id": "5bfeb919-e3ab-4083-8477-69e9760d82dc", 
+        "value": "Yes"
+    }, 
+    "88b423f6-64aa-4930-b4e2-7893dced8e05": {
+        "parent_question_id": "6fff72ff-40b7-4581-9bf3-9b6599fbc5e8", 
+        "id": "88b423f6-64aa-4930-b4e2-7893dced8e05", 
+        "value": "Partnership with other people"
+    }, 
+    "1a91b2f0-bfb0-45ed-a161-1492dcc2e7f9": {
+        "parent_question_id": "74f4099a-7891-448c-9dc5-0c02ba430990", 
+        "id": "1a91b2f0-bfb0-45ed-a161-1492dcc2e7f9", 
+        "value": "Require a new Australian Business Number (ABN)"
+    }, 
+    "6f132247-d611-4e4f-8974-b925967c7a88": {
+        "parent_question_id": "70cfc563-2f4f-4197-be73-bcc35c181b25", 
+        "id": "6f132247-d611-4e4f-8974-b925967c7a88", 
+        "value": "Yes"
+    }, 
+    "25033f48-40b8-491e-8e14-cb451a8d350d": {
+        "parent_question_id": "6ffa1a31-78e0-46fc-be0a-a38d7eda7b3f", 
+        "id": "25033f48-40b8-491e-8e14-cb451a8d350d", 
+        "value": "Yes"
+    }, 
+    "84f28dfe-6a16-43bf-a449-2e5f1ab357cb": {
+        "parent_question_id": "bb4f44da-03e9-476e-81b1-66af413d9ceb", 
+        "id": "84f28dfe-6a16-43bf-a449-2e5f1ab357cb", 
+        "value": "Yes"
+    }, 
+    "7b197516-c611-4265-a534-729645876e6d": {
+        "parent_question_id": "dddeeb49-cfff-446a-b30c-2de0376d7977", 
+        "id": "7b197516-c611-4265-a534-729645876e6d", 
+        "value": "Conduct works that require environment protection"
+    }, 
+    "53da3165-a3e6-47a3-a75f-a59138873939": {
+        "parent_question_id": "206bb05e-b0fc-4f22-b5f7-ce27ba94c49d", 
+        "id": "53da3165-a3e6-47a3-a75f-a59138873939", 
+        "value": "Yes"
+    }, 
+    "f369f05f-ebac-44d8-8f39-642426ac4651": {
+        "parent_question_id": "da31a561-9883-4b7c-8854-1c865e3f6793", 
+        "id": "f369f05f-ebac-44d8-8f39-642426ac4651", 
+        "value": "Import, wholesale or resell"
+    }, 
+    "b9dedf04-9b48-41bc-8c75-392ee8835577": {
+        "parent_question_id": "7483961b-8fdb-412d-8c20-c6c32aedb138", 
+        "id": "b9dedf04-9b48-41bc-8c75-392ee8835577", 
+        "value": "Pay wages to yourself, employees or contractors"
+    }, 
+    "2a364b67-0404-45c4-8455-a7ecb5480571": {
+        "parent_question_id": "9656a7f0-a523-49c9-a5e9-513d0d64faef", 
+        "id": "2a364b67-0404-45c4-8455-a7ecb5480571", 
+        "value": "Yes"
+    }, 
+    "9bf011f0-3c5d-4728-8399-c266e835f9bb": {
+        "parent_question_id": "71608ae2-2b42-4004-a59d-a55b7b959a44", 
+        "id": "9bf011f0-3c5d-4728-8399-c266e835f9bb", 
+        "value": "Interpreting and Translation services"
+    }, 
+    "dcaf26d4-2002-4746-8e9f-29c87052998c": {
+        "parent_question_id": "7b293f18-70d7-4ed2-9b24-e492b6046006", 
+        "id": "dcaf26d4-2002-4746-8e9f-29c87052998c", 
+        "value": "Surveying, mapping or aerial photography"
+    }, 
+    "49ee8338-fe52-4b09-8571-419fa661d950": {
+        "parent_question_id": "55a6dce4-46d7-4824-b313-057554496aab", 
+        "id": "49ee8338-fe52-4b09-8571-419fa661d950", 
+        "value": "Film, sound or video recordings"
+    }, 
+    "44b6b6d3-b2d7-4eed-a99b-c681ae420b94": {
+        "parent_question_id": "add6d598-83ac-47ba-8f9e-9ef273431c60", 
+        "id": "44b6b6d3-b2d7-4eed-a99b-c681ae420b94", 
+        "value": "Yes"
+    }, 
+    "e6ac42dd-75f1-4652-93ea-aa286c3ab009": {
+        "parent_question_id": "485ebafa-5906-4f68-9e42-4777065da08b", 
+        "id": "e6ac42dd-75f1-4652-93ea-aa286c3ab009", 
+        "value": "Yes"
+    }, 
+    "3dd9289d-a3e6-4271-b516-5ba88d8bc8f6": {
+        "parent_question_id": "7b293f18-70d7-4ed2-9b24-e492b6046006", 
+        "id": "3dd9289d-a3e6-4271-b516-5ba88d8bc8f6", 
+        "value": "Lease, purchase or sale of land"
+    }, 
+    "dc4d50ac-b9d9-492c-88fe-52e517cb7d18": {
+        "parent_question_id": "216439da-1cdf-4f31-b652-3d59a67d7f8f", 
+        "id": "dc4d50ac-b9d9-492c-88fe-52e517cb7d18", 
+        "value": "Yes"
+    }
+}

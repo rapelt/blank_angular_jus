@@ -1,0 +1,12 @@
+version: '2.0'
+services:
+  sac:
+    build: .
+    ports:
+    - "9000:9000"
+    - "35729:35729"
+    expose:
+    - "9000"
+    - "35729"
+    volumes:
+    - .:/src/app

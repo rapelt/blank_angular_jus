@@ -1,0 +1,11 @@
+/node_modules
+/dist
+/release
+/.tmp
+/.sass-cache
+/app/bower_components
+/awscli-bundle
+/.idea
+/reports/*
+.DS_Store
+/coverage

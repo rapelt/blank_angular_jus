@@ -1,0 +1,34 @@
+<div class='business-activities-page'>
+  <div class='boxes clearfix'>
+    <h1>What type of business are you starting?</h1>
+    <h5>Select as many business types that best describe your business</h5>
+    <form id=“ga-jus-select-a-business-activity”>
+      <!--TODO Alt text confirmation-->
+      <label class='box' ng-class='{"selected-box":businessActivities.cafe}'>
+        <h2>Café</h2>
+        <img class='icon icon-inactive' src='/resources/images/coffee-cup{{businessActivities.cafe ? "-white" : ""}}.png' alt='Coffee Cup' aria-hidden='true'>
+        <img class='icon icon-active' src='/resources/images/coffee-cup-white.png' alt='White Coffee Cup' aria-hidden='true'>
+        <input name="Cafe" type='checkbox' ng-model='businessActivities.cafe'>
+      </label>
+
+      <label class='box' ng-class='{"selected-box":businessActivities.mobile}'>
+        <h2>Mobile food</h2>
+        <img class='icon icon-inactive' src='/resources/images/transport{{businessActivities.mobile ? "-white" : ""}}.png' alt='Transport' aria-hidden='true'>
+        <img class='icon icon-active' src='/resources/images/transport-white.png' alt='White Transport' aria-hidden='true'>
+        <input name="Mobile Food" type='checkbox' ng-model='businessActivities.mobile'>
+      </label>
+
+      <label class='box' ng-class='{"selected-box":businessActivities.takeaway}'>
+        <h2>Takeaway food</h2>
+        <img class='icon icon-inactive' src='/resources/images/food{{businessActivities.takeaway ? "-white" : ""}}.png' alt='Takeaway food' aria-hidden='true'>
+        <img class='icon icon-active' src='/resources/images/food-white.png' alt='White Takeaway food' aria-hidden='true'>
+        <input name="Takeaway Food" type='checkbox' ng-model='businessActivities.takeaway'>
+      </label>
+    </form>
+  </div>
+
+  <div class="col-md-12 navigation-buttons">
+    <button id='questions-button' class="jus-next-button jus-button btn btn-primary" scroll-to="qg-primary-content" ng-disabled='!isNextButtonEnabled()' ng-click="showNextPage()">Next</button>
+  </div>
+
+</div>
