@@ -7,7 +7,6 @@ describe('Directive: header', function () {
       scope = $rootScope.$new();
       $templateCache.put('features/home/home.html', '');
       $templateCache.put('features/common/header.html', '<h1>header</h1>');
-      $templateCache.put('features/business-activities/business-activities.html', '');
       element = '<div header></div>';
       elem = $compile(element)(scope);
       scope.$apply();

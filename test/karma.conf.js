@@ -55,7 +55,6 @@ module.exports = function (config) {
       './app/bower_components/angular-animate/angular-animate.js',
       './app/bower_components/angular-touch/angular-touch.js',
       './app/bower_components/underscore/underscore.js',
-      'https://maps.googleapis.com/maps/api/js?v=3.23&libraries=geometry,places',
       './app/app.js',
       './app/features/**/*.html',
       './app/features/**/*.js',
